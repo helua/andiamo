@@ -1,0 +1,16 @@
+<div class="grid__item">
+    <span class="name">{{ getName(video.title) }}</span>
+
+    <a [routerLink]="['/video', video.id]">
+        <img [src]="video.thumbnail_large" [alt]="video.title">
+    </a>
+    <span class="rest">{{ getRest(video.title) }} </span>
+    
+
+    <!-- <div class="card-desc">
+    <p>{{ video.desc.slice(0, 100) }}...</p>
+    </div> 
+    <div class="card-action">
+        <a class="black-text" [routerLink]="['/movie', movie.id]">More >></a>
+    </div>-->
+</div>

@@ -1,0 +1,65 @@
+$color-2: #84fb54;
+
+
+.active{
+    background-color: $color-2;
+    border-style: solid;
+    box-shadow: black 5px 5px;
+}
+
+nav li{
+        text-decoration: none;
+        list-style-type: none;
+        text-align: right;
+
+        & a{
+            padding: 2px;
+
+        }
+    
+}
+
+nav .nav-main{
+    display: inline-block;
+    width: 96%;
+    position: fixed;
+    top: 0;
+    left: 2%;
+    z-index: 1;
+
+
+    & ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    & li{
+        display: inline;
+        
+        & a{
+            transition: .2s ease-out;
+
+        }
+    }
+}
+
+i{
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+nav .nav-sec{
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    z-index: 1;
+}
+
+nav .nav-tri{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+

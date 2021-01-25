@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'andiamo';
+  // background: string = '{ background-color: green; }'
+  isDigital: boolean = false;
+
+
 }
+
+
+  
+

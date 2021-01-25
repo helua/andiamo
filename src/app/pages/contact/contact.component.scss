@@ -1,0 +1,18 @@
+.board{
+    width: 25%;
+    padding-top: 4rem;
+    margin: 0 auto;
+    position: relative;
+
+    & h1, h2, p{
+        text-transform: uppercase;
+        line-height: 1.8rem;
+        padding: .5rem 0;
+    }
+
+    & h1, h2{
+        margin-bottom: -1rem;
+        margin-left: -2rem;
+    }
+
+}
