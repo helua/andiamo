@@ -5,10 +5,40 @@
 <header>
   <app-nav></app-nav>
 </header>
-<body>
-  <img src="assets/andiamo-logo-big-green.png" alt="ANDIAMO" class="logotype">
-  <div class="router-wrapper">
-    <router-outlet></router-outlet>
+<body>  
+  <div class="mobile">
+    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
   </div>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav>
+          <mat-nav-list>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/films" routerLinkActive="active">WORKS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/about" routerLinkActive="active">ABOUT</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/bts" routerLinkActive="active">BTS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/digital" routerLinkActive="active">DIGITAL</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/contact" routerLinkActive="active">CONTACT</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/reel" routerLinkActive="active">REEL2020</a>
+          </mat-nav-list>
+        </mat-sidenav>
+      <mat-sidenav-content>
+        <div id="logotype-wrapper">
+          <span id="allora">Allora,</span>
+          <img src="assets/andiamo-logo-big-green.png" alt="ANDIAMO" class="logotype">
+          <span id="question-mark">?</span>
+        </div>
+          <div class="router-wrapper">
+            <router-outlet></router-outlet>
+          </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+  
+  <!-- <div class="desktop">
+    <img src="assets/andiamo-logo-big-green.png" alt="ANDIAMO" class="logotype">
+    <div class="router-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div> -->
+
 </body>
 </html>

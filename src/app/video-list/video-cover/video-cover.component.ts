@@ -12,8 +12,6 @@ export class VideoCoverComponent{
   
   @Input() video: any;
 
-  name: string = '';
-  rest: string = '';
 
     // let title = this.video.title;
     // let nameGet = new RegExp(/[^\|]*/);
@@ -26,7 +24,10 @@ export class VideoCoverComponent{
 
   getRest(videoTitle: string){
     let title = this.getName(videoTitle)
-    return videoTitle.substr(title.length+2).toUpperCase();
+    let rest = videoTitle.substr(title.length+2).split('|')
+      if (rest.length > 1){
+        rest.pop();
+      }
+    return rest.join(" | ").toUpperCase();
   }
-
 }

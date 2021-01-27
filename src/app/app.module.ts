@@ -26,7 +26,6 @@ import { BtsComponent } from './pages/bts/bts.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuMobileComponent } from './nav/menu-mobile/menu-mobile.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,6 @@ import { MenuMobileComponent } from './nav/menu-mobile/menu-mobile.component';
     BtsComponent,
     ContactComponent,
     VideoDetailsComponent,
-    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

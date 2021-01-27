@@ -1,7 +1,27 @@
-h1{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
+$color-2: #8cfa60;
+
+.masonry-with-columns {
+    margin-top: -80px;
+    columns: 3 300px;
+    column-gap: 0;
+    column-span: none;
+    column-fill: balance;
+    div {
+      width: 100px;
+      background: #EC985A;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+
+      & img{
+          width:100%;
+          vertical-align: bottom;
+      }
+    } 
+  }
+
+  h1{ 
+    display: none;
+    visibility: hidden;
+  }

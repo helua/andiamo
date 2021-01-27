@@ -1,22 +1,27 @@
 $color-2: #84fb54;
 
-
 .active{
     background-color: $color-2;
     border-style: solid;
     box-shadow: black 5px 5px;
 }
 
-nav li{
+nav{
+    & *{
+        z-index: 10;
+    }
+    & ul{
+        padding: 0;
+    }
+    & li{
         text-decoration: none;
         list-style-type: none;
-        text-align: right;
-
+        
         & a{
             padding: 2px;
-
+            
         }
-    
+    }
 }
 
 nav .nav-main{
@@ -25,41 +30,28 @@ nav .nav-main{
     position: fixed;
     top: 0;
     left: 2%;
-    z-index: 1;
-
+    
 
     & ul{
         display: flex;
         justify-content: space-between;
-        padding: 0 15px;
     }
-
-    & li{
-        display: inline;
-        
-        & a{
-            transition: .2s ease-out;
-
-        }
+    & a{
+        transition: .2s ease-out;
     }
-}
-
-i{
-    vertical-align: middle;
-    font-size: 1.2rem;
 }
 
 nav .nav-sec{
     position: fixed;
     bottom: 0;
     right: 2%;
-    z-index: 1;
+    text-align: right;
 }
 
 nav .nav-tri{
     position: fixed;
     bottom: 0;
-    left: 0;
-    z-index: 1;
+    left: 2%;
+    
 }
 
