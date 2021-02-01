@@ -1,54 +1,103 @@
 $color-2: #8cfa60;
 
+.video-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    // width: 960px;
+    // height: 540px;
+    // transform: translate(-50%, -50%);
+
+    & iframe{
+        width: 960px;
+        height: 540px;
+    }
+    @media screen and (max-width: 960px){
+
+        & iframe{
+            width:720px;
+            height: 405px;
+        }
+    }
+    @media screen and (max-width: 720px){
+
+        & iframe{
+            width: 648px;
+            height: 364.5px;
+        }
+    }
+    @media screen and (max-width: 648px){
+
+        & iframe{
+            width: 576px;
+            height: 324px;
+        }
+    }
+    @media screen and (max-width: 576px){
+
+        & iframe{
+            width: 432px;
+            height: 243px;
+        }
+    }
+    @media screen and (max-width: 432px){
+
+        & iframe{
+            width: 360px;
+            height: 202.5px;
+        }
+    }
+    @media screen and (max-width: 360px){
+
+        & iframe{
+            width: 270px;
+            height: 151.875px;
+        }
+    }
+}
+
+.iframe-wrapper{
+    margin: 0 auto;
+    width: 960px;
+    overflow: auto;
+    -webkit-overflow-scrolling:touch;
+    @media screen and (max-width: 960px){
+        width: 720px;
+   
+    }
+    @media screen and (max-width: 720px){
+        width: 648px;
+
+    }
+    @media screen and (max-width: 648px){
+        width: 576px;
+ }
+    @media screen and (max-width: 576px){
+        width: 432px;
+ }
+    @media screen and (max-width: 432px){
+        width: 360px;
+ }
+    @media screen and (max-width: 360px){
+        width: 270px;
+    
+    }
+}
 
 .title-wrapper{
-    position: fixed;
-    top: 3.4rem;
     width: 100%;
-    // left: calc(60vw - 640px);
     z-index: 1;
-    & span{
-        color: grey;
-        background-color: white;
-        font-weight: 500;
-        font-size: 1rem;
-    }
-
     & h1{
         text-transform: uppercase;
         text-align: center;
-        font-size: 2rem;
+        margin-bottom: .2rem;
     }
-}
-
-.video-wrapper{
-    width: 960px;
-    height: 540px;
-    position: fixed;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
-.desc-wrapper{
-    width: calc(69vw - 640px);
-    font-weight: 500;
-    margin-top: 6rem;
-    padding-bottom: 6rem;
-    word-spacing: 1.5px;
-    letter-spacing: .5px;
-    text-align: right;
-    position: absolute;
-    white-space: pre-line;
-
-    
 }
 
 button.back{
     position: fixed;
-    bottom: 1rem;
-    left: 41%;
-    transform: translate(-50%,0);
+    bottom: 50%;
+    left: 10%;
+    transform: translate(-50%,50%);
 }

@@ -12,15 +12,18 @@ export class DigitalComponent implements OnDestroy {
 
   ngAfterViewInit(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+    menu.style.backgroundColor="#8cfa60";
  }
 
  scrollToElement($element): void {
-  console.log($element);
   $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
  ngOnDestroy(){
   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'white';
+  let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+  menu.style.backgroundColor="#fff";
  }
 
 }

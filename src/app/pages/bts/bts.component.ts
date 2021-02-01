@@ -1,4 +1,5 @@
-import { Component, OnDestroy } from '@angular/core';
+import { ViewportRuler } from '@angular/cdk/overlay';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-bts',
@@ -6,14 +7,28 @@ import { Component, OnDestroy } from '@angular/core';
   styleUrls: ['./bts.component.scss']
 })
 export class BtsComponent{
+  scrWidth:any;
 
-  constructor() { }
+  @HostListener('window:resize', ['$event'])
+    getScreenSize(event?) {
+          this.scrWidth = window.innerWidth;
+    }
+
+  constructor() {
+    this.getScreenSize();
+
+   }
+
 
   ngAfterViewInit(){
+        this.getScreenSize();
+
     let logo = document.getElementById("logotype-wrapper");
-    console.log(logo);
     logo.style.bottom="50%";
     logo.style.left="calc(50% + 4.725rem)"
+      if(this.scrWidth < 405){
+        logo.style.left="calc(50% + 3.225rem)";
+      }
     logo.style.transform="translate(-50%, 50%)";
 
     let allora = document.getElementById("allora");

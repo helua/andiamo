@@ -1,10 +1,13 @@
 $color-2: #8cfa60;
 
 .board{
-    height: calc(100vh - 204px);
-    width: 65%;
+    height: 75vh;
+    width: 67%;
     margin: 0 auto;
     position: relative;
+    @media screen and (max-width: 900px){
+        width: 87%;
+    }
 
     & h1{
         width: 100%;
@@ -13,11 +16,28 @@ $color-2: #8cfa60;
         left: 50%;
         transform: translate(-50%, -50%);
 
+        font-size: 2.2rem;
+        letter-spacing: .21rem;
+        line-height: 2.5rem;
+        word-spacing: .26rem;
+
+        @media screen and (max-width: 900px){
+            font-size: 2rem;
+            letter-spacing: .11rem;
+            line-height: 2.1rem;
+            word-spacing: .19rem;
+        }
+        @media screen and (max-width: 600px){
+            font-size: 1.4rem;
+            letter-spacing: .15rem;
+            line-height: 1.5rem;
+            word-spacing: .17rem;
+        }
     }
+
 
     & button{
         position: absolute;
-        background-color: $color-2;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);

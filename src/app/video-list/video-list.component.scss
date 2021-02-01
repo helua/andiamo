@@ -1,7 +1,6 @@
-:host{
-    display: block;
-}
-
 .grid{
-    margin-top: 3rem;
+    margin-top: 10%;
+    @media screen and (max-width: 900px){
+        padding-bottom: 25%;
+    }
 }

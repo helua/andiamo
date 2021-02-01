@@ -3,17 +3,23 @@ $color-2: #84fb54;
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    // font-family: Palatino, serif;
-    // font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
     margin: 0px;
     
     & ::selection{
         background-color: $color-2;
     }
 }
+
+.router-wrapper{
+    margin: 5% 0;
+    // @media screen and (max-width: 600px){
+    //     margin: -5% 0;
+    // }
+}
+
 #logotype-wrapper{
     position: fixed;
     left: 50%;
@@ -22,14 +28,21 @@ body{
     width: 35rem;
     z-index: 2;
     mix-blend-mode: difference;
-    height: 7rem;   
+    height: 7rem; 
+    @media screen and (max-width: 405px){
+        width: 22.826rem;
+    }  
 }
 .logotype{
     position: absolute;
     width: 12rem;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 405px){
+        width: 7.826rem;
+    }  
+
 }
 
 
@@ -38,31 +51,39 @@ span#question-mark, span#allora{
     position: absolute;
     font-size: 2.3rem;
     text-transform: uppercase;
-    transform: rotate(-6deg);
+    transform: rotate(-7.2deg);
     color: $color-2;
     z-index: 10;
+    @media screen and (max-width: 405px){
+        font-size: 1.5rem;
+    }  
 }
 span#allora{
     left: 0;
     bottom: 8%;
+    @media screen and (max-width: 405px){
+        bottom: 23%;
+        }  
 }
 span#question-mark{
     right: 27%;
     top: 13%;
-}
-
-.router-wrapper{
-    margin-top: 5rem;
-    margin-bottom: 6rem;
+    @media screen and (max-width: 405px){
+        top: 25%;
+        }  
 }
 
 h1{
-    font-size: 2.2rem;
+    font-size: 1.3rem;
+    letter-spacing: .15rem;
+    color: black;
+    
 }
 
 a{
     text-decoration: none;
     color: black;
+    text-shadow: 2px 2px rgba($color-2, .2);
 
     &:hover{
         background-color: rgba($color-2, 0.8);
@@ -75,6 +96,10 @@ a{
 
 p, h2, h1, ul {
     padding: 0 5rem;
+    @media screen and (max-width: 900px){
+        padding: 0 1rem;
+    }
+    
 }
 
 button{
@@ -90,13 +115,24 @@ button{
     }
 }
     
-@media only screen and (min-width: 601px) {
-    .mobile{
-            display: none;
-            visibility: hidden;
+
+ 
+//mobile menu
+.mobile{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+
+    @media only screen and (min-width: 601px) {
+    display: none;
+    visibility: hidden;
     }
 }
-//mobile menu
+.mat-drawer{
+    position: fixed !important;
+    padding-top: 3rem;
+}
 .mat-drawer-container{
     background-color: rgba(white, 0);
 }
