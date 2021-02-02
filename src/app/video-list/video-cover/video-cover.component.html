@@ -6,6 +6,6 @@
     </a>
 
     <span class="rest">{{ getRest(video.title) }} </span>
-    <h1 class="name-rest">{{ getNameRest(video.title) }}</h1>
+    <h1 class="name-rest" [routerLink]="['/video', video.id]">{{ getNameRest(video.title) }}</h1>
 
 </div>

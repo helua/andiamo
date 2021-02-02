@@ -21,9 +21,9 @@ export class DigitalComponent implements OnDestroy {
 }
 
  ngOnDestroy(){
-  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'white';
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
   let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-  menu.style.backgroundColor="#fff";
+  menu.style.backgroundColor="#fafff6";
  }
 
 }

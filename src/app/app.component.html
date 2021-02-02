@@ -7,8 +7,13 @@
 </header>
 <body>  
   <div class="mobile">
-    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-  </div>
+    <ul>
+      <li><a><mat-icon (click)="sidenav.toggle()">menu</mat-icon></a></li>
+      <li><a href="https://vimeo.com/andiamoworks" target="_blank"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.facebook.com/andiamoworks" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/andiamoworks" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
+    </div>
     <mat-sidenav-container>
         <mat-sidenav #sidenav>
           <mat-nav-list>
@@ -31,14 +36,5 @@
           </div>
       </mat-sidenav-content>
     </mat-sidenav-container>
-
-  
-  <!-- <div class="desktop">
-    <img src="assets/andiamo-logo-big-green.png" alt="ANDIAMO" class="logotype">
-    <div class="router-wrapper">
-      <router-outlet></router-outlet>
-    </div>
-  </div> -->
-
 </body>
 </html>

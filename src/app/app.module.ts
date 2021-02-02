@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoCoverComponent } from './video-list/video-cover/video-cover.component';
@@ -54,6 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatListModule,
     MatToolbarModule,
     MatButtonModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'andiamo';
-  // background: string = '{ background-color: green; }'
-  isDigital: boolean = false;
+
+  constructor(private elementRef: ElementRef){}
+
+
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  }
+
+
 
 
 }

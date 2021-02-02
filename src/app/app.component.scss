@@ -1,15 +1,21 @@
 $color-2: #84fb54;
 
+
 .mat-list-item{
-    font-size: 1.7rem;
-    letter-spacing: 3px;
-    margin-top: 5%;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    margin-top: 3%;
 }
 .mat-list-item:hover{
     background-color: $color-2;
 }
 
-.mat-icon {
-    font-size: 3rem;
-}
+i{
+    font-size: 2rem;
+    line-height: 3rem;
 
+}
+.mat-icon{
+    font-size: 3rem;
+    line-height: 3rem;
+}

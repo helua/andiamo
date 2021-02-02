@@ -1,11 +1,15 @@
 $color-2: #84fb54;
+$white: #fafff6;
 .screen{
     position: fixed;
     z-index: 100;
-    color: white;
+    height: calc(100vh - 180px);
+    color: $white;
     mix-blend-mode:  difference;
     @media screen and (max-width: 600px){
     position: relative;
+    height: unset;
+    
     }
 }
 
@@ -19,6 +23,7 @@ p{
     &:first-child{
         padding-top: 1%;
     }
+
     @media screen and (max-width: 900px){
         padding: 0 19%; 
         font-size: 1.2rem;
@@ -45,6 +50,15 @@ p{
     }
 }
 
+.awards{
+    position: absolute;
+    bottom: 0;
+    @media screen and (max-width: 900px) {
+        position: relative;
+        
+    }
+}
+
 h1, ul{
     list-style: none;
     font-size: .9rem;
@@ -52,18 +66,21 @@ h1, ul{
     letter-spacing: 2px;
     text-align: justify;
     @media screen and (max-width: 600px){
-        font-size: .7rem;
+        font-size: .9rem;
         padding: 0 4%;
-        letter-spacing: .05rem;
-        word-spacing: .03rem;
+        letter-spacing: .09rem;
+        word-spacing: .16rem;
         text-align: left;
 
     }
 }
-ul{    
+ul{       
+
+
     & li{
         display: inline;
         padding-right: .5rem;
+        padding-bottom: .2rem;
         
         &:before {
             content: "▪ ";
@@ -91,7 +108,7 @@ ul{
             margin-bottom: 20%;
         }
         @media screen and (max-width: 600px){
-            margin-bottom: 0%;
+            margin-bottom: -2%;
             }
 
         .push{

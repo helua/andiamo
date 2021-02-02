@@ -1,15 +1,12 @@
+<div class="video-wrapper">
+    
+    <div class="title-wrapper">
+        <h1>{{video.title}}</h1>
+    </div>
 
-<!-- <iframe [src]="video.video_id | vimeoUrl"  scrolling="no" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<div class="iframe-wrapper">
-    <iframe [src]="video.video_id | vimeoUrl"  scrolling="no" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div> -->
-    <div class="video-wrapper">
-        <div class="title-wrapper">
-            <h1>{{ video.title }}</h1>
-        </div>
-        <div class="iframe-wrapper">
-            <iframe [src]="video.video_id | vimeoUrl"  scrolling="no" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    <div class="iframe-wrapper">
+        <iframe [src]="video.video_id | vimeoUrl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <!-- <button class="back" (click)="goToVideos()">
         <i class="material-icons">arrow_back</i>    
     </button> -->

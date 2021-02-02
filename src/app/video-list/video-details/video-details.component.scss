@@ -1,103 +1,102 @@
 $color-2: #8cfa60;
 
-.video-wrapper{
-    position: relative;
-    width: 100%;
-    height: 100vh;
+    .video-wrapper{
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 10rem);
+        @media screen and (max-width:600px){
+            height: calc(100vh - 5.925rem);
+        }
     
-    // width: 960px;
-    // height: 540px;
-    // transform: translate(-50%, -50%);
-
-    & iframe{
+    .iframe-wrapper{
+        margin: 0 auto;
         width: 960px;
-        height: 540px;
-    }
-    @media screen and (max-width: 960px){
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        background-color: black;
 
         & iframe{
-            width:720px;
-            height: 405px;
+            width: 960px;
+            height: 540px;
+            vertical-align: bottom;
         }
-    }
-    @media screen and (max-width: 720px){
 
-        & iframe{
-            width: 648px;
-            height: 364.5px;
+        @media screen and (min-width: 1800px){
+            width: 1440px;
+            & iframe{
+                width: 1440px;
+                height: 810px;
+            }
         }
-    }
-    @media screen and (max-width: 648px){
-
-        & iframe{
-            width: 576px;
-            height: 324px;
-        }
-    }
-    @media screen and (max-width: 576px){
-
-        & iframe{
-            width: 432px;
-            height: 243px;
-        }
-    }
-    @media screen and (max-width: 432px){
-
-        & iframe{
-            width: 360px;
-            height: 202.5px;
-        }
-    }
-    @media screen and (max-width: 360px){
-
-        & iframe{
-            width: 270px;
-            height: 151.875px;
-        }
-    }
-}
-
-.iframe-wrapper{
-    margin: 0 auto;
-    width: 960px;
-    overflow: auto;
-    -webkit-overflow-scrolling:touch;
-    @media screen and (max-width: 960px){
-        width: 720px;
-   
-    }
-    @media screen and (max-width: 720px){
-        width: 648px;
-
-    }
-    @media screen and (max-width: 648px){
-        width: 576px;
- }
-    @media screen and (max-width: 576px){
-        width: 432px;
- }
-    @media screen and (max-width: 432px){
-        width: 360px;
- }
-    @media screen and (max-width: 360px){
-        width: 270px;
+        @media screen and (max-width: 960px){
+            width: 720px;
+            & iframe{
+                    width:720px;
+                    height: 405px;
+                }
     
-    }
-}
+        }
+        @media screen and (max-width: 720px){
+            width: 648px;
+            & iframe{
+                    width: 648px;
+                    height: 364.5px;
+                }
 
-.title-wrapper{
-    width: 100%;
-    z-index: 1;
-    & h1{
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: .2rem;
+        }
+        @media screen and (max-width: 648px){
+            width: 576px;
+            & iframe{
+                        width: 576px;
+                        height: 324px;
+            }
     }
-}
+        @media screen and (max-width: 576px){
+            width: 432px;
+            & iframe{
+                width: 432px;
+                height: 243px;
+            }
+    }
+        @media screen and (max-width: 432px){
+            width: 360px;
+            & iframe{
+                width: 360px;
+                height: 202.5px;
+        }
+    }
+        @media screen and (max-width: 360px){
+            width: 270px;
+            & iframe{
+                width: 270px;
+                height: 151.875px;
+            }
+        
+        }
+    }
 
-button.back{
-    position: fixed;
-    bottom: 50%;
-    left: 10%;
-    transform: translate(-50%,50%);
+    .title-wrapper{
+        width: 100%;
+        z-index: 1;
+
+        @media screen and (max-width: 960px){
+            padding-top: 20%;
+        }
+
+        @media screen and (max-width: 600px){
+            padding-top: 10%;
+        }
+        & h1{
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: .2rem;
+        }
+    }
+
+    button.back{
+        position: fixed;
+        bottom: 50%;
+        left: 10%;
+        transform: translate(-50%, 50%);
+    }
 }
