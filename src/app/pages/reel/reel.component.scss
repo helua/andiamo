@@ -1,6 +1,9 @@
 .board{
-    height: calc(100vh - 186px);
-}
+    height: calc(100vh - 10rem);
+        @media screen and (max-width:600px){
+            height: calc(100vh - 5.925rem);
+        }
+    }
 p{
     position: absolute;
     top: 50%;

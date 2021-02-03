@@ -1,23 +1,41 @@
 import { ViewportRuler } from '@angular/cdk/overlay';
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bts',
   templateUrl: './bts.component.html',
   styleUrls: ['./bts.component.scss']
 })
-export class BtsComponent{
+export class BtsComponent implements OnInit{
   scrWidth:any;
+  numbers: number[] = [];
+
 
   @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
           this.scrWidth = window.innerWidth;
     }
 
-  constructor() {
+  constructor() {}
+
+  shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  ngOnInit() {
     this.getScreenSize();
 
-   }
+    this.numbers = Array(121).fill(1).map((x, i) => i + 1);
+    let numbersMix = this.shuffleArray(this.numbers);
+    this.numbers = numbersMix;
+
+  }
+
+ 
 
 
   ngAfterViewInit(){

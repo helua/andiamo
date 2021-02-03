@@ -5,7 +5,7 @@ $color-2: #84fb54;
     margin: 17% auto;
     position: relative;
     @media screen and(max-width: 900px){
-        border-left: 3px solid rgba($color-2, 1);
+        border-left: 3px solid rgba($color-2, .2);
         width: 270px;
         margin: 25% auto;
 
@@ -18,7 +18,7 @@ $color-2: #84fb54;
     & h1, h2{
         margin: 0;
         text-transform: uppercase;
-        border-bottom: 3px solid rgba($color-2, 1);
+        border-bottom: 3px solid rgba($color-2, .2);
         @media screen and (max-width: 900px){
             border-bottom: none;
         }
@@ -27,7 +27,7 @@ $color-2: #84fb54;
 
     & h1, h2, p{
         line-height: 1.8rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding: 0;
         margin-bottom: 0;
         @media screen and (max-width: 400px){
@@ -46,15 +46,22 @@ $color-2: #84fb54;
 .third{
     display: inline-block;
     vertical-align: top;
-    width: 31%;
-    margin-left: 2%;
+    width: 15%;
+    margin-left: 5%;
+    &:first-child{
+        text-align: right;
+        width: 31%;
+    }
 
     @media screen and (max-width: 900px){
         display: block;
         width: 270px;   
         padding: 10%;    
         margin-left: 1%;
- 
+        &:first-child{
+            text-align: left;
+            width: 270px;   
+        } 
     }
     @media screen and (max-width: 400px){
         width: 236px;  
