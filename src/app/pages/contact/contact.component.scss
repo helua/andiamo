@@ -30,10 +30,7 @@ $color-2: #84fb54;
         font-size: 1.2rem;
         padding: 0;
         margin-bottom: 0;
-        @media screen and (max-width: 400px){
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
+
     }
     @media screen and (max-width: 400px){
         p{

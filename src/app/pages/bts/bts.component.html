@@ -1,8 +1,17 @@
-<div class="masonry-with-columns">
-    <div class="" *ngFor="let number of numbers">
-        <img src="assets/bts/bts{{number}}.jpg" alt="">
+<div *ngIf="isBigScreen; else smallScreen">
+    <div class="masonry-with-columns">
+        <div class="masonry" *ngFor="let photo of photos">
+            <img src="assets/bts/big/bts{{photo}}.jpg" alt="">
+        </div>
     </div>
 </div>
+    <ng-template #smallScreen>
+        <div class="masonry-with-columns">
+            <div class="masonry" *ngFor="let photo of photos">
+                <img src="assets/bts/smallbts{{photo}}.jpg" alt=""> 
+            </div>
+        </div>
+    </ng-template>
 
 <h1>Allora, ANDIAMO ?</h1>
 

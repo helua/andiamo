@@ -17,7 +17,6 @@ export class VideoListComponent implements OnInit {
   ngOnInit(): void{
     this._vimeoService.getVideos(this.user).subscribe(videos => {
       this.videos = videos;
-      console.log(videos);
     })
   }
   

@@ -1,20 +1,32 @@
-import { ViewportRuler } from '@angular/cdk/overlay';
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-bts',
   templateUrl: './bts.component.html',
   styleUrls: ['./bts.component.scss']
 })
-export class BtsComponent implements OnInit{
-  scrWidth:any;
-  numbers: number[] = [];
-
+export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
+  scrWidth: any;
+  photos: number[] = [];
+  isBigScreen: boolean = false;
 
   @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
-          this.scrWidth = window.innerWidth;
+      this.scrWidth = window.innerWidth;
+      console.log('szerokosc ekranu: ' + this.scrWidth);
+
+      if(this.scrWidth > 1500){
+        this.isBigScreen = true;
+        console.log('ekran duży: ' + this.isBigScreen);
+      }
+      else{
+        this.isBigScreen = false;
+        console.log('ekran duży: ' +  this.isBigScreen);
+
+      }
     }
+
 
   constructor() {}
 
@@ -26,20 +38,17 @@ export class BtsComponent implements OnInit{
     return array;
   }
 
-  ngOnInit() {
-    this.getScreenSize();
 
-    this.numbers = Array(121).fill(1).map((x, i) => i + 1);
-    let numbersMix = this.shuffleArray(this.numbers);
-    this.numbers = numbersMix;
+  ngOnInit() {
+    this.getScreenSize();    
+
+    this.photos = Array(121).fill(1).map((x, i) => i + 1);
+    let photosMix = this.shuffleArray(this.photos);
+    this.photos = photosMix;
 
   }
 
- 
-
-
   ngAfterViewInit(){
-        this.getScreenSize();
 
     let logo = document.getElementById("logotype-wrapper");
     logo.style.bottom="50%";
@@ -54,6 +63,10 @@ export class BtsComponent implements OnInit{
 
     let question = document.getElementById("question-mark");
     question.style.display="block";
+
+      // let logo = document.getElementsByTagName("h1")[0];
+      // logo.style.display="block";
+      // logo.style.visibility="visible";
  }
 
  ngOnDestroy(){

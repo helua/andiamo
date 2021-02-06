@@ -1,13 +1,39 @@
-import { Component, ElementRef, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnDestroy {
+export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  constructor(private elementRef: ElementRef){}
+  scrWidth: any;
+  isBigScreen: boolean = false;
+  photos: number[] = [1,2,3,4,5,6,7,8,9,10,11];
+
+  @HostListener('window:resize', ['$event'])
+    getScreenSize(event?) {
+      this.scrWidth = window.innerWidth;
+      console.log('szerokosc ekranu: ' + this.scrWidth);
+
+      if(this.scrWidth > 1500){
+        this.isBigScreen = true;
+        console.log('ekran duży: ' + this.isBigScreen);
+      }
+      else{
+        this.isBigScreen = false;
+        console.log('ekran duży: ' +  this.isBigScreen);
+
+      }
+    }
+
+  constructor(private elementRef: ElementRef){
+  }
+
+  ngOnInit() {
+    this.getScreenSize();    
+  }
+
 
   ngAfterViewInit(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';

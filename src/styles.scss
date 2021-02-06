@@ -19,6 +19,7 @@ body{
     margin: 5% 0;
 }
 
+//logotype "Allora, ANDIAMO ?"
 #logotype-wrapper{
     position: fixed;
     left: 50%;
@@ -43,8 +44,6 @@ body{
     }  
 
 }
-
-
 span#question-mark, span#allora{
     display: none;
     position: absolute;
@@ -72,9 +71,14 @@ span#question-mark{
         }  
 }
 
-h1{
+h1, h2{
     font-size: 1.3rem;
     letter-spacing: .15rem;
+
+    @media screen and (max-width: 400px){
+        font-size: 1rem;
+        letter-spacing: .11rem;
+    }
     
 }
 

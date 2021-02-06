@@ -27,62 +27,22 @@
             </ul>
         </div>
     </div>
-    <div class="gallery">
-
-    <div class="row">
-        <div class="push push-1">
-            <img src="assets/1.jpg" alt="">
+    <div *ngIf="isBigScreen; else smallScreen">
+        <div class="gallery">
+            <!-- <div class="row" *ngFor="item of [].constructor(11); let photo = index"> -->
+            <div class="row" *ngFor="let photo of photos">
+                <div class="push push-{{photo}}">
+                    <img src="assets/big/{{photo}}.jpg" alt="">
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="push push-2">
-            <img src="assets/11.jpg" alt="">  
-        </div>      
-    </div>
-    <div class="row">
-        <div class="push push-3">
-            <img src="assets/3.jpg" alt="">
+    <ng-template #smallScreen>
+        <div class="gallery">
+            <div class="row" *ngFor="let photo of photos">
+                <div class="push push-{{photo}}">
+                    <img src="assets/small{{photo}}.jpg" alt="">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="push push-4">
-            <img src="assets/4.jpg" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push push-5">
-            <img src="assets/5.jpg" alt="">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="push push-6">
-            <img src="assets/2.jpg" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push push-7">
-            <img src="assets/7.jpg" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push push-8">
-            <img src="assets/8.JPG" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push push-9">
-            <img src="assets/10.jpg" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push push-10">
-            <img src="assets/9.jpg" alt="">
-        </div>
-    </div>
-    <div class="row">
-        <div class="push-11">
-            <img src="assets/6.jpg" alt="">
-        </div>
-    </div>
-</div>
+    </ng-template>
