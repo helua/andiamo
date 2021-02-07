@@ -10,6 +10,7 @@ export class VideoCoverComponent{
   constructor() { }
 
   @Input() video: any;
+  logo: string = 'assets/alt.svg';
 
   getName(videoTitle: string){
     return videoTitle.split(' | ')[0].toUpperCase();

@@ -1,4 +1,5 @@
-import { Component, HostListener, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+import { ScreenService } from 'src/app/screen.service';
 
 @Component({
   selector: 'app-bts',
@@ -6,31 +7,13 @@ import { Component, HostListener, OnDestroy, OnInit, AfterViewInit } from '@angu
   styleUrls: ['./bts.component.scss']
 })
 export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
-  scrWidth: any;
-  // photos: number[] = [];
   // numbers: number[] = Array(121).fill(1).map((x, i) => i + 1);
-
-  photos: string[] = [];
-  isBigScreen: boolean = true;
+  photos: number[] = [];
   smallURL: string = 'assets/bts/smallbts';
   bigURL: string = 'assets/bts/big/compiled/bts';
 
-  @HostListener('window:resize', ['$event'])
-    getScreenSize(event?) {
-      this.scrWidth = window.innerWidth;
-      console.log('szerokosc ekranu: ' + this.scrWidth);
+  constructor(public screen: ScreenService) {}
 
-      if(this.scrWidth > 1500){
-        this.isBigScreen = true;
-        console.log('ekran duży: ' + this.isBigScreen);
-      }
-      else{
-        this.isBigScreen = false;
-        console.log('ekran duży: ' +  this.isBigScreen);
-      }
-    }
-
-  constructor() {}
 
   shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -42,11 +25,10 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
 
 
   ngOnInit() {
-    this.getScreenSize();    
-    for(let i = 1; i < 121; i++){
-      let newPhoto: string = i + '.jpg';
-      console.log(this.bigURL+newPhoto);
+    this.screen.getScreenSize();  
 
+    for(let i = 1; i < 121; i++){
+      let newPhoto: number = i;
       this.photos.push(newPhoto)
     };
     // this.photos = Array(121).fill(1).map((x, i) => i + 1);
@@ -59,7 +41,7 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
     let logo = document.getElementById("logotype-wrapper");
     logo.style.bottom="50%";
     logo.style.left="calc(50% + 4.725rem)"
-      if(this.scrWidth < 405){
+      if(this.screen.scrWidth < 405){
         logo.style.left="calc(50% + 3.225rem)";
       }
     logo.style.transform="translate(-50%, 50%)";

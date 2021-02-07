@@ -27,12 +27,13 @@
             </ul>
         </div>
     </div>
-    <div *ngIf="isBigScreen; else smallScreen">
+    <div *ngIf="screen.isBigScreen; else smallScreen">
         <div class="gallery">
             <!-- <div class="row" *ngFor="item of [].constructor(11); let photo = index"> -->
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img [lazyLoad]="bigURL+photo+'.jpg'" alt="">
+                    <img [lazyLoad]="bigURL+photo+'.jpg'" 
+                    alt="ANDIAMO photo{{photo}}">
                 </div>
             </div>
         </div>
@@ -41,7 +42,9 @@
         <div class="gallery">
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img [lazyLoad]="smallURL+photo+'.jpg'" alt="">
+                    <img 
+                    [lazyLoad]="smallURL+photo+'.jpg'" 
+                    alt="ANDIAMO photo{{photo}}">
                 </div>
             </div>
         </div>

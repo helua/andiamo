@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { ScreenService } from 'src/app/screen.service';
 
 @Component({
   selector: 'app-about',
@@ -7,33 +8,18 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit }
 })
 export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  scrWidth: any;
-  isBigScreen: boolean = true;
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/compiled/';
 
-  @HostListener('window:resize', ['$event'])
-    getScreenSize(event?) {
-      this.scrWidth = window.innerWidth;
-      console.log('szerokosc ekranu: ' + this.scrWidth);
 
-      if(this.scrWidth > 1500){
-        this.isBigScreen = true;
-        console.log('ekran duży: ' + this.isBigScreen);
-      }
-      else{
-        this.isBigScreen = false;
-        console.log('ekran duży: ' +  this.isBigScreen);
+  
 
-      }
-    }
-
-  constructor(private elementRef: ElementRef){
+  constructor(private elementRef: ElementRef, public screen: ScreenService){
   }
 
   ngOnInit() {
-    this.getScreenSize();  
+    this.screen.getScreenSize();  
     for(let i = 1; i < 12; i++){
       let newPhoto: number = i;
       this.photos.push(newPhoto)

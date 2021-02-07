@@ -7,8 +7,9 @@
 
     <a [routerLink]="['/video', video.id]">
         <img 
-            [lazyLoad]="video.thumbnail_large" 
-            alt="">
+            [lazyLoad]="video.thumbnail_large"
+            [defaultImage]="logo"
+            alt="{{ getName(video.title) }}">
         <label 
             class="name-rest">
                 {{ getNameRest(video.title) }}
