@@ -8,8 +8,10 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit }
 export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
 
   scrWidth: any;
-  isBigScreen: boolean = false;
-  photos: number[] = [1,2,3,4,5,6,7,8,9,10,11];
+  isBigScreen: boolean = true;
+  photos: number[] = [];
+  smallURL: string = 'assets/about/small';
+  bigURL: string = 'assets/about/big/compiled/';
 
   @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
@@ -31,7 +33,11 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.getScreenSize();    
+    this.getScreenSize();  
+    for(let i = 1; i < 12; i++){
+      let newPhoto: number = i;
+      this.photos.push(newPhoto)
+    };  
   }
 
 

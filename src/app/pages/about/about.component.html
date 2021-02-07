@@ -32,7 +32,7 @@
             <!-- <div class="row" *ngFor="item of [].constructor(11); let photo = index"> -->
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img src="assets/big/{{photo}}.jpg" alt="">
+                    <img [lazyLoad]="bigURL+photo+'.jpg'" alt="">
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="gallery">
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img src="assets/small{{photo}}.jpg" alt="">
+                    <img [lazyLoad]="smallURL+photo+'.jpg'" alt="">
                 </div>
             </div>
         </div>

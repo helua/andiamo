@@ -1,14 +1,14 @@
 <div *ngIf="isBigScreen; else smallScreen">
     <div class="masonry-with-columns">
         <div class="masonry" *ngFor="let photo of photos">
-            <img src="assets/bts/big/bts{{photo}}.jpg" alt="">
+            <img [lazyLoad]="bigURL+photo" alt="">
         </div>
     </div>
 </div>
     <ng-template #smallScreen>
         <div class="masonry-with-columns">
             <div class="masonry" *ngFor="let photo of photos">
-                <img src="assets/bts/smallbts{{photo}}.jpg" alt=""> 
+                <img [lazyLoad]="smallURL+photo" alt=""> 
             </div>
         </div>
     </ng-template>

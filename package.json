@@ -27,6 +27,7 @@
     "@types/vimeo__player": "^2.10.0",
     "@vimeo/player": "^2.14.1",
     "material-design-icons": "^3.0.1",
+    "ng-lazyload-image": "^9.1.0",
     "rxjs": "^6.6.3",
     "tslib": "^2.0.0",
     "vimeo": "^2.1.1",

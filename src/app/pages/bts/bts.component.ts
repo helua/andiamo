@@ -1,6 +1,5 @@
 import { Component, HostListener, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-bts',
   templateUrl: './bts.component.html',
@@ -8,8 +7,13 @@ import { Component, HostListener, OnDestroy, OnInit, AfterViewInit } from '@angu
 })
 export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
   scrWidth: any;
-  photos: number[] = [];
-  isBigScreen: boolean = false;
+  // photos: number[] = [];
+  // numbers: number[] = Array(121).fill(1).map((x, i) => i + 1);
+
+  photos: string[] = [];
+  isBigScreen: boolean = true;
+  smallURL: string = 'assets/bts/smallbts';
+  bigURL: string = 'assets/bts/big/compiled/bts';
 
   @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
@@ -23,10 +27,8 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
       else{
         this.isBigScreen = false;
         console.log('ekran duży: ' +  this.isBigScreen);
-
       }
     }
-
 
   constructor() {}
 
@@ -41,15 +43,19 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
 
   ngOnInit() {
     this.getScreenSize();    
+    for(let i = 1; i < 121; i++){
+      let newPhoto: string = i + '.jpg';
+      console.log(this.bigURL+newPhoto);
 
-    this.photos = Array(121).fill(1).map((x, i) => i + 1);
+      this.photos.push(newPhoto)
+    };
+    // this.photos = Array(121).fill(1).map((x, i) => i + 1);
     let photosMix = this.shuffleArray(this.photos);
     this.photos = photosMix;
 
   }
 
-  ngAfterViewInit(){
-
+  ngAfterViewInit() {
     let logo = document.getElementById("logotype-wrapper");
     logo.style.bottom="50%";
     logo.style.left="calc(50% + 4.725rem)"
@@ -57,10 +63,8 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
         logo.style.left="calc(50% + 3.225rem)";
       }
     logo.style.transform="translate(-50%, 50%)";
-
     let allora = document.getElementById("allora");
     allora.style.display="block";
-
     let question = document.getElementById("question-mark");
     question.style.display="block";
 
@@ -72,12 +76,10 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
  ngOnDestroy(){
   let logo = document.getElementById("logotype-wrapper");
   logo.style.bottom="-1rem";
-  logo.style.left="50%"
+  logo.style.left="50%";
   logo.style.transform="translate(-50%, 0%)";
-  
   let allora = document.getElementById("allora");
   allora.style.display="none";
-
   let question = document.getElementById("question-mark");
   question.style.display="none";
 }
