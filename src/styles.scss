@@ -2,7 +2,6 @@ $color:#f7695a;
 $color-2: #84fb54;
 $white: #fafff6;
 
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
@@ -90,10 +89,6 @@ a{
         &:hover{
             background-color: rgba($color-2, 0.8);
         }
-    
-        &:focus{
-            outline-offset: none;
-        }  
     }
     
 }

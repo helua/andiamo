@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnDestroy} from '@angular/core';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-digital',
@@ -8,6 +9,7 @@ import { Component, ElementRef, OnDestroy} from '@angular/core';
 })
 export class DigitalComponent implements OnDestroy {
 
+  arrowIcon = faArrowDown;
   constructor(private elementRef: ElementRef){}
 
   ngAfterViewInit(){

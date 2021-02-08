@@ -24,6 +24,7 @@
     "@fortawesome/angular-fontawesome": "^0.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@types/vimeo__player": "^2.10.0",
     "@vimeo/player": "^2.14.1",
     "material-design-icons": "^3.0.1",

@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatIconModule } from '@angular/material/icon'; 
 import { MatMenuModule } from '@angular/material/menu'; 
 import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { MatListModule } from '@angular/material/list'; 
@@ -52,7 +51,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule,
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
@@ -61,12 +59,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     CommonModule,
     LazyLoadImageModule,
-    // ScrollHooks,
+
   ],
   providers: [],
-  // providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
+
  }

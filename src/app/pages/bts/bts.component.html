@@ -10,7 +10,7 @@
     <ng-template #smallScreen>
         <div class="masonry-with-columns">
             <div class="masonry" *ngFor="let photo of photos">
-                <img [src]="smallURL+photo+'.jpg'" alt="BTS photo{{photo}}"> 
+                <img [lazyLoad]="smallURL+photo+'.jpg'" alt="BTS photo{{photo}}"> 
             </div>
         </div>
     </ng-template>
