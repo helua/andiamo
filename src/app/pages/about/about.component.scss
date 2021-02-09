@@ -20,9 +20,15 @@ p{
     word-spacing: .1rem;
     text-align: justify;
     &:first-child{
-        padding-top: 3%;
+        padding-top: 4%;
     }
-
+    //laptop big height
+    @media screen and (min-height: 800px){
+        &:first-child{
+            padding-top: 8%;
+        }
+    }
+    //tablet up to Pro
     @media screen and (max-width: 1024px){
         padding: 1% 22%; 
         font-size: 1.2rem;
@@ -37,6 +43,7 @@ p{
             padding-bottom: 6%;
         }
     }
+    //phone up to Nexus 7 excluded
     @media screen and (max-width: 599px){
         padding: 2% 10%; 
         font-size: 1.1rem;
@@ -52,12 +59,9 @@ p{
         font-size: 1.6rem;
         line-height: 2rem;
         letter-spacing: .25rem;
-        word-spacing: .25rem;
-        &:first-child{
-            padding-top: 8%;
-        }
+        word-spacing: .25rem;   
     }
-    //big tablet
+    //big tablet padding top fix
     @media  (min-height: 1280px){
         &:first-child{
             padding-top: calc(22% + 10rem);
@@ -100,6 +104,7 @@ h1, ul{
 
     }
 }
+
 ul{       
 
 
@@ -148,6 +153,7 @@ ul{
             &-1{
                 margin-left:70%;
                 margin-right: 2%;
+                filter: brightness(1);
             }
             &-2{
                 margin-left:2%;
@@ -184,6 +190,11 @@ ul{
             &-10    {
                 margin-left:5%;
                 margin-right: 60%;
+            }
+            &-11{ 
+                @media screen and (min-width: 599px){
+                    filter: brightness(0.4);
+                }
             }
 
         }
