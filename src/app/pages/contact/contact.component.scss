@@ -2,23 +2,27 @@ $color-2: #84fb54;
 
 .board{
     width: 100%;
-    margin: 19% auto;
+    height: calc(100vh - 4.2rem);
     position: relative;
-    @media screen and (max-width: 1024px){
+    margin-top: -4.2rem;   
+
+    @media screen and (max-width: 1134px){
         border-left: 3px solid rgba($color-2, .2);
         width: 270px;
-        margin: 30% auto;
+        margin: calc((100vh - 450px) / 2) auto;
+        height: unset;
 
     }
     @media screen and(max-width: 600px){
-        margin: 15% auto;
+        margin: calc((100vh - 498.2px) / 2) auto;
+
     }
     
 
     & h1, h2{
         text-transform: uppercase;
         border-bottom: 3px solid rgba($color-2, .2);
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: 1134px){
             border-bottom: none;
         }
         
@@ -43,12 +47,13 @@ $color-2: #84fb54;
     vertical-align: top;
     width: 15%;
     margin-left: 5%;
+    padding-top: 19%;
     &:first-child{
         text-align: right;
         width: 31%;
     }
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1134px){
         display: block;
         width: 270px;   
         padding: 10%;    
@@ -63,6 +68,4 @@ $color-2: #84fb54;
         padding: 9% 5%;    
  
     }
-
-    
 }

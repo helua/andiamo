@@ -3,7 +3,8 @@ $color-2: #8cfa60;
     .video-wrapper{
         position: relative;
         width: 100%;
-        height: calc(100vh - 10rem);
+        height: calc(100vh - 4.2rem);
+        margin-bottom: -4.2rem;
         @media screen and (max-width:600px){
             height: calc(100vh - 5.925rem);
         }

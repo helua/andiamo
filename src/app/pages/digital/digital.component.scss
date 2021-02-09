@@ -46,10 +46,8 @@ $color-2: #8cfa60;
         transform: translateX(-50%);
         font-size: 2.2rem;
         @media screen and (max-width:600px){
-
-        display: none;
-        visibility: hidden;
-            
+            display: none;
+            visibility: hidden;   
         }
 
         &:focus{
