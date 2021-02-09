@@ -2,24 +2,23 @@ $color-2: #84fb54;
 
 .board{
     width: 100%;
-    margin: 17% auto;
+    margin: 19% auto;
     position: relative;
-    @media screen and(max-width: 900px){
+    @media screen and (max-width: 1024px){
         border-left: 3px solid rgba($color-2, .2);
         width: 270px;
-        margin: 25% auto;
+        margin: 30% auto;
 
     }
     @media screen and(max-width: 600px){
-        margin: 13% auto;
+        margin: 15% auto;
     }
     
 
     & h1, h2{
-        margin: 0;
         text-transform: uppercase;
         border-bottom: 3px solid rgba($color-2, .2);
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 1024px){
             border-bottom: none;
         }
         
@@ -29,7 +28,6 @@ $color-2: #84fb54;
         line-height: 1.8rem;
         font-size: 1.2rem;
         padding: 0;
-        margin-bottom: 0;
 
     }
     @media screen and (max-width: 400px){
@@ -50,7 +48,7 @@ $color-2: #84fb54;
         width: 31%;
     }
 
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 1024px){
         display: block;
         width: 270px;   
         padding: 10%;    

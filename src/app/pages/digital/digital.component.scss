@@ -1,7 +1,7 @@
 $color-2: #8cfa60;
 
 .board{
-    height: calc(100vh - 180px);
+    height: calc(93vh - 7.3rem);
     width: 67%;
     margin: 0 auto;
     position: relative;
@@ -45,7 +45,7 @@ $color-2: #8cfa60;
         left: 50%;
         transform: translateX(-50%);
         font-size: 1.3rem;
-        @media screen and (max-width:900px){
+        @media screen and (max-width:600px){
 
         display: none;
         visibility: hidden;

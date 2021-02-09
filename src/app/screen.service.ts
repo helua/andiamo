@@ -14,7 +14,7 @@ export class ScreenService {
       this.scrWidth = window.innerWidth;
         console.log('szerokosc ekranu: ' + this.scrWidth);
 
-      if(this.scrWidth > 1500){
+      if(this.scrWidth > 1200){
         this.isBigScreen = true;
         console.log('ekran duży: ' + this.isBigScreen);
       }

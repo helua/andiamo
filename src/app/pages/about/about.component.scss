@@ -3,89 +3,99 @@ $white: #fafff6;
 .screen{
     position: fixed;
     z-index: 100;
-    height: calc(100vh - 180px);
+    height: calc(97vh - 10.4rem);
     color: $white;
     mix-blend-mode: difference;
-    @media screen and (max-width: 600px){
-    position: relative;
-    height: unset;
-    
+    @media screen and (max-width: 599px){
+        position: relative;
+        height: unset;
     }
 }
 
 p{   
-    padding: 0 22%;
+    padding: 1% 26%;
     font-size: 1.4rem;
-    letter-spacing: .15rem;
     line-height: 1.7rem;
+    letter-spacing: .2rem;
     word-spacing: .1rem;
     text-align: justify;
     &:first-child{
-        padding-top: 2%;
+        padding-top: 3%;
     }
 
-    @media screen and (max-width: 900px){
-        padding: 0 18%; 
+    @media screen and (max-width: 1024px){
+        padding: 1% 22%; 
         font-size: 1.2rem;
-        letter-spacing: .12rem;
         line-height: 1.4rem;
+        letter-spacing: .12rem;
         word-spacing: .06rem;
         &:first-child{
-            padding-top: 18%;
+            padding-top: 16%;
         }
         
         &:nth-of-type(2){
             padding-bottom: 6%;
         }
     }
-    @media screen and (max-width: 600px){
-        padding: 0 10%; 
+    @media screen and (max-width: 599px){
+        padding: 2% 10%; 
         font-size: 1.1rem;
+        line-height: 1.3rem;
         letter-spacing: .1rem;
-        line-height: 1.4rem;
-        word-spacing: .05rem;
+        word-spacing: .12rem;
+        &:first-child{
+            padding-top: 15%;
+        }
+    }
+    //big laptop
+    @media screen and (min-width: 1600px){
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: .25rem;
+        word-spacing: .25rem;
         &:first-child{
             padding-top: 8%;
         }
     }
-    @media screen and (min-width: 1600px){
-        padding: 0 24%;
-        font-size: 2rem;
-        letter-spacing: .25rem;
-        line-height: 2.4rem;
-        word-spacing: .25rem;
-        text-align: justify;
+    //big tablet
+    @media  (min-height: 1280px){
         &:first-child{
-            padding-top: 5%;
+            padding-top: calc(22% + 10rem);
         }
+        
     }
 }
 
 .awards{
     position: absolute;
-    bottom: 0;
-    @media screen and (max-width: 600px) {
+    bottom: 0%;
+    @media screen and (max-width: 599px) {
         position: relative;
+        padding-top: 5%;
     }
 }
 
 h1, ul{
     list-style: none;
-    font-size: 1rem;
-    padding: 0 1%;
+    padding: 0 .5%;
+    font-size: .8rem;
     letter-spacing: .16rem;
+    word-spacing: .05rem;
     text-align: justify;
-    @media screen and (max-width: 900px){
-        font-size: .8rem;
+    opacity: .9;
+    @media screen and (max-width: 1024px){
+        font-size: .7rem;
         letter-spacing: .1rem;
-        word-spacing: .05rem;
+        word-spacing: .02rem;
+
         
     }
-    @media screen and (max-width: 600px){
-        font-size: .9rem;
+    @media screen and (max-width: 599px){
+        text-align: left;
+        font-size: .8rem;
+        line-height: 1.2rem;
         padding: 0 4%;
-        letter-spacing: .1rem;
-        word-spacing: .16rem;
+        letter-spacing: .06rem;
         text-align: left;
 
     }
@@ -96,14 +106,14 @@ ul{
     & li{
         display: inline;
         padding-right: .5rem;
-        padding-bottom: .2rem;
+        padding-top: .24rem;
         
         &:before {
             content: "▪ ";
             color: $color-2;
           } 
 
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 599px){
             display: list-item;
         }
 
@@ -113,22 +123,25 @@ ul{
 .gallery{    
     padding-top: 25%;
     position: relative;
+    margin-bottom: -4.2rem;
     @media screen and (max-width: 900px){
-        padding-top: 15%;
+        padding-top: 6%;
     }
 
     .row{
         width: 100%;
-        margin-bottom: 10%;
-        @media screen and (max-width: 900px){
-            margin-bottom: 20%;
-        }
-        @media screen and (max-width: 600px){
-            margin-bottom: -2%;
-            }
+        &:not(:last-child){
+            margin-bottom: 10%;
 
+            @media screen and (max-width: 900px){
+                margin-bottom: 20%;
+            }
+            @media screen and (max-width: 599px){
+                margin-bottom: 0%;
+            }
+        }
         .push{
-            @media screen and (max-width: 600px){
+            @media screen and (max-width: 599px){
             margin: 0 !important;
             }
 
@@ -172,13 +185,11 @@ ul{
                 margin-left:5%;
                 margin-right: 60%;
             }
-            &-11{
-                margin-bottom:-8rem;
-               
-            }
+
         }
         & img{
             width:100%;
+            vertical-align: bottom;
         }
     }
 }

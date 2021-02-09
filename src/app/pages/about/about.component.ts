@@ -23,6 +23,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
     for(let i = 1; i < 12; i++){
       let newPhoto: number = i;
       this.photos.push(newPhoto)
+      console.log(this.photos);
     };  
   }
 
