@@ -6,17 +6,6 @@
         width: 100%;
     }
 
-    &:hover span{
-        display: block;
-        visibility: visible;
-        opacity: 100%;
-        @media screen and (max-width: 900px){
-            display: none;
-            visibility: hidden;
-            opacity: 0;
-        }
-    }
-
     & span{
         position: fixed;
         width: 80%;
@@ -32,6 +21,17 @@
             visibility: hidden;
         }
     }
+
+    &:hover span{
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        @media screen and (max-width: 900px){
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }    
 }
 
 .name{
