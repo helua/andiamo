@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/compiled/';
+  logo: string = 'assets/alt-green.svg';
 
 
   

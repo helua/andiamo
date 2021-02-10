@@ -8,6 +8,24 @@ $color-2: #8cfa60;
         @media screen and (max-width:600px){
             height: calc(100vh - 5.925rem);
         }
+
+    .title-wrapper{
+        width: 100%;
+        z-index: 1;
+
+        @media screen and (max-width: 1024px){
+            padding-top: 20%;
+        }
+    
+        @media screen and (max-width: 600px){
+            padding-top: 10%;
+         }
+        & h1{
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: .2rem;
+        }
+    }
     
     .iframe-wrapper{
         margin: 0 auto;
@@ -73,24 +91,6 @@ $color-2: #8cfa60;
                 height: 151.875px;
             }
         
-        }
-    }
-
-    .title-wrapper{
-        width: 100%;
-        z-index: 1;
-
-        @media screen and (max-width: 960px){
-            padding-top: 20%;
-        }
-
-        @media screen and (max-width: 600px){
-            padding-top: 10%;
-        }
-        & h1{
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: .2rem;
         }
     }
 

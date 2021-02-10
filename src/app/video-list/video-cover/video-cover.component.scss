@@ -4,6 +4,10 @@
 
     & img{
         width: 100%;
+        @media screen and (max-width: 600px){
+            width: 96%;
+            margin: 0 2%;
+        }
     }
 
     & span{
@@ -13,10 +17,10 @@
         transition: .2s ease-out;
         display: none;
         visibility: hidden;
-        opacity: 0%;
+        opacity: 0;
         width: calc((100% - 34.5rem) / 2);
         text-align: center;
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 1024px){
             display: none;
             visibility: hidden;
         }
@@ -26,7 +30,7 @@
         display: block;
         visibility: visible;
         opacity: 1;
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 1024px){
             display: none;
             visibility: hidden;
             opacity: 0;
@@ -52,10 +56,10 @@ label.name-rest{
     width: 120%;
     margin-left: -10%;
     
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 1024px){
         visibility: visible;
         display: block;
-        opacity: 100%;
+        opacity: 1;
     }
     @media screen and (max-width: 600px){
         width: 90%;

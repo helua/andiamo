@@ -33,6 +33,7 @@
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
                     <img [lazyLoad]="bigURL+photo+'.jpg'" 
+                    [defaultImage]="logo"
                     alt="ANDIAMO photo{{photo}}">
                 </div>
             </div>
@@ -44,6 +45,7 @@
                 <div class="push push-{{photo}}">
                     <img 
                     [lazyLoad]="smallURL+photo+'.jpg'" 
+                    [defaultImage]="logo"
                     alt="ANDIAMO photo{{photo}}">
                 </div>
             </div>

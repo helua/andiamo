@@ -11,6 +11,7 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
   photos: number[] = [];
   smallURL: string = 'assets/bts/smallbts';
   bigURL: string = 'assets/bts/big/compiled/bts';
+  logo: string = 'assets/alt-green.svg';
 
   constructor(public screen: ScreenService) {}
 
