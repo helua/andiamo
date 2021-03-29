@@ -16,13 +16,6 @@
       "es2018",
       "dom"
     ],
-    "types": [
-      "node",
-      "jest"
-    ]
-  },
-  "angularCompilerOptions": {                             // Here
-    "genDir": "./dist/ngfactory",
-    "entryModule": "./src/app/app.module#AppModule"
-  }  
+    "types": ["node"]
+  }
 }

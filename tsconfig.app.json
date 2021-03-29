@@ -11,10 +11,5 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ],
-  "exclude": [
-    "server.ts",    // Right here
-    "test.ts",
-    "**/*.spec.ts"
   ]
 }
