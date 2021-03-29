@@ -46,9 +46,9 @@ testem.log
 Thumbs.db
 
 # Sanity
-blog/node_modules
-blog/public
-blog/config/.checksums
-blog/config/@sanity/data-aspects.json
+/blog/node_modules
+/blog/public
+/blog/config/.checksums
+/blog/config/@sanity/data-aspects.json
 
-.vscode
+/.vscode
