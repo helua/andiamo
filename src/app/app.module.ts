@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { MatMenuModule } from '@angular/material/menu'; 
 import { MatSidenavModule } from '@angular/material/sidenav'; 
@@ -28,7 +31,6 @@ import { ReelComponent } from './pages/reel/reel.component';
 import { BtsComponent } from './pages/bts/bts.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,10 +45,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReelComponent,
     BtsComponent,
     ContactComponent,
-    VideoDetailsComponent,
+    VideoDetailsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'andiamo' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -59,7 +61,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     CommonModule,
     LazyLoadImageModule,
-
+    HttpModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/films', pathMatch: 'full' },
+      { path: 'films', component: MainComponent, pathMatch: 'full' },
+      { path: 'video/:id', component: VideoDetailsComponent, pathMatch: 'full' },
+      { path: 'about', component: AboutComponent, pathMatch: 'full' },
+      { path: 'reel', component: ReelComponent, pathMatch: 'full' },
+      { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
+      { path: 'bts', component: BtsComponent, pathMatch: 'full' },
+      { path: 'contact', component: ContactComponent, pathMatch: 'full' },
+      { path: '**', component: MainComponent, pathMatch: 'full' },
+    ])   
   ],
   providers: [],
   bootstrap: [AppComponent],

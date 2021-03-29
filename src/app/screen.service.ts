@@ -5,6 +5,7 @@ import { HostListener, Injectable } from '@angular/core';
 })
 export class ScreenService {
   scrWidth: any;
+  scrHeight: any;
   isBigScreen: boolean = false;
 
   constructor() { }
@@ -12,7 +13,8 @@ export class ScreenService {
   @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
       this.scrWidth = window.innerWidth;
-        console.log('szerokosc ekranu: ' + this.scrWidth);
+      this.scrHeight = window.innerHeight;
+        console.log('szerokosc ekranu: ' + this.scrWidth + ' wysokość ekranu: ' + this.scrHeight);
 
       if(this.scrWidth > 1200){
         this.isBigScreen = true;
