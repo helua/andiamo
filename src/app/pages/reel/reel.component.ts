@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-reel',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reel.component.scss']
 })
 export class ReelComponent implements OnInit {
+  title = 'reel';
+  keywords: MetaDefinition = {name: 'keywords', content: 'reel, 2020'};
+  description: MetaDefinition = {name: 'description', content: 'reel is real'};
 
-  constructor() { }
+  constructor(private titleService: Title, private metaService: Meta) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
   }
-
 }

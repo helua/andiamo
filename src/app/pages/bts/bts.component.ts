@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-bts',
@@ -12,8 +13,11 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
   smallURL: string = 'assets/bts/smallbts';
   bigURL: string = 'assets/bts/big/compiled/bts';
   logo: string = 'assets/alt-green.svg';
+  title = 'bts';
+  keywords: MetaDefinition = {name: 'keywords', content: 'bts'};
+  description: MetaDefinition = {name: 'description', content: 'behind the scenes'};
 
-  constructor(public screen: ScreenService) {}
+  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta) {}
 
 
   shuffleArray(array) {
@@ -26,6 +30,10 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
 
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
+
     this.screen.getScreenSize();  
 
     for(let i = 1; i < 121; i++){

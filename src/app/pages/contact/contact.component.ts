@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  title = 'andiamo';
+  keywords: MetaDefinition = {name: 'keywords', content: 'contact, '};
+  description: MetaDefinition = {name: 'description', content: 'Andiamo to Mateusz i Michal'};
 
-  ngOnInit(): void {
-  }
-
+  constructor(private titleService: Title, private metaService: Meta){}
+    
+    ngOnInit() {
+      this.titleService.setTitle(this.title);
+      this.metaService.updateTag(this.keywords);
+      this.metaService.updateTag(this.description);
+    }
 }
