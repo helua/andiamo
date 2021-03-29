@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   constructor(private elementRef: ElementRef, private metaService: Meta){}
   ngOnInit() {
     this.metaService.addTags([
-      {name: 'robots', content: 'noindex, nofollow'}
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
     ]);
   }
   ngAfterViewInit(){
