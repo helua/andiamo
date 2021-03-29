@@ -22,51 +22,54 @@ p{
     &:first-child{
         padding-top: 4%;
     }
-    //laptop big height
-    @media screen and (min-height: 800px){
-        &:first-child{
-            padding-top: 8%;
-        }
-    }
+
+
     //tablet up to Pro
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) and (orientation: portrait){
         padding: 1% 22%; 
         font-size: 1.2rem;
-        line-height: 1.4rem;
+        line-height: 1.5rem;
         letter-spacing: .12rem;
         word-spacing: .06rem;
         &:first-child{
-            padding-top: 16%;
-        }
-        
-        &:nth-of-type(2){
             padding-bottom: 6%;
         }
+    }
+    //big tablet padding top fix
+    @media  (min-height: 1280px) and (orientation: portrait){ 
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: .2rem;
+        word-spacing: .1rem;
+        &:first-child{
+            padding-top: calc(22% + 10rem);
+        }            
     }
     //phone up to Nexus 7 excluded
     @media screen and (max-width: 599px){
         padding: 2% 10%; 
-        font-size: 1.1rem;
-        line-height: 1.3rem;
-        letter-spacing: .1rem;
-        word-spacing: .12rem;
         &:first-child{
             padding-top: 15%;
         }
     }
-    //big laptop
-    @media screen and (min-width: 1600px){
+
+    //big screen
+    @media screen and (min-width: 1600px) and (min-height: 860px){
         font-size: 1.6rem;
         line-height: 2rem;
         letter-spacing: .25rem;
         word-spacing: .25rem;   
-    }
-    //big tablet padding top fix
-    @media  (min-height: 1280px){
         &:first-child{
-            padding-top: calc(22% + 10rem);
+            padding-top: 8%;
         }
-        
+    }
+
+     //small laptop <720 px height (11'-15')
+     @media screen and (max-height: 720px) and (orientation: landscape){
+        padding: .5% 24vh;
+        &:first-child{
+            padding-top: 2%;
+        }
     }
 }
 
