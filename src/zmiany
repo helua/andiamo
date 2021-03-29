@@ -1,0 +1,334 @@
+  export interface VimeoVideo{
+    account_type: string;
+    author_name: string;
+    author_url: string;
+    description: string;
+    duration: number;
+    height: number;
+    html: string;
+    is_plus: string;
+    provider_name: string;
+    provider_url: string;
+    thumbnail_height: number;
+    thumbnail_url: string;
+    thumbnail_url_with_play_button: string;
+    thumbnail_width: number;
+    title: string;
+    type: string;
+    upload_date: string;
+    uri: string;
+    version: string;
+    video_id: number;
+    width: number;
+  }
+
+
+ABOUT
+
+  &:first-child{
+        padding-top: 4%;
+    }
+
+
+    //tablet up to Pro
+    @media screen and (max-width: 1024px) and (orientation: portrait){
+        padding: 1% 22%; 
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: .12rem;
+        word-spacing: .06rem;
+        &:first-child{
+@@ -43,6 +39,16 @@ p{
+            padding-bottom: 6%;
+        }
+    }
+    //big tablet padding top fix
+    @media  (min-height: 1280px) and (orientation: portrait){ 
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: .2rem;
+        word-spacing: .1rem;
+        &:first-child{
+            padding-top: calc(22% + 10rem);
+        }            
+    }
+    //phone up to Nexus 7 excluded
+    @media screen and (max-width: 599px){
+        padding: 2% 10%; 
+@@ -54,19 +60,24 @@ p{
+            padding-top: 15%;
+        }
+    }
+
+    //big screen
+    @media screen and (min-width: 1600px) and (min-height: 860px){
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: .25rem;
+        word-spacing: .25rem;   
+        &:first-child{
+            padding-top: 8%;
+        }
+    }
+
+     //small laptop <720 px height (11'-15')
+     @media screen and (max-height: 720px) and (orientation: landscape){
+        padding: .5% 24vh;
+        &:first-child{
+            padding-top: 2%;
+        }
+    }
+}
+
+DIGITAL.TS
+
+import { Component, ElementRef, OnDestroy, OnInit} from '@angular/core';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+@Component({
+@Component({
+  selector: 'app-digital',
+  selector: 'app-digital',
+  templateUrl: './digital.component.html',
+  templateUrl: './digital.component.html',
+  styleUrls: ['./digital.component.scss'],
+  styleUrls: ['./digital.component.scss'],
+
+
+})
+})
+export class DigitalComponent implements OnDestroy {
+export class DigitalComponent implements OnInit, OnDestroy {
+  title = 'digital';
+  keywords: MetaDefinition = {name: 'keywords', content: 'digital, production'};
+  description: MetaDefinition = {name: 'description', content: 'DIGITAL to zupełnie inna strona'};
+
+
+  arrowIcon = faArrowDown;
+  arrowIcon = faArrowDown;
+  constructor(private elementRef: ElementRef){}
+  constructor(private elementRef: ElementRef, private titleService: Title, private metaService: Meta){}
+
+  ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
+
+
+
+  }
+  ngAfterViewInit(){
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+@@ -26,6 +36,5 @@ export class DigitalComponent implements OnDestroy {
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+  let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+  menu.style.backgroundColor="#fafff6";
+  menu.style.backgroundColor="#fafff6";
+ }
+
+}
+}
+} 
+
+
+MAIN.TS
+import { Component, OnInit } from '@angular/core';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+
+@Component({
+  selector: 'app-main',
+@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
+})
+export class MainComponent implements OnInit {
+
+  title = 'andiamo';
+  keywords: MetaDefinition = {name: 'keywords', content: 'kaszanka, film production'};
+  description: MetaDefinition = {name: 'description', content: 'Andiamo to duet reżyserski'};
+
+  constructor(private titleService: Title, private metaService: Meta){}
+
+    ngOnInit() {
+    this.titleService.setTitle(this.title);
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
+  }
+
+
+}
+
+
+SCREEN metaService
+
+ scrHeight: any;
+  isBigScreen: boolean = false;
+  isBigScreen: boolean = false;
+
+
+  constructor() { }
+  constructor() { }
+
+
+  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', ['$event'])
+    getScreenSize(event?) {
+    getScreenSize(event?) {
+      this.scrWidth = window.innerWidth;
+      this.scrWidth = window.innerWidth;
+        console.log('szerokosc ekranu: ' + this.scrWidth);
+      this.scrHeight = window.innerHeight;
+        console.log('szerokosc ekranu: ' + this.scrWidth + ' wysokość ekranu: ' + this.scrHeight);
+
+
+VIDEO DETAILS
+
+
+import { Location } from '@angular/common';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { VimeoService } from 'src/app/vimeo.service';
+import { switchMap } from 'rxjs/operators';
+import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
+import { VimeoVideo } from 'src/app/models/video';
+
+@Component({
+  selector: 'app-video-details',
+  templateUrl: './video-details.component.html',
+  styleUrls: ['./video-details.component.scss']
+})
+export class VideoDetailsComponent implements OnInit, AfterViewChecked {
+
+  video: any;
+  title: string;
+  keywords: MetaDefinition = {};
+  description: MetaDefinition = {};
+
+  constructor(
+    private http: VimeoService ,
+    private route: ActivatedRoute,
+    private location: Location,
+    private titleService: Title,
+    private metaService: Meta
+  ) {}
+
+  ngOnInit(): void {
+@@ -26,7 +32,16 @@ export class VideoDetailsComponent implements OnInit {
+      subscribe(video => {
+        this.video = video;
+        console.log(video);
+      })   
+  }
+
+  ngAfterViewChecked(){
+    this.title = this.video.title;
+    this.titleService.setTitle(this.title);
+    this.keywords = {name: 'keywords', content: this.video.title.split(' | ').join(', ') + ', ' + this.video.author_name};
+    this.description = {name: 'description', content: this.video.description.substring(0, 250) + '...' };
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
+  }
+
+
+  INDEX
+
+    <meta name="robots" content="noindex, nofollow, noimageindex">
+
+
+    APP MODULE
+
+    import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { MatMenuModule } from '@angular/material/menu'; 
+import { MatSidenavModule } from '@angular/material/sidenav'; 
+@@ -28,7 +31,6 @@ import { ReelComponent } from './pages/reel/reel.component';
+import { BtsComponent } from './pages/bts/bts.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
+
+@NgModule({
+  declarations: [
+@@ -43,10 +45,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+    ReelComponent,
+    BtsComponent,
+    ContactComponent,
+    VideoDetailsComponent
+  ],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'andiamo' }),
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+@@ -59,7 +61,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+    FontAwesomeModule,
+    CommonModule,
+    LazyLoadImageModule,
+    HttpModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/films', pathMatch: 'full' },
+      { path: 'films', component: MainComponent, pathMatch: 'full' },
+      { path: 'video/:id', component: VideoDetailsComponent, pathMatch: 'full' },
+      { path: 'about', component: AboutComponent, pathMatch: 'full' },
+      { path: 'reel', component: ReelComponent, pathMatch: 'full' },
+      { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
+      { path: 'bts', component: BtsComponent, pathMatch: 'full' },
+      { path: 'contact', component: ContactComponent, pathMatch: 'full' },
+      { path: '**', component: MainComponent, pathMatch: 'full' },
+    ])   
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+
+
+  APP Component
+
+
+  
+  import { OnInit, AfterViewInit, Component, ElementRef } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+import { faFacebookF, faInstagram, faVimeoV } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faVimeoV } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+
+@@ -7,14 +8,20 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
+  templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss']
+})
+})
+export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit{
+  title = 'andiamo';
+  title = 'andiamo';
+  vimeoIcon = faVimeoV;
+  vimeoIcon = faVimeoV;
+  instagramIcon = faInstagram;
+  instagramIcon = faInstagram;
+  facebookIcon = faFacebookF;
+  facebookIcon = faFacebookF;
+  menuIcon = faBars;
+  menuIcon = faBars;
+
+
+  constructor(private elementRef: ElementRef){}
+  constructor(private elementRef: ElementRef, private metaService: Meta){}
+
+  ngOnInit() {
+    this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow'}
+    ]);
+  }
