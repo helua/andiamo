@@ -47,7 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     VideoDetailsComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'andiamo' }),
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
