@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { VimeoService } from 'src/app/vimeo.service';
 import { switchMap } from 'rxjs/operators';
@@ -12,7 +12,7 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
   templateUrl: './video-details.component.html',
   styleUrls: ['./video-details.component.scss']
 })
-export class VideoDetailsComponent implements OnInit {
+export class VideoDetailsComponent implements OnInit, AfterViewChecked {
 
   video: any;
   title: string;
@@ -32,8 +32,8 @@ export class VideoDetailsComponent implements OnInit {
       switchMap((params: ParamMap) => this.http.getVideo(params.get('id')))).
       subscribe(video => {
         this.video = video;
-        console.log(video);
-      })
+        console.log(video)
+      });
   }
   ngAfterViewChecked(){
     this.title = this.video.title;
