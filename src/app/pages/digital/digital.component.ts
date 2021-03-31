@@ -21,13 +21,10 @@ export class DigitalComponent implements OnInit, OnDestroy {
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
-  }
-
-  ngAfterViewInit(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
     let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
     menu.style.backgroundColor="#8cfa60";
- }
+  }
 
  scrollToElement($element): void {
   $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});

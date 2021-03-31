@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
@@ -7,7 +7,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
+export class AboutComponent implements OnInit, OnDestroy {
 
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
@@ -35,10 +35,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
       this.photos.push(newPhoto)
       console.log(this.photos);
     };  
-  }
-
-
-  ngAfterViewInit(){
+    
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
     let nav = Array.from(document.getElementsByTagName("a"));
     for (let i = 0; i < nav.length; i++) {

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
@@ -7,7 +7,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
   templateUrl: './bts.component.html',
   styleUrls: ['./bts.component.scss']
 })
-export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
+export class BtsComponent implements OnInit, OnDestroy{
   // numbers: number[] = Array(121).fill(1).map((x, i) => i + 1);
   photos: number[] = [];
   smallURL: string = 'assets/bts/smallbts';
@@ -44,9 +44,6 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
     let photosMix = this.shuffleArray(this.photos);
     this.photos = photosMix;
 
-  }
-
-  ngAfterViewInit() {
     let logo = document.getElementById("logotype-wrapper");
     logo.style.bottom="50%";
     logo.style.left="calc(50% + 4.725rem)"
@@ -62,7 +59,8 @@ export class BtsComponent implements OnInit, AfterViewInit, OnDestroy{
       // let logo = document.getElementsByTagName("h1")[0];
       // logo.style.display="block";
       // logo.style.visibility="visible";
- }
+
+  }
 
  ngOnDestroy(){
   let logo = document.getElementById("logotype-wrapper");
