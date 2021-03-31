@@ -47,7 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     VideoDetailsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -60,17 +60,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     CommonModule,
     LazyLoadImageModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/films', pathMatch: 'full' },
-      { path: 'films', component: MainComponent, pathMatch: 'full' },
-      { path: 'video/:id', component: VideoDetailsComponent, pathMatch: 'full' },
-      { path: 'about', component: AboutComponent, pathMatch: 'full' },
-      { path: 'reel', component: ReelComponent, pathMatch: 'full' },
-      { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
-      { path: 'bts', component: BtsComponent, pathMatch: 'full' },
-      { path: 'contact', component: ContactComponent, pathMatch: 'full' },
-      { path: '**', component: MainComponent, pathMatch: 'full' },
-    ])
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
