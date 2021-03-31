@@ -1,0 +1,17 @@
+<div class="blog">
+    <main
+      *ngIf="posts | async as posts; else loadingBlock"
+    >
+      <app-news-cover
+        class="post-item"
+        *ngFor="let post of posts"
+        [post]="post"
+      >
+        {{ post.name }}
+      </app-news-cover>
+    </main>
+  
+    <ng-template #loadingBlock>
+      <p>Loading...</p>
+    </ng-template>
+  </div>

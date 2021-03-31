@@ -10,11 +10,14 @@ import { Post } from './models/Post';
 export class BlogPostsService {
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Post[]> {
+  getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>('/.netlify/functions/getPosts', {
       headers: {
         'Content-Type': 'application/json',
       },
     });
+  }
+  getPost(id) {
+    return this.http.get('/.netlify/functions/getPosts/'+id);
   }
 }

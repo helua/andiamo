@@ -1,0 +1,23 @@
+
+
+
+.blog {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+.blog p {
+    font-size: 40px;
+    margin-top: 200px;
+    text-align: center;
+  }
+  
+
+.post-item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 15px;
+    min-width: 350px;
+    width: 15%;
+  }

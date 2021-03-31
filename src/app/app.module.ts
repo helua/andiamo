@@ -30,6 +30,9 @@ import { BtsComponent } from './pages/bts/bts.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewsComponent } from './pages/news/news.component';
+import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component';
+import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BtsComponent,
     ContactComponent,
     VideoDetailsComponent,
+    NewsComponent,
+    NewsCoverComponent,
+    NewsDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
