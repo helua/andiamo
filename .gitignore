@@ -49,7 +49,6 @@ Thumbs.db
 
 # Sanity
 /blog/node_modules
-/blog/public
 /blog/dist/
 /blog/config/.checksums
 /blog/config/@sanity/data-aspects.json
