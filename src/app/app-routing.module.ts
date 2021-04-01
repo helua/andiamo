@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'digital', component: DigitalComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'post/:id', component: NewsDetailsComponent },
+  { path: 'news/:id', component: NewsDetailsComponent },
   { path: 'bts', component: BtsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'reel', component: ReelComponent },
