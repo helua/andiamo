@@ -48,10 +48,11 @@ testem.log
 Thumbs.db
 
 # Sanity
-/blog/node_modules
-/blog/dist/
-/blog/config/.checksums
-/blog/config/@sanity/data-aspects.json
+
+/backend/node_modules
+/backend/dist/
+/backend/config/.checksums
+/backend/config/@sanity/data-aspects.json
 
 /.vscode
 # Local Netlify folder
