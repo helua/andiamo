@@ -1,0 +1,14 @@
+.post-wrapper{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 4.2rem);
+    margin-bottom: -4.2rem;
+    @media screen and (max-width:600px){
+        height: calc(100vh - 5.925rem);
+    }
+}
+
+.title-wrapper{
+    width: 100%;
+    z-index: 1;
+}
