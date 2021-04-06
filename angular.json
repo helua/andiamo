@@ -166,7 +166,14 @@
             "browserTarget": "andiamo:build:production",
             "serverTarget": "andiamo:server:production",
             "routes": [
-              "/"
+              "/",
+              "/films",
+              "/about", 
+              "/bts",
+              "/digital", 
+              "/news", 
+              "/contact", 
+              "/reel"
             ]
           },
           "configurations": {
