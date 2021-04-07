@@ -15,12 +15,11 @@ export class AppComponent implements OnInit{
   facebookIcon = faFacebookF;
   menuIcon = faBars;
 
-  constructor(private elementRef: ElementRef, private metaService: Meta){}
+  constructor(private metaService: Meta){}
   ngOnInit() {
     this.metaService.addTags([
       {name: 'robots', content: 'noindex, nofollow, noimageindex'}
     ]);
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
   }
 }
 
