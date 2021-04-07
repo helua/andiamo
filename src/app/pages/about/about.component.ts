@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit, OnDestroy {
       console.log(this.photos);
     };  
     
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
+    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
     let nav = Array.from(document.getElementsByTagName("a"));
     for (let i = 0; i < nav.length; i++) {
       nav[i].style.color = "#fafff6";
@@ -49,7 +49,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
  ngOnDestroy(){
-  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
   let nav = Array.from(document.getElementsByTagName("a"));
     for (let i = 0; i < nav.length; i++) {
       nav[i].style.color = "#000";
