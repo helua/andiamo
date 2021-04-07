@@ -8,7 +8,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
   styleUrls: ['./digital.component.scss'],
 
 })
-export class DigitalComponent implements OnInit {
+export class DigitalComponent implements OnInit, OnDestroy {
 
   arrowIcon = faArrowDown;
   title = 'digital';
@@ -22,8 +22,8 @@ export class DigitalComponent implements OnInit {
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
-    // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-    // menu.style.backgroundColor="#8cfa60";
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+    menu.style.backgroundColor="#8cfa60";
   }
 
  scrollToElement($element): void {

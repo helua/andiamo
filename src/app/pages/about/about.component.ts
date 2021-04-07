@@ -33,15 +33,15 @@ export class AboutComponent implements OnInit, OnDestroy {
     };  
     
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
-    // let nav = Array.from(document.getElementsByTagName("a"));
-    // for (let i = 0; i < nav.length; i++) {
-    //   nav[i].style.color = "#fafff6";
-    // }
-    // let shadow = Array.from(document.getElementsByClassName("active")as HTMLCollectionOf<HTMLElement>)[0];
-    // shadow.style.boxShadow="5px 5px #fafff6";
+    let nav = Array.from(document.getElementsByTagName("a"));
+    for (let i = 0; i < nav.length; i++) {
+      nav[i].style.color = "#fafff6";
+    }
+    let shadow = Array.from(document.getElementsByClassName("active")as HTMLCollectionOf<HTMLElement>)[0];
+    shadow.style.boxShadow="5px 5px #fafff6";
 
-    // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-    // menu.style.backgroundColor="#000";
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+    menu.style.backgroundColor="#000";
   }
 
  ngOnDestroy(){

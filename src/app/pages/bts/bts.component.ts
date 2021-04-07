@@ -34,7 +34,7 @@ export class BtsComponent implements OnInit{
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
-    // this.screen.getScreenSize();  
+    this.screen.getScreenSize();  
 
     for(let i = 1; i < 121; i++){
       let newPhoto: number = i;
@@ -44,21 +44,21 @@ export class BtsComponent implements OnInit{
     let photosMix = this.shuffleArray(this.photos);
     this.photos = photosMix;
     // wygląd strony
-    // let logo = document.getElementById("logotype-wrapper");
-    // logo.style.bottom="50%";
-    // logo.style.left="calc(50% + 4.725rem)"
-    //   if(this.screen.scrWidth < 405){
-    //     logo.style.left="calc(50% + 3.225rem)";
-    //   }
-    // logo.style.transform="translate(-50%, 50%)";
-    // let allora = document.getElementById("allora");
-    // allora.style.display="block";
-    // let question = document.getElementById("question-mark");
-    // question.style.display="block";
-    //logo fix - klasyczny wygląd
-      // let logo = document.getElementsByTagName("h1")[0];
-      // logo.style.display="block";
-      // logo.style.visibility="visible";
+    let logo = document.getElementById("logotype-wrapper");
+    logo.style.bottom="50%";
+    logo.style.left="calc(50% + 4.725rem)"
+      if(this.screen.scrWidth < 405){
+        logo.style.left="calc(50% + 3.225rem)";
+      }
+    logo.style.transform="translate(-50%, 50%)";
+    let allora = document.getElementById("allora");
+    allora.style.display="block";
+    let question = document.getElementById("question-mark");
+    question.style.display="block";
+    // logo fix - klasyczny wygląd
+    //   let logo = document.getElementsByTagName("h1")[0];
+    //   logo.style.display="block";
+    //   logo.style.visibility="visible";
 
   }
 
@@ -67,10 +67,10 @@ export class BtsComponent implements OnInit{
 //   logo.style.bottom="-1rem";
 //   logo.style.left="50%";
 //   logo.style.transform="translate(-50%, 0%)";
-//   let allora = document.getElementById("allora");
-//   allora.style.display="none";
-//   let question = document.getElementById("question-mark");
-//   question.style.display="none";
-// }
+  // let allora = document.getElementById("allora");
+  // allora.style.display="none";
+  // let question = document.getElementById("question-mark");
+  // question.style.display="none";
+//}
 
 }
