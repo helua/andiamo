@@ -21,7 +21,7 @@ export class DigitalComponent implements OnInit {
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
-    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
     // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
     // menu.style.backgroundColor="#8cfa60";
   }
@@ -30,10 +30,10 @@ export class DigitalComponent implements OnInit {
   $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
-//  ngOnDestroy(){
-//   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+ ngOnDestroy(){
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
 //   let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
 //   menu.style.backgroundColor="#fafff6";
-//  }
+ }
 
 }

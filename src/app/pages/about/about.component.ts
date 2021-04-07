@@ -7,7 +7,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
 
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
@@ -17,14 +17,10 @@ export class AboutComponent implements OnInit {
   keywords: MetaDefinition = {name: 'keywords', content: 'inne tagi, about'};
   description: MetaDefinition = {name: 'description', content: 'O Andiamo'};
 
-
-  
-
   constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta){
   }
 
   ngOnInit() {
-
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
@@ -48,8 +44,8 @@ export class AboutComponent implements OnInit {
     // menu.style.backgroundColor="#000";
   }
 
-//  ngOnDestroy(){
-//   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+ ngOnDestroy(){
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
 //   let nav = Array.from(document.getElementsByTagName("a"));
 //     for (let i = 0; i < nav.length; i++) {
 //       nav[i].style.color = "#000";
@@ -60,5 +56,5 @@ export class AboutComponent implements OnInit {
 //   let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
 //     menu.style.backgroundColor="#fafff6";
 
-//   }
+  }
 }
