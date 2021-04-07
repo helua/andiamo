@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
@@ -55,22 +55,13 @@ export class BtsComponent implements OnInit{
     allora.style.display="block";
     let question = document.getElementById("question-mark");
     question.style.display="block";
+
+    this.screen.fixMenuColors('#000', '#fafff6');
+
     // logo fix - klasyczny wygląd
     //   let logo = document.getElementsByTagName("h1")[0];
     //   logo.style.display="block";
     //   logo.style.visibility="visible";
 
   }
-
-//  ngOnDestroy(){
-//   let logo = document.getElementById("logotype-wrapper");
-//   logo.style.bottom="-1rem";
-//   logo.style.left="50%";
-//   logo.style.transform="translate(-50%, 0%)";
-  // let allora = document.getElementById("allora");
-  // allora.style.display="none";
-  // let question = document.getElementById("question-mark");
-  // question.style.display="none";
-//}
-
 }

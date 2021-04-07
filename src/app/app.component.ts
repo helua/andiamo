@@ -21,6 +21,7 @@ export class AppComponent implements OnInit{
       {name: 'robots', content: 'noindex, nofollow, noimageindex'}
     ]);
   }
+  
 }
 
 
