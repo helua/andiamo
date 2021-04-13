@@ -19,8 +19,6 @@ export class NewsComponent implements OnInit {
     this.posts = this.blogPostsService.getPosts();
     this.screen.fixAllora();
     this.screen.fixMenuColors('#000', '#fafff6');
-
-
   }
 
 }

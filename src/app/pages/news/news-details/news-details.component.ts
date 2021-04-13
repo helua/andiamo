@@ -12,7 +12,7 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 })
 export class NewsDetailsComponent implements OnInit {
   post: any = {
-    body: "<div><h1>New andiamo website is already out there. Watch all the videos of directors duo.</h1><p></p><p>Great news for all the andiamo fans all overthe world. Directors duo new website is finally published.</p></div>",
+    body: "<div><h1>New andiaaaaamo website is already out there. Watch all the videos of directors duo.</h1><p></p><p>Great news for all the andiamo fans all overthe world. Directors duo new website is finally published.</p></div>",
     categories: [],
     id: "andiamo-new-website",
     image: "https://cdn.sanity.io/images/10ugj9p1/production/098188ddc114bc30957ae938fd2d82db67046140-600x398.webp",
@@ -31,14 +31,34 @@ export class NewsDetailsComponent implements OnInit {
     private metaService: Meta
   ) {}
 
+
   ngOnInit(): void {
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
       subscribe(post => {
         this.post = post;
+        
         console.log(post);
       })
+    
+
+    // this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
+    //   subscribe(post => {
+    //     this.post = post;
+    //     console.log(post);
+        // var test2 = post.find(post => post.id === "new-andiamo-website");
+
+      
+      // var test = this.getCurrentPost("new-andiamo-website");
+      // console.log(test);
+      
+    
   }
+ 
+
+ 
+
   ngAfterViewChecked(){
     this.title = this.post[0].name;
     this.titleService.setTitle(this.title);

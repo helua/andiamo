@@ -20,4 +20,14 @@ export class BlogPostsService {
   getPost(id) {
     return this.http.get('/.netlify/functions/getPosts/'+id);
   }
+  // getPosts(): Observable<Post[]> {
+  //   return this.http.get<Post[]>('https://10ugj9p1.api.sanity.io/v2021-03-25/data/query/production?query=*[_type == "post"]', {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Referrer-Policy': 'no-referrer',
+  //       'Access-Control-Allow-Origin': 'https://10ugj9p1.api.sanity.io'
+  //     },
+  //   });
+  // }
+
 }

@@ -4,7 +4,6 @@ $white: #fafff6;
     position: fixed;
     z-index: 100;
     height: calc(97vh - 10.4rem);
-    // background-color: black;
     color: $white;
     mix-blend-mode: difference;
     @media screen and (max-width: 599px){

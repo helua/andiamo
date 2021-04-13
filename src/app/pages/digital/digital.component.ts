@@ -23,13 +23,8 @@ export class DigitalComponent implements OnInit, OnDestroy {
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
-    // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-    // menu.style.backgroundColor="#8cfa60";
     this.screen.fixAllora();
     this.screen.fixMenuColors('#000', '#8cfa60');
-
-    
-
   }
 
  scrollToElement($element): void {
@@ -38,8 +33,5 @@ export class DigitalComponent implements OnInit, OnDestroy {
 
  ngOnDestroy(){
   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
-//   let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-//   menu.style.backgroundColor="#fafff6";
  }
-
 }

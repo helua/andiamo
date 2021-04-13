@@ -22,11 +22,5 @@ export class ContactComponent implements OnInit {
 
       this.screen.fixAllora();
       this.screen.fixMenuColors('#000', '#fafff6');
-      // let shadow = Array.from(document.getElementsByClassName("active")as HTMLCollectionOf<HTMLElement>)[0];
-      // shadow.style.boxShadow="5px 5px #000";
-      
-      
-
-
     }
 }
