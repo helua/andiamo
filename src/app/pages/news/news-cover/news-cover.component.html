@@ -1,9 +1,11 @@
 <div class="post-cover">
-  <span style="font-family: Palatino; font-size: 1rem;">{{ post.createdAt | date}}</span>
-
   <a [routerLink]="['/news', post.id]">
-    <img [src]="post.image" />
 
+  <span style="font-family: Palatino; font-size: 1rem; line-height: 1.5rem;">{{ post.createdAt | date}}</span>
+
+    <div class="post-cover-image">
+      <img [src]="post.image" />
+    </div>
     <div class="post-cover-title">
       <h3>
         {{ post.name }}
