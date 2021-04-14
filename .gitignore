@@ -53,6 +53,7 @@ Thumbs.db
 /backend/dist/
 /backend/config/.checksums
 /backend/config/@sanity/data-aspects.json
+/functions/hello.js
 
 /.vscode
 # Local Netlify folder

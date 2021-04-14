@@ -10,16 +10,18 @@ const sanity = sanityClient({
 
 exports.handler = async () => {
   const query = '*[_type=="post"] | order(title asc)';
+  console.log(query);
   const posts = await sanity.fetch(query).then((results) => {
     const allPosts = results.map((post) => {
       const output = {
-        createdAt: post.createdAt,
+        createdAt: post._createdAt,
         id: post.slug.current,
         name: post.title,
         url: `${process.env.URL}/.netlify/functions/getPosts`,
         categories: post.categories,
         body: blocksToHtml({ blocks: post.body }),
       };
+      console.log(output);
 
       const image =
         post.mainImage.asset

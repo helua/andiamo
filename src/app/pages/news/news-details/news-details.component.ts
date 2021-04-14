@@ -37,30 +37,14 @@ export class NewsDetailsComponent implements OnInit {
       switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
       subscribe(post => {
         this.post = post;
-        
         console.log(post);
       })
-    
 
-    // this.route.paramMap.pipe(
-    //   switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
-    //   subscribe(post => {
-    //     this.post = post;
-    //     console.log(post);
-        // var test2 = post.find(post => post.id === "new-andiamo-website");
 
-      
-      // var test = this.getCurrentPost("new-andiamo-website");
-      // console.log(test);
-      
-    
   }
- 
-
- 
 
   ngAfterViewChecked(){
-    this.title = this.post[0].name;
+    this.title = this.post.name;
     this.titleService.setTitle(this.title);
     this.keywords = {name: 'keywords', content: 'jakies tam keywords'};
     this.description = {name: 'description', content: 'jakis tam opis' };
@@ -68,7 +52,7 @@ export class NewsDetailsComponent implements OnInit {
     this.metaService.updateTag(this.description);
   }
 
-  
+
   // goToPosts() {
   //   this.location.back();
   // }
