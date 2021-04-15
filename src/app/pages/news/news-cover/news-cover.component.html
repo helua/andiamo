@@ -1,15 +1,18 @@
+
 <div class="post-cover">
-  <a [routerLink]="['/news', post.id]">
+  <div class="holder">
+    <a [routerLink]="['/news', post.id]">
 
-  <span style="font-family: Palatino; font-size: 1rem; line-height: 1.5rem;">{{ post.createdAt | date}}</span>
+    <span style="font-family: Palatino; font-size: 1rem; line-height: 1.5rem;">{{ post.createdAt | date}}</span>
 
-    <div class="post-cover-image">
-      <img [src]="post.image" />
-    </div>
-    <div class="post-cover-title">
-      <h3>
+      <div class="post-cover-image">
+        <img [src]="post.image" />
+      </div>
+
+      <caption class="post-cover-title">
         {{ post.name }}
-      </h3>
-    </div>
-  </a>
+      </caption>
+
+    </a>
+  </div>
 </div>

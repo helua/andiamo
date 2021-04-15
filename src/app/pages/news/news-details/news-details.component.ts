@@ -11,14 +11,7 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
   styleUrls: ['./news-details.component.scss']
 })
 export class NewsDetailsComponent implements OnInit {
-  post: any = {
-    body: "<div><h1>New andiaaaaamo website is already out there. Watch all the videos of directors duo.</h1><p></p><p>Great news for all the andiamo fans all overthe world. Directors duo new website is finally published.</p></div>",
-    categories: [],
-    id: "andiamo-new-website",
-    image: "https://cdn.sanity.io/images/10ugj9p1/production/098188ddc114bc30957ae938fd2d82db67046140-600x398.webp",
-    name: "Andiamo new website says \"Hello world!\"",
-    url: "http://localhost:8888/.netlify/functions/getPosts"
-  };
+  post: any = {};
   title: string;
   keywords: MetaDefinition = {};
   description: MetaDefinition = {};
