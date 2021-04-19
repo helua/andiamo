@@ -1,13 +1,24 @@
 
 .post-cover{
-  width: 30rem;
+  width: 100%;
   & img{
     width: 100%;
     margin: auto 0;
   }
 }
 
+.post-date{
+  font-family: Palatino;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.post-cover-image{
+  width: 100%;
+}
+
 caption.post-cover-title{
   width: 100%;
+  display: inline;
 }
 
