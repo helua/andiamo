@@ -16,7 +16,7 @@ $color-2: #8cfa60;
         @media screen and (max-width: 1024px){
             padding-top: 20%;
         }
-    
+
         @media screen and (max-width: 600px){
             padding-top: 10%;
          }
@@ -25,8 +25,9 @@ $color-2: #8cfa60;
             text-align: center;
             margin-bottom: .2rem;
         }
+
     }
-    
+
     .iframe-wrapper{
         margin: 0 auto;
         width: 960px;
@@ -53,7 +54,7 @@ $color-2: #8cfa60;
                     width:720px;
                     height: 405px;
                 }
-    
+
         }
         @media screen and (max-width: 720px){
             width: 648px;
@@ -90,7 +91,7 @@ $color-2: #8cfa60;
                 width: 270px;
                 height: 151.875px;
             }
-        
+
         }
     }
 
@@ -100,4 +101,15 @@ $color-2: #8cfa60;
         left: 10%;
         transform: translate(-50%, 50%);
     }
+}
+
+ul.credits{
+  text-align: center;
+  font-size: .7rem;
+  padding-top: .15rem;
+  list-style: none;
+  & li{
+    display: inline;
+    padding-right: .75rem;
+  }
 }
