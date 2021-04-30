@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Order } from '../models/order';
+import { VimeoVideo } from '../models/video';
 import { VimeoService } from '../vimeo.service';
 
 @Component({
@@ -11,8 +13,8 @@ export class VideoListComponent implements OnInit {
 
   @Input() user: string;
 
-  videos = [];
-  videosUnsorted;
+  videos;
+  videosUnsorted: any;
   videoCount: number;
   order: number[] = Order;
 
@@ -26,6 +28,7 @@ export class VideoListComponent implements OnInit {
       this.videoCount = this.videosUnsorted.length;
       this.order = this.orderUpdate(this.videoCount, this.order);
       this.videos = this.changePosition(this.videosUnsorted, this.order);
+      console.log(this.videos);
     })
   }
 

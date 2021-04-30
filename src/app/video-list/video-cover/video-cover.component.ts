@@ -9,7 +9,8 @@ export class VideoCoverComponent{
 
   constructor() { }
 
-  @Input() video: any;
+
+  @Input() video;
   logo: string = 'assets/alt.svg';
 
   getName(videoTitle: string){

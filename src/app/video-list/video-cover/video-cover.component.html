@@ -1,22 +1,22 @@
-<div class="grid__item" onclick="">
+<div class="grid__item" onclick="" *ngIf="video">
 
-    <span  
+    <span
         class="name">
-            {{ getName(video.title) }}
+            {{ getName(video.title)}}
     </span>
 
     <a [routerLink]="['/video', video.id]">
-        <img 
+        <img
             [lazyLoad]="video.thumbnail_large"
             [defaultImage]="logo"
             alt="{{ getName(video.title) }}">
-        <label 
+        <label
             class="name-rest">
                 {{ getNameRest(video.title) }}
         </label>
-    </a>    
+    </a>
 
-    <span 
+    <span
         class="rest">
             {{ getRest(video.title) }}
     </span>

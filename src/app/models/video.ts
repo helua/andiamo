@@ -21,4 +21,3 @@ export interface VimeoVideo{
   video_id: number;
   width: number;
 }
-  
