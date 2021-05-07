@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-import { MatMenuModule } from '@angular/material/menu'; 
-import { MatSidenavModule } from '@angular/material/sidenav'; 
-import { MatListModule } from '@angular/material/list'; 
-import { MatToolbarModule } from '@angular/material/toolbar'; 
-import { MatButtonModule } from '@angular/material/button'; 
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
@@ -33,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewsComponent } from './pages/news/news.component';
 import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component';
 import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { NewsDetailsComponent } from './pages/news/news-details/news-details.com
     NewsComponent,
     NewsCoverComponent,
     NewsDetailsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

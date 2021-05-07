@@ -5,6 +5,7 @@ import { VimeoService } from 'src/app/vimeo.service';
 import { switchMap } from 'rxjs/operators';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { AllCredits } from 'src/app/models/credits';
+import { VimeoUrlPipe } from 'src/app/vimeo-url.pipe';
 
 
 
@@ -15,11 +16,14 @@ import { AllCredits } from 'src/app/models/credits';
 })
 export class VideoDetailsComponent implements OnInit, AfterViewChecked {
 
-  video: any = {title: "", description: "", video_id: null};
+  video: any = {name: "", user: {name: ""}, embed: {html: ""}, uri:""};
   title: string;
+  videoID: number;
   keywords: MetaDefinition = {};
   description: MetaDefinition = {};
-  credits: any = {id: 1, dop: "...", editor: "...", prodComp: "..."};
+  credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
+  // credits = {};
+  player: string = '';
   allCredits = AllCredits;
 
   constructor(
@@ -31,32 +35,53 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   ) {}
 
   ngOnInit(): void {
+
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.http.getVideo(params.get('id')))).
       subscribe(video => {
         this.video = video;
-        this.credits = this.getCredits(this.video.video_id, this.allCredits);
-        console.log(this.credits);
+        this.videoID = this.video.uri.split('/')[2];
+        console.log(this.videoID);
+        this.credits = this.getCredits(this.videoID, this.allCredits);
+        console.log(this.video.embed.html);
+        this.player = this.video.embed.html;
       });
+
+
+
+  }
+
+
+
+  ngAfterViewChecked(){
+    this.title = this.video.name;
+    this.titleService.setTitle(this.title);
+    // this.keywords = {name: 'keywords', content: this.video.name.split(' | ').join(', ') + ', ' + this.video.user.name};
+    // this.description = {name: 'description', content: this.video.description.substring(0, 250) + '...' };
+    this.metaService.updateTag(this.keywords);
+    this.metaService.updateTag(this.description);
+
   }
 
   getCredits(id: number, allCredits){
-    var credit = allCredits.find(o => o.id === id);
+
+    var credit = allCredits.find(o => o.id == id);
+    console.log(id, credit);
+
     if(credit){
 
     return credit;
+
     }
     else{
       return this.credits;
     }
   }
-  ngAfterViewChecked(){
-    this.title = this.video.title;
-    this.titleService.setTitle(this.title);
-    this.keywords = {name: 'keywords', content: this.video.title.split(' | ').join(', ') + ', ' + this.video.author_name};
-    this.description = {name: 'description', content: this.video.description.substring(0, 250) + '...' };
-    this.metaService.updateTag(this.keywords);
-    this.metaService.updateTag(this.description);
+  ngOnDestroy(){
+    this.credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
+    this.videoID = null;
+    this.video = null;
+    this.title = "";
 
   }
 

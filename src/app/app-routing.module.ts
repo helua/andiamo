@@ -13,7 +13,7 @@ import { VideoDetailsComponent } from './video-list/video-details/video-details.
 const routes: Routes = [
   { path: '', redirectTo: '/films', pathMatch: 'full' },
   { path: 'films', component: MainComponent },
-  { path: 'video/:id', component: VideoDetailsComponent },
+  { path: 'videos/:id', component: VideoDetailsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'digital', component: DigitalComponent },
   { path: 'news', component: NewsComponent },

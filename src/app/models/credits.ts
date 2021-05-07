@@ -1,6 +1,7 @@
 export const AllCredits = [
   {
     id: 520875253,
+    title: "BNP PARIBAS | PATRONKI",
     dop: "Olaf Malinowski",
     editor: "Krzysztof Fischer",
     prodComp: "Shootme",

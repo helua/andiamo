@@ -1,6 +1,7 @@
 $color-2: #8cfa60;
 
     .video-wrapper{
+        margin-top: 5%;
         position: relative;
         width: 100%;
         height: calc(100vh - 4.2rem);
@@ -37,7 +38,7 @@ $color-2: #8cfa60;
 
         & iframe{
             width: 960px;
-            height: 540px;
+            height: 480px;
             vertical-align: bottom;
         }
 
@@ -105,11 +106,21 @@ $color-2: #8cfa60;
 
 ul.credits{
   text-align: center;
-  font-size: .7rem;
+  font-size: .9rem;
   padding-top: .15rem;
   list-style: none;
   & li{
     display: inline;
     padding-right: .75rem;
   }
+  @media screen and (max-width: 960px){
+    text-align: left;
+    padding: 5% 0 0 10%;
+
+    & li{
+      display: list-item;
+    }
+  }
 }
+
+
