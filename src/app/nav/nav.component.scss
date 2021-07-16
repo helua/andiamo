@@ -16,10 +16,10 @@ nav{
     & li{
         text-decoration: none;
         list-style-type: none;
-        
+
         & a{
             padding: 2px;
-            
+
         }
     }
 }
@@ -30,7 +30,7 @@ nav .nav-main{
     position: fixed;
     top: 2%;
     left: 2%;
-    
+
 
     & ul{
         display: flex;
@@ -52,6 +52,18 @@ nav .nav-tri{
     position: fixed;
     bottom: 2%;
     left: 2%;
-    
+
+}
+
+nav .nav-qua{
+  font-size: 8.5px;
+  line-height: 11px;
+  position: fixed;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+    writing-mode: sideways-lr;
+  // text-orientation: upright;
+
 }
 

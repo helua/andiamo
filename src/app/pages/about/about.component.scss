@@ -33,10 +33,10 @@ p{
     //tablet
     @media screen and (max-width: 1024px) and (orientation: portrait){
         padding: 1% 22%;
-        font-size: 1.87vh;
-        line-height: 2.3vh;
-        letter-spacing: .16vh;
-        word-spacing: .7vh;
+        font-size: 2.5vw;
+        line-height: 3vw;
+        letter-spacing: .2vw;
+        word-spacing: 1vw;
         &:first-child{
           padding-top: 22%;
       }
@@ -45,13 +45,17 @@ p{
     //phone up to Nexus 7 excluded
     @media screen and (max-width: 599px){
         padding: 2% 10%;
+        font-size:5vw;
+        line-height: 6vw;
+        letter-spacing: .2vw;
+        word-spacing: 1vw;
         &:first-child{
             padding-top: 15%;
         }
     }
 
     //BIG SCREEN TV
-    @media screen and (min-width: 1600px) and (min-height: 860px){
+    @media screen and (min-height: 860px) and (orientation: landscape){
         font-size: 1.54vw;
         line-height: 1.7vw;
         letter-spacing: .2vw;
@@ -81,7 +85,7 @@ p{
       padding-top: 5%;
     }
     @media screen and (max-height: 600px) and (orientation: landscape){
-     width: 50%;
+      width: 50%;
       top: 140vh;
   }
 }
@@ -130,6 +134,9 @@ ul{
         @media screen and (max-height: 600px) and (orientation: landscape){
           display: list-item;
           padding-top: 25rem;
+          &:last-of-type{
+          padding-bottom: 25rem;}
+
 
         }
 
