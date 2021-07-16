@@ -25,13 +25,13 @@ export class AboutComponent implements OnInit, OnDestroy {
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
-    // this.screen.getScreenSize();  
+    this.screen.getScreenSize();
     for(let i = 1; i < 12; i++){
       let newPhoto: number = i;
       this.photos.push(newPhoto)
       console.log(this.photos);
-    };  
-    
+    };
+
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
     let nav = Array.from(document.getElementsByTagName("a"));
     for (let i = 0; i < nav.length; i++) {
