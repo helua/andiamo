@@ -61,9 +61,6 @@ nav .nav-qua{
   position: fixed;
   right: 2%;
   top: 50%;
-  transform: translateY(-50%);
-    writing-mode: sideways-lr;
-  // text-orientation: upright;
-
+  transform: translate(50%, -50%) rotate(270deg);
 }
 
