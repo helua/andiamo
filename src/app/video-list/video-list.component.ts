@@ -18,7 +18,6 @@ export class VideoListComponent implements OnInit {
   videoCount: number;
   order: number[] = Order;
 
-
   constructor(private _vimeoService: VimeoService){}
 
   ngOnInit(): void{
