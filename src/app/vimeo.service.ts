@@ -13,9 +13,9 @@ export class VimeoService {
 
   constructor(private http:HttpClient) { }
 
-  getVideos(user, page) {
+  getVideos(user) {
     // return this.http.get('https://vimeo.com/api/v2/'+user+'/videos.json');
-    return this.http.get('https://api.vimeo.com/users/'+user+'/videos?fields=uri,name,pictures.sizes&sizes=640x360&per_page='+page,
+    return this.http.get('https://api.vimeo.com/users/'+user+'/albums/8969296/videos?fields=uri,name,pictures.sizes&sizes=640x360',
      {
       headers: {
         'Accept': 'application/vnd.vimeo.user+json;version=3.0,application/vnd.vimeo.video+json;version=3.4',

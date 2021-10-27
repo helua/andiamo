@@ -1,24 +1,32 @@
 .grid__item{
-    max-width: 34.5rem;
+    // max-width: 34.5rem;
+    max-width: 640px;
     margin: 0 auto .8rem auto;
 
     & img{
         width: 100%;
+        filter:grayscale(100%);
+        transition: .5s ease-in-out;
+        @media screen and (hover: none){
+          filter:grayscale(0%);
+        }
         @media screen and (max-width: 600px){
             width: 96%;
             margin: 0 2%;
         }
     }
-
+    &:hover img{
+      filter:grayscale(0%);
+    }
     & span{
         position: fixed;
         width: 80%;
         top: 50%;
-        transition: .2s ease-out;
-        display: none;
+        transition: .5s;
         visibility: hidden;
         opacity: 0;
-        width: calc((100% - 34.5rem) / 2);
+        width: calc((100% - 640px) / 2);
+        // width: calc((100% - 34.5rem) / 2);
         text-align: center;
         @media screen and (max-width: 1024px){
             display: none;
@@ -35,7 +43,7 @@
             visibility: hidden;
             opacity: 0;
         }
-    }    
+    }
 }
 
 .name{
@@ -55,7 +63,7 @@ label.name-rest{
     margin-top: 0;
     width: 120%;
     margin-left: -10%;
-    
+
     @media screen and (max-width: 1024px){
         visibility: visible;
         display: block;

@@ -17,13 +17,12 @@ export class VideoListComponent implements OnInit {
   videosUnsorted: any;
   videoCount: number;
   order: number[] = Order;
-  page: number = 50;
 
 
   constructor(private _vimeoService: VimeoService){}
 
   ngOnInit(): void{
-    this._vimeoService.getVideos(this.user, this.page).subscribe(videos => {
+    this._vimeoService.getVideos(this.user).subscribe(videos => {
       this.videosUnsorted = videos;
       // this.videosUnsorted.splice(0,0, this.videosUnsorted[3]);
       this.videoCount = this.videosUnsorted.data.length;

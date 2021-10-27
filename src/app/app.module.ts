@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -29,7 +30,6 @@ import { ReelComponent } from './pages/reel/reel.component';
 import { BtsComponent } from './pages/bts/bts.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewsComponent } from './pages/news/news.component';
 import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component';
 import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';

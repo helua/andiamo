@@ -47,6 +47,14 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'metaDescription',
+      title: 'Meta descrtiption (SEO)',
+      type: 'string',
+      options: {
+        maxLength: 158,
+      },
+    },
   ],
 
   preview: {
