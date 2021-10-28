@@ -29,21 +29,18 @@ export class NewsDetailsComponent implements OnInit {
       subscribe(post => {
         this.post = post;
         console.log(post);
-        this.title = this.post.name;
-        this.titleService.setTitle(this.title);
-        this.description = {name: 'description', content: this.post.meta };
-        this.metaService.updateTag(this.description);
+
       })
 
 
   }
 
-  // ngAfterViewChecked(){
-  //   this.title = this.post.name;
-  //   this.titleService.setTitle(this.title);
-  //   this.description = {name: 'description', content: this.post.meta };
-  //   this.metaService.updateTag(this.description);
-  // }
+  ngAfterViewChecked(){
+    this.title = this.post.name;
+    this.titleService.setTitle(this.title);
+    this.description = {name: 'description', content: this.post.meta };
+    this.metaService.updateTag(this.description);
+  }
 
 
   // goToPosts() {

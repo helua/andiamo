@@ -7,7 +7,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
 
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
@@ -25,28 +25,29 @@ export class AboutComponent implements OnInit {
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
+    // this.screen.getScreenSize();
     for(let i = 1; i < 12; i++){
       let newPhoto: number = i;
       this.photos.push(newPhoto)
       console.log(this.photos);
     };
-    //basic
-    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
-    // let nav = Array.from(document.getElementsByTagName("a"));
-    // for (let i = 0; i < nav.length; i++) {
-    //   nav[i].style.color = "#fafff6";
-    // }
+    // basic
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
+    let nav = Array.from(document.getElementsByTagName("a"));
+    for (let i = 0; i < nav.length; i++) {
+      nav[i].style.color = "#fafff6";
+    }
     //inne
     // let shadow = Array.from(document.getElementsByClassName("active")as HTMLCollectionOf<HTMLElement>)[0];
     // shadow.style.boxShadow="5px 5px #fafff6";
 
-    // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
-    // menu.style.backgroundColor="#000";
-    // this.screen.fixAllora();
+    let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
+    menu.style.backgroundColor="#000";
+    this.screen.fixAllora();
 
   }
 
-//  ngOnDestroy(){
-//   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
-//   }
+ ngOnDestroy(){
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  }
 }

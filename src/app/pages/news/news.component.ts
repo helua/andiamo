@@ -20,8 +20,8 @@ export class NewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = this.blogPostsService.getPosts();
-    // this.screen.fixAllora();
-    // this.screen.fixMenuColors('#000', '#fafff6');
+    this.screen.fixAllora();
+    this.screen.fixMenuColors('#000', '#fafff6');
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
   }
