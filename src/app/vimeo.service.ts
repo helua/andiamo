@@ -28,7 +28,7 @@ export class VimeoService {
 
   getVideo(id) {
   // return this.http.get('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/'+id);
-  return this.http.get('https://api.vimeo.com/videos/'+id+'?fields=name,embed.html,user.name,uri',
+  return this.http.get('https://api.vimeo.com/videos/'+id+'?fields=name,embed.html,uri,description',
   {
     headers: {
       'Accept': 'application/vnd.vimeo.user+json;version=3.0,application/vnd.vimeo.video+json;version=3.4',

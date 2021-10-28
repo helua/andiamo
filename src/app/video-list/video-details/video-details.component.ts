@@ -16,7 +16,7 @@ import { VimeoUrlPipe } from 'src/app/vimeo-url.pipe';
 })
 export class VideoDetailsComponent implements OnInit, AfterViewChecked {
 
-  video: any = {name: "", user: {name: ""}, embed: {html: ""}, uri:""};
+  video: any = {name: "", embed: {html: ""}, uri:"", description:""};
   title: string;
   videoID: number;
   keywords: MetaDefinition = {};
@@ -40,7 +40,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
       subscribe(video => {
         this.video = video;
         this.videoID = this.video.uri.split('/')[2];
-        console.log(this.videoID);
+        console.log(this.videoID, video);
         this.credits = this.getCredits(this.videoID, this.allCredits);
         console.log(this.video.embed.html);
         this.player = this.video.embed.html;
