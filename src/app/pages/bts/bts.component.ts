@@ -34,7 +34,7 @@ export class BtsComponent implements OnInit{
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
-    this.screen.getScreenSize();  
+    // this.screen.getScreenSize();
 
     for(let i = 1; i < 121; i++){
       let newPhoto: number = i;
@@ -43,20 +43,20 @@ export class BtsComponent implements OnInit{
     // this.photos = Array(121).fill(1).map((x, i) => i + 1);
     let photosMix = this.shuffleArray(this.photos);
     this.photos = photosMix;
-    // wygląd strony
-    let logo = document.getElementById("logotype-wrapper");
-    logo.style.bottom="50%";
-    logo.style.left="calc(50% + 4.725rem)"
-      if(this.screen.scrWidth < 405){
-        logo.style.left="calc(50% + 3.225rem)";
-      }
-    logo.style.transform="translate(-50%, 50%)";
-    let allora = document.getElementById("allora");
-    allora.style.display="block";
-    let question = document.getElementById("question-mark");
-    question.style.display="block";
+    // wygląd strony alternative
+    // let logo = document.getElementById("logotype-wrapper");
+    // logo.style.bottom="50%";
+    // logo.style.left="calc(50% + 4.725rem)"
+    //   if(this.screen.scrWidth < 405){
+    //     logo.style.left="calc(50% + 3.225rem)";
+    //   }
+    // logo.style.transform="translate(-50%, 50%)";
+    // let allora = document.getElementById("allora");
+    // allora.style.display="block";
+    // let question = document.getElementById("question-mark");
+    // question.style.display="block";
 
-    this.screen.fixMenuColors('#000', '#fafff6');
+    // this.screen.fixMenuColors('#000', '#fafff6');
 
     // logo fix - klasyczny wygląd
     //   let logo = document.getElementsByTagName("h1")[0];

@@ -9,7 +9,7 @@ import { ScreenService } from 'src/app/screen.service';
   styleUrls: ['./digital.component.scss'],
 
 })
-export class DigitalComponent implements OnInit, OnDestroy {
+export class DigitalComponent implements OnInit {
 
   arrowIcon = faArrowDown;
   title = 'digital';
@@ -22,16 +22,16 @@ export class DigitalComponent implements OnInit, OnDestroy {
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
-    this.screen.fixAllora();
-    this.screen.fixMenuColors('#000', '#8cfa60');
+    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
+    // this.screen.fixAllora();
+    // this.screen.fixMenuColors('#000', '#8cfa60');
   }
 
  scrollToElement($element): void {
   $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
- ngOnDestroy(){
-  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
- }
+//  ngOnDestroy(){
+//   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+//  }
 }

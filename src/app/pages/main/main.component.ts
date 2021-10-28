@@ -14,13 +14,13 @@ export class MainComponent implements OnInit {
   description: MetaDefinition = {name: 'description', content: 'Andiamo to duet reżyserski'};
 
   constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService){}
-    
+
     ngOnInit() {
       this.titleService.setTitle(this.title);
       this.metaService.updateTag(this.keywords);
       this.metaService.updateTag(this.description);
-      this.screen.fixAllora();
-      this.screen.fixMenuColors('#000', '#fafff6');
+      // this.screen.fixAllora();
+      // this.screen.fixMenuColors('#000', '#fafff6');
     }
 
 }
