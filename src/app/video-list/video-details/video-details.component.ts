@@ -45,9 +45,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
         console.log(this.video.embed.html);
         this.player = this.video.embed.html;
       });
-
-
-
   }
 
 
@@ -58,7 +55,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     this.description = {name: 'description', content: this.video.description.substring(0, 155) + '...' };
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
-
   }
 
   getCredits(id: number, allCredits){
