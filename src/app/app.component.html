@@ -1,7 +1,6 @@
 <header>
   <app-nav></app-nav>
 </header>
-<body>
   <div class="mobile">
     <ul>
       <li><a>
@@ -24,8 +23,8 @@
 
       </a></li>
     </ul>
-    </div>
-    <mat-sidenav-container>
+  </div>
+  <mat-sidenav-container>
         <mat-sidenav #sidenav>
           <mat-nav-list>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="/films" routerLinkActive="active">WORKS</a>
@@ -46,5 +45,4 @@
             <router-outlet></router-outlet>
           </div>
       </mat-sidenav-content>
-    </mat-sidenav-container>
-</body>
+  </mat-sidenav-container>

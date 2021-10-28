@@ -9,7 +9,7 @@
         </p>
         <div class="awards">
             <h1>PRESS & AWARDS</h1>
-            
+
             <ul>
                 <li>Pezet „Nisko jest Niebo” VIDEOCLIP ITALIA 2021</li>
                 <li>Pezet „Nisko jest Niebo” Cinematographers Award 2021</li>
@@ -29,10 +29,9 @@
     </div>
     <div *ngIf="screen.isBigScreen; else smallScreen">
         <div class="gallery">
-            <!-- <div class="row" *ngFor="item of [].constructor(11); let photo = index"> -->
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img [lazyLoad]="bigURL+photo+'.jpg'" 
+                    <img [lazyLoad]="bigURL+photo+'.jpg'"
                     [defaultImage]="logo"
                     alt="ANDIAMO photo{{photo}}">
                 </div>
@@ -43,8 +42,8 @@
         <div class="gallery">
             <div class="row" *ngFor="let photo of photos">
                 <div class="push push-{{photo}}">
-                    <img 
-                    [lazyLoad]="smallURL+photo+'.jpg'" 
+                    <img
+                    [lazyLoad]="smallURL+photo+'.jpg'"
                     [defaultImage]="logo"
                     alt="ANDIAMO photo{{photo}}">
                 </div>

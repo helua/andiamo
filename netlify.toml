@@ -1,7 +1,7 @@
 [build]
   command = "npm run prerender"
   functions = "./functions"
-  publish = "dist/andiamo/browser"
+  publish = "dist/browser"
 [dev]
   command = "npm run start"
   functions = "./functions"
