@@ -22,6 +22,7 @@ exports.handler = async (event) => {
         url: `${process.env.URL}/.netlify/functions/getPost`,
         categories: post.categories,
         body: blocksToHtml({ blocks: post.body }),
+        meta: post.metaDescription,
       };
       console.log(output);
 

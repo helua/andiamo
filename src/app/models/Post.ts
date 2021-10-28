@@ -6,4 +6,5 @@ export interface Post {
     categories: string;
     body: string;
     image: string;
+    meta: string;
   }

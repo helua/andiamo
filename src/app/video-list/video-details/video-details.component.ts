@@ -22,7 +22,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   keywords: MetaDefinition = {};
   description: MetaDefinition = {};
   credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
-  // credits = {};
   player: string = '';
   allCredits = AllCredits;
 
@@ -56,8 +55,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(){
     this.title = this.video.name;
     this.titleService.setTitle(this.title);
-    // this.keywords = {name: 'keywords', content: this.video.name.split(' | ').join(', ') + ', ' + this.video.user.name};
-    // this.description = {name: 'description', content: this.video.description.substring(0, 250) + '...' };
+    this.description = {name: 'description', content: this.video.description.substring(0, 155) + '...' };
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 

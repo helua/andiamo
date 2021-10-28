@@ -14,7 +14,8 @@ export class NewsCoverComponent implements OnInit {
     url: 'zwr.waw.pl',
     categories: 'newsy',
     body: 'treść artykułu',
-    image: 'zdjecia/img'
+    image: 'zdjecia/img',
+    meta: 'jakiś opis meta'
   };
 
   constructor() {}

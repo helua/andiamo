@@ -13,13 +13,11 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 export class NewsDetailsComponent implements OnInit {
   post: any = {};
   title: string;
-  keywords: MetaDefinition = {};
   description: MetaDefinition = {};
 
   constructor(
     private http: BlogPostsService ,
     private route: ActivatedRoute,
-    // private location: Location,
     private titleService: Title,
     private metaService: Meta
   ) {}
@@ -39,9 +37,7 @@ export class NewsDetailsComponent implements OnInit {
   ngAfterViewChecked(){
     this.title = this.post.name;
     this.titleService.setTitle(this.title);
-    this.keywords = {name: 'keywords', content: 'jakies tam keywords'};
-    this.description = {name: 'description', content: 'jakis tam opis' };
-    this.metaService.updateTag(this.keywords);
+    this.description = {name: 'description', content: this.post.meta };
     this.metaService.updateTag(this.description);
   }
 
