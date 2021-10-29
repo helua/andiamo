@@ -19,7 +19,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   video: any = {name: "", embed: {html: ""}, uri:"", description:""};
   title: string;
   videoID: number;
-  keywords: MetaDefinition = {};
   description: MetaDefinition = {};
   credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
   player: string = '';
@@ -53,7 +52,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     this.title = this.video.name;
     this.titleService.setTitle(this.title);
     this.description = {name: 'description', content: this.video.description.substring(0, 155) + '...' };
-    this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
   }
 
