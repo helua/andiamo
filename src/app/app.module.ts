@@ -34,6 +34,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component';
 import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { LoadingComponent } from './loading/loading.component';
     FontAwesomeModule,
     CommonModule,
     LazyLoadImageModule,
-    RouterModule
+    RouterModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent],
