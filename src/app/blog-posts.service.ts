@@ -22,8 +22,12 @@ export class BlogPostsService {
   // }
 
   // 'https://10ugj9p1.api.sanity.io/v2021-03-25/data/query/production?query=*[_type==\"post\"][slug.current==\"'+id+'\"]'
-  getPost(id) {
+  getPost(id): Observable<Post>{
     console.log(id);
-    return this.http.get( `/.netlify/functions/getPost\?id=${id}`);
+    return this.http.get<Post>( `/.netlify/functions/getPost\?id=${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
 }

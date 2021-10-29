@@ -12,10 +12,10 @@ exports.handler = async (event) => {
   const id = event.queryStringParameters.id || "home";
     console.log(id);
   const query = `*[_type == "post"][slug.current=="${id}"]`;
-    console.log('siemanko'+query);
 
   const post = await sanity.fetch(query).then((result) => {
-    const thisPost = result.map((post) => {
+    console.log(result);
+    const thisPostArray = result.map((post) => {
       const output = {
         createdAt: post._createdAt,
         name: post.title,
@@ -34,8 +34,10 @@ exports.handler = async (event) => {
       if (image) {
         output.image = imageUrlBuilder(sanity).image(image).url();
       }
+      console.log(output);
       return output;
     });
+    const thisPost = thisPostArray[0];
     console.log(thisPost);
     return thisPost;
   });
@@ -43,6 +45,6 @@ exports.handler = async (event) => {
   return {
     statusCode: 200,
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(post[0])
+    body: JSON.stringify(post)
   }
 };
