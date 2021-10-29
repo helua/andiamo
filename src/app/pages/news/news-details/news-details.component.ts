@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 // import { Location } from '@angular/common';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { BlogPostsService } from 'src/app/blog-posts.service';
@@ -10,10 +10,10 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
   templateUrl: './news-details.component.html',
   styleUrls: ['./news-details.component.scss']
 })
-export class NewsDetailsComponent implements OnInit {
+export class NewsDetailsComponent implements OnInit, AfterViewChecked {
   post: any = {};
   title: string;
-  description: MetaDefinition = {};
+  description: MetaDefinition = {name: 'description', content: 'z pliku fiku miku' };
 
   constructor(
     private http: BlogPostsService ,
@@ -28,7 +28,6 @@ export class NewsDetailsComponent implements OnInit {
       switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
       subscribe(post => {
         this.post = post;
-        console.log(post);
 
       })
 
@@ -36,7 +35,7 @@ export class NewsDetailsComponent implements OnInit {
   }
 
   ngAfterViewChecked(){
-    this.title = this.post.name;
+    this.title = this.post.title;
     this.titleService.setTitle(this.title);
     this.description = {name: 'description', content: this.post.meta };
     this.metaService.updateTag(this.description);

@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -70,7 +70,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     CommonModule,
     LazyLoadImageModule,
     RouterModule,
-    ScullyLibModule
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
