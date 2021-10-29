@@ -11,7 +11,7 @@ import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
   styleUrls: ['./news-details.component.scss']
 })
 export class NewsDetailsComponent implements OnInit, AfterViewChecked {
-  post: any = {};
+  post: any = {body: "", categories: [], createdAt: "", image: "", meta: "", name: "", url: "" };
   title: string;
   description: MetaDefinition = {name: 'description', content: 'z pliku fiku miku' };
 
@@ -28,7 +28,7 @@ export class NewsDetailsComponent implements OnInit, AfterViewChecked {
       switchMap((params: ParamMap) => this.http.getPost(params.get('id')))).
       subscribe(post => {
         this.post = post;
-
+        console.log(post);
       })
 
 
