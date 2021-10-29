@@ -15,6 +15,6 @@ export const config: ScullyConfig = {
   // },
   routes: {},
   extraRoutes: [
-    '/news/andiamo-new-website'
+    '/news/andiamo-new-website','/videos/475158192'
   ]
 };
