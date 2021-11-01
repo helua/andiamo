@@ -11,8 +11,7 @@ export class NewsCoverComponent implements OnInit {
     createdAt: 'dzisiaj',
     id: 'super-post',
     name: 'Szok i niedowierzanie. Kliknij i też to przeżyj',
-    url: 'zwr.waw.pl',
-    categories: 'newsy',
+    categories: ['newsy'],
     body: 'treść artykułu',
     image: 'zdjecia/img',
     meta: 'jakiś opis meta'

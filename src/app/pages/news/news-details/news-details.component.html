@@ -1,4 +1,4 @@
-<div class="post-wrapper">
+<div *ngIf="postID; else loadingBlock" class="post-wrapper">
       <span>{{ post.createdAt | date }}</span>
 
     <div class="title-wrapper">
@@ -13,5 +13,8 @@
     <div class="body-wrapper" [innerHTML]="post.body"></div>
 
 </div>
+<ng-template #loadingBlock>
+  <app-loading></app-loading>
+</ng-template>
 
 
