@@ -167,12 +167,11 @@
             "serverTarget": "andiamo:server:production",
             "routes": [
               "/",
-              "/films",
-              "/about",
-              "/bts",
+              "/o-nas",
+              "/backstage",
               "/digital",
-              "/news",
-              "/contact",
+              "/aktualnosci",
+              "/kontakt",
               "/reel"
             ]
           },

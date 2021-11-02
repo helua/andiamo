@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ScreenService } from 'src/app/screen.service';
 
