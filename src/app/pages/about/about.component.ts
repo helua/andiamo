@@ -13,19 +13,17 @@ export class AboutComponent implements OnInit, OnDestroy {
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/compiled/';
   logo: string = 'assets/alt-green.svg';
-  title = 'about';
-  keywords: MetaDefinition = {name: 'keywords', content: 'inne tagi, about'};
-  description: MetaDefinition = {name: 'description', content: 'O Andiamo'};
+  title = 'O nas – kto stoi za Andiamo Works?';
+  description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
 
   constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta){
   }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
-    // this.screen.getScreenSize();
+    this.screen.getScreenSize();
     for(let i = 1; i < 12; i++){
       let newPhoto: number = i;
       this.photos.push(newPhoto)

@@ -9,15 +9,13 @@ import { ScreenService } from 'src/app/screen.service';
 })
 export class ContactComponent implements OnInit {
 
-  title = 'andiamo';
-  keywords: MetaDefinition = {name: 'keywords', content: 'contact, '};
-  description: MetaDefinition = {name: 'description', content: 'Andiamo to Mateusz i Michal'};
+  title = 'Kontakt z Andiamo Works';
+  description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze dane kontaktowe i skontaktuj się z nami.'};
 
   constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService){}
 
     ngOnInit() {
       this.titleService.setTitle(this.title);
-      this.metaService.updateTag(this.keywords);
       this.metaService.updateTag(this.description);
 
       this.screen.fixAllora();

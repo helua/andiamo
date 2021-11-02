@@ -13,9 +13,8 @@ export class BtsComponent implements OnInit{
   smallURL: string = 'assets/bts/smallbts';
   bigURL: string = 'assets/bts/big/compiled/bts';
   logo: string = 'assets/alt-green.svg';
-  title = 'bts';
-  keywords: MetaDefinition = {name: 'keywords', content: 'bts'};
-  description: MetaDefinition = {name: 'description', content: 'behind the scenes'};
+  title = 'Backstage – zdjęcia z pracy Andiamo Works';
+  description: MetaDefinition = {name: 'description', content: 'Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów.'};
 
   constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta) {}
 
@@ -31,7 +30,6 @@ export class BtsComponent implements OnInit{
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
 
     this.screen.getScreenSize();

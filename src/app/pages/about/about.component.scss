@@ -10,14 +10,16 @@ $white: #fafff6;
         position: relative;
         height: unset;
     }
-    @media screen and (max-height: 600px) and (orientation: landscape){
+    @media screen and (max-height: 680px) and (orientation: landscape){
+    // @media screen and (max-height: 600px) and (orientation: landscape){
       position: relative;
       height: unset;
   }
 }
 
 p{
-    padding: 1% 26%;
+    // padding: 1% 26%;
+    padding: 1% 16%;
     font-size: 1.4vw;
     line-height: 1.7vw;
     // font-size: 1.5vw !important;
@@ -38,7 +40,8 @@ p{
         letter-spacing: .2vw;
         word-spacing: 1vw;
         &:first-child{
-          padding-top: 22%;
+          // padding-top: 22%;
+          padding-top: 12%;
       }
     }
 
@@ -61,12 +64,14 @@ p{
         letter-spacing: .2vw;
         word-spacing: .15vw;
         &:first-child{
-            padding-top: 8%;
+            padding-top: 6%;
+            // padding-top: 8%;
         }
     }
 
      //small laptop <720 px height (11'-15')
-     @media screen and (max-height: 720px) and (orientation: landscape){
+     @media screen and (max-height: 680px) and (orientation: landscape){
+    //  @media screen and (max-height: 720px) and (orientation: landscape){
         padding: 1% 25%;
         font-size: 1.45vw;
         line-height: 2vw;
@@ -84,7 +89,8 @@ p{
       position: relative;
       padding-top: 5%;
     }
-    @media screen and (max-height: 600px) and (orientation: landscape){
+    // @media screen and (max-height: 600px) and (orientation: landscape){
+    @media screen and (max-height: 680px) and (orientation: landscape){
       width: 50%;
       top: 140vh;
   }
@@ -107,7 +113,8 @@ h1, ul{
         letter-spacing: .06rem;
 
     }
-    @media screen and (max-height: 600px) and (orientation: landscape){
+    @media screen and (max-height: 680px) and (orientation: landscape){
+    // @media screen and (max-height: 600px) and (orientation: landscape){
       text-align: left;
       font-size: 1.6rem;
       line-height: 3rem;
@@ -131,7 +138,8 @@ ul{
         @media screen and (max-width: 599px){
             display: list-item;
         }
-        @media screen and (max-height: 600px) and (orientation: landscape){
+        @media screen and (max-height: 680px) and (orientation: landscape){
+        // @media screen and (max-height: 600px) and (orientation: landscape){
           display: list-item;
           padding-top: 25rem;
           &:last-of-type{
@@ -168,7 +176,8 @@ ul{
             @media screen and (max-width: 599px){
             margin: 0 !important;
             }
-            @media screen and (max-height: 600px) and (orientation: landscape){
+            @media screen and (max-height: 680px) and (orientation: landscape){
+            // @media screen and (max-height: 600px) and (orientation: landscape){
               margin: 0 0 0 50% !important;
               }
 

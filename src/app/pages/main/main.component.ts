@@ -9,8 +9,8 @@ import { ScreenService } from 'src/app/screen.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  title = 'andiamo';
-  description: MetaDefinition = {name: 'description', content: 'Andiamo to duet reżyserski'};
+  title = 'Reżyserski duet Andiamo Works. Mateusz Erdmann i Michał Więckowski';
+  description: MetaDefinition = {name: 'description', content: 'Tworzymy wyjątkowe reklamy, teledyski i filmy. Zobacz nasze projekty, m.in. dla Adidasa, Wyborowej, czy Pezeta.'};
 
   constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService){}
 

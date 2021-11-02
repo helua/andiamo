@@ -13,8 +13,8 @@ import { ScreenService } from 'src/app/screen.service';
 export class NewsComponent implements OnInit {
 
   posts!: Observable<Post[]>;
-  title = 'News';
-  description: MetaDefinition = {name: 'description', content: 'Newsy o andiamo'};
+  title = 'Aktualności z życia i projektów Andiamo';
+  description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze najnowsze projekty i zrealizowane spoty reklamowe. Mamy doswiadczenie w produkcji i kreacji!'};
 
   constructor(private blogPostsService: BlogPostsService, private screen: ScreenService, private titleService: Title, private metaService: Meta) {}
 
