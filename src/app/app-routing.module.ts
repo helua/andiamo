@@ -12,8 +12,8 @@ import { ReelComponent } from './pages/reel/reel.component';
 import { VideoDetailsComponent } from './video-list/video-details/video-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/films', pathMatch: 'full' },
-  { path: 'films', component: MainComponent },
+  // { path: 'films', redirectTo: '', pathMatch: 'full' },
+  { path: '', component: MainComponent },
   { path: 'videos/:id', component: VideoDetailsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'digital', component: DigitalComponent },
