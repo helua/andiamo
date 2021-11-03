@@ -2,20 +2,16 @@
 $color: #ff501e;
 $color-2: #8cfa60;
 $white: #fafff6;
-$font: tex gyre heros cn;
-$font-bold: tex gyre heros cn bold;
+$font: "tex gyre heros cn", arial;
+$font-bold: "tex gyre heros cn bold", arial;
 @font-face{
-  font-family:tex gyre heros cn;
-  src:local('TeX Gyre Heros Cn'),
-  local('TeXGyreHerosCn-Regular'),
-  url(./assets/texgyreheroscn-regular.otf)
+  font-family:"tex gyre heros cn";
+  src: url("https://andiamo.works/assets/texgyreheroscn-regular.otf")
   format('otf')
 }
 @font-face{
-  font-family:tex gyre heros cn bold;
-  src:local('TeX Gyre Heros Cn Bold'),
-  local('TeXGyreHerosCn-Bold'),
-  url(./assets/texgyreheroscn-bold.otf)
+  font-family:"tex gyre heros cn bold";
+  src: url("https://andiamo.works/assets/texgyreheroscn-bold.otf")
   format('otf')
 }
 
