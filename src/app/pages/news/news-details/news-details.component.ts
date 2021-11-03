@@ -42,7 +42,9 @@ export class NewsDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(){
-
+    this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
+    ]);
     // this.getData();
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>

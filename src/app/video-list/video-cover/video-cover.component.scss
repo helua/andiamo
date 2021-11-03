@@ -1,3 +1,4 @@
+$color: #ff501e;
 .grid__item{
     // max-width: 34.5rem;
     max-width: 640px;
@@ -12,7 +13,8 @@
         width: 100%;
         filter:grayscale(100%);
         transition: .5s ease-in-out;
-        border-radius: 12px;
+        // border-radius: 12px;
+        border: solid 1px $color;
         @media screen and (hover: none){
           filter:grayscale(0%);
         }

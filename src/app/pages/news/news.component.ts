@@ -24,6 +24,9 @@ export class NewsComponent implements OnInit {
     this.screen.fixMenuColors('#000', '#fafff6');
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
+    this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
+    ]);
   }
 
 }

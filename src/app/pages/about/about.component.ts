@@ -48,5 +48,7 @@ export class AboutComponent implements OnInit, OnDestroy {
 
  ngOnDestroy(){
   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  this.screen.fixMenuColors('#000', '#8cfa60');
+
   }
 }

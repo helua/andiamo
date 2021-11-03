@@ -20,5 +20,8 @@ export class ReelComponent implements OnInit {
     this.metaService.updateTag(this.description);
     this.screen.fixAllora();
     this.screen.fixMenuColors('#000', '#fafff6');
+    this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
+    ]);
   }
 }

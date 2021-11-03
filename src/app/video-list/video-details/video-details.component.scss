@@ -1,10 +1,13 @@
 $color-2: #8cfa60;
+$white: #fafff6;
+$font: 'TeX Gyre Heros Cn', arial;
+$font-bold: 'TeX Gyre Heros Cn Bold', arial;
 
     .video-wrapper{
         margin-top: 5%;
         position: relative;
         width: 100%;
-        height: calc(100vh - 4.2rem);
+        height: 100vh;
         margin-bottom: -4.2rem;
         @media screen and (max-width:600px){
             height: calc(100vh - 5.925rem);
@@ -25,6 +28,10 @@ $color-2: #8cfa60;
             text-transform: uppercase;
             text-align: center;
             margin-bottom: .2rem;
+            font-size: 1.3rem;
+            letter-spacing: .15rem;
+            color: $white;
+        }
         }
 
     }
@@ -102,13 +109,14 @@ $color-2: #8cfa60;
         left: 10%;
         transform: translate(-50%, 50%);
     }
-}
+
 
 ul.credits{
   text-align: center;
   font-size: .9rem;
   padding-top: .15rem;
   list-style: none;
+  color: $white;
   & li{
     display: inline;
     padding-right: .75rem;

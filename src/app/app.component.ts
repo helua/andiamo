@@ -9,7 +9,7 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'andiamo';
+  title = '';
   vimeoIcon = faVimeoV;
   instagramIcon = faInstagram;
   facebookIcon = faFacebookF;
@@ -21,9 +21,9 @@ export class AppComponent implements OnInit{
       {name: 'robots', content: 'noindex, nofollow, noimageindex'}
     ]);
   }
-  
+
 }
 
 
-  
+
 

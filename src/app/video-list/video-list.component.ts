@@ -17,6 +17,7 @@ export class VideoListComponent implements OnInit {
   videosUnsorted: any;
   videoCount: number;
   order: number[] = Order;
+  uris: string[];
 
   constructor(private _vimeoService: VimeoService){}
 
@@ -30,6 +31,12 @@ export class VideoListComponent implements OnInit {
       this.videos = this.changePosition(this.videosUnsorted.data, this.order);
       // this.videos = videos;
       console.log(this.videos);
+      let i;
+      for (i = 0; i < this.videos.lenght; i++){
+        this.uris.push(this.videos[i].uri)
+      }
+      console.log(this.uris)
+
     })
   }
 

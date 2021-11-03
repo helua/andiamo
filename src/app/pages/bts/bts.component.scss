@@ -1,8 +1,7 @@
-$color-2: #8cfa60;
 
 
 .masonry-with-columns {
-    margin-top: -4.2rem;
+    margin-top: -.2rem;
     columns: 3 300px;
     column-gap: 0;
     column-span: none;
@@ -19,10 +18,10 @@ $color-2: #8cfa60;
           width:100%;
           vertical-align: bottom;
       }
-    } 
+    }
   }
 
-  h1{ 
+  h1{
     display: none;
     visibility: hidden;
     position: fixed;
@@ -32,7 +31,7 @@ $color-2: #8cfa60;
     width: 90%;
     text-align: center;
     text-transform: uppercase;
-    color: $color-2;
+    // color: $color-2;
     @media screen and (min-width:600px){
       font-size: 2rem;
     }

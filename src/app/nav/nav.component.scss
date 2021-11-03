@@ -1,9 +1,14 @@
-$color-2: #84fb54;
+
+$color: #ff501e;
+$white: #fafff6;
+$font: 'TeX Gyre Heros Cn', arial;
+$font-bold: 'TeX Gyre Heros Cn Bold', arial;
+
 
 .active{
-    background-color: $color-2;
-    border-style: solid;
-    box-shadow: black 5px 5px;
+  text-decoration: underline;
+  font-family: $font-bold;
+
 }
 
 nav{
@@ -25,18 +30,33 @@ nav{
 }
 
 nav .nav-main{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     width: 96%;
     position: fixed;
     top: 2%;
     left: 2%;
     text-transform: uppercase;
-
+    font-size: 1.2rem;
 
     & ul{
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+
+
     }
+
+    & ul:first-child{
+        justify-content: left;
+        & li{
+          padding: 0 1vw 0 0;
+        }
+    }
+    & ul:last-child{
+      justify-content: right;
+      & li{
+        padding: 0 0 0 1vw;
+      }
+  }
     & a{
         transition: .2s ease-out;
     }
@@ -44,16 +64,14 @@ nav .nav-main{
 
 nav .nav-sec{
     position: fixed;
-    bottom: 2%;
-    right: 2%;
-    text-align: right;
-}
-
-nav .nav-tri{
-    position: fixed;
+    width: 96%;
     bottom: 2%;
     left: 2%;
-
+    font-size: .85rem;
+    & ul{
+      display: flex;
+      justify-content: space-between;
+    }
 }
 
 nav .nav-qua{

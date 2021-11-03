@@ -1,71 +1,98 @@
-$color-2: #84fb54;
+$color: #ff501e ;
+$dark: #005953;
+$light: #D3FFB5;
+$font-bold: 'TeX Gyre Heros Cn Bold', arial;
 
 .board{
     width: 100%;
     height: calc(100vh - 4.2rem);
     position: relative;
-    margin-top: -4.2rem;   
+    & h1, h2, a, p{
+      color: $light;
+    }
+    & h2{
+      font-family: $font-bold;
+      font-size: 1rem;
+      padding: 0;
+    }
+    & p{
+      font-size: 1rem;
+      padding: 0;
+    }
 //break on 'Mat Erdman' break 1134px instead of initial 900px
-    @media screen and (max-width: 1134px){
-        border-left: 3px solid rgba($color-2, .2);
-        width: 270px;
-        margin: calc((100vh - 450px) / 2) auto;
-        height: unset;
+    // @media screen and (max-width: 1134px){
+    //     border-left: 3px solid rgba($color-2, .2);
+    //     width: 270px;
+    //     margin: calc((100vh - 450px) / 2) auto;
+    //     height: unset;
 
-    }
-    @media screen and(max-width: 600px){
-        margin: calc((100vh - 498.2px) / 2) auto;
+    // }
+    // @media screen and(max-width: 600px){
+    //     margin: calc((100vh - 498.2px) / 2) auto;
 
-    }
-    
+    // }
 
-    & h1, h2{
-        text-transform: uppercase;
-        border-bottom: 3px solid rgba($color-2, .2);
-        @media screen and (max-width: 1134px){
-            border-bottom: none;
-        }
-        
-    }
 
-    & h1, h2, p{
-        line-height: 1.8rem;
-        font-size: 1.2rem;
-        padding: 0;
+    // & h1, h2{
+    //     text-transform: uppercase;
+    //     border-bottom: 3px solid rgba($color-2, .2);
+    //     @media screen and (max-width: 1134px){
+    //         border-bottom: none;
+    //     }
 
-    }
-    @media screen and (max-width: 400px){
-        p{
-            margin-top: 1%;
-        }
-    }
+    // }
+
+    // & h1, h2, p{
+    //     line-height: 1.8rem;
+    //     font-size: 1.2rem;
+    //     padding: 0;
+
+    // }
+    // @media screen and (max-width: 400px){
+    //     p{
+    //         margin-top: 1%;
+    //     }
+    // }
 
 }
+.stamp{
+  text-align: center;
+  margin: 2rem 0;
+  & p{
+    font-size: .8rem;
+    padding: .2rem 0;
 
+  }
+  & span{
+    border: $light 1px solid;
+    color: $light;
+    padding: 0 1rem;
+  }
+}
+.contact{
+  display: flex;
+  justify-content: center;
+}
 .third{
     display: inline-block;
     vertical-align: top;
-    width: 15%;
-    margin-left: 5%;
-    padding-top: 19%;
-    &:first-child{
-        text-align: right;
-        width: 31%;
-    }
+    width: 16%;
+    padding-top: 1rem;
+    text-align: center;
 
     @media screen and (max-width: 1134px){
         display: block;
-        width: 270px;   
-        padding: 10%;    
+        width: 270px;
+        padding: 10%;
         margin-left: 1%;
         &:first-child{
             text-align: left;
-            width: 270px;   
-        } 
+            width: 270px;
+        }
     }
     @media screen and (max-width: 400px){
-        width: 236px;  
-        padding: 9% 5%;    
- 
+        width: 236px;
+        padding: 9% 5%;
+
     }
 }

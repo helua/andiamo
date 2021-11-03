@@ -1,3 +1,4 @@
+
 .post-wrapper{
     width: 99%;
     padding-bottom: 25%;
@@ -22,6 +23,27 @@
       line-height: 2rem;
       padding: 1rem;
     }
+}
+.body-wrapper{
+  & p{
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    line-height: 1.8rem;
+    width: 70%;
+    margin: 0 30% 0 0;
+    padding-top: 1rem;
+    text-align: justify;
+    @media screen and (max-width: 600px){
+      margin: 0 auto;
+      width: 85%;
+    }
+  }
+  & h1{
+    font-size: 1.9rem;
+    width: 90%;
+    margin: 0 auto;
+    }
+
 }
 
 .title-wrapper{

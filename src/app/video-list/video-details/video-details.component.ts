@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { AfterViewChecked, Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { VimeoService } from 'src/app/vimeo.service';
 import { switchMap } from 'rxjs/operators';
@@ -29,7 +29,8 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     private route: ActivatedRoute,
     private location: Location,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +45,9 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
         console.log(this.video.embed.html);
         this.player = this.video.embed.html;
       });
+      // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgb(242,129,41)';
+      this.elementRef.nativeElement.ownerDocument.body.style.background = 'linear-gradient(34deg, rgba(242,129,41,1) 0%, rgba(243,104,65,1) 100%)';
+
   }
 
 
@@ -74,7 +78,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     this.videoID = null;
     this.video = null;
     this.title = "";
-
+    this.elementRef.nativeElement.ownerDocument.body.style.background = '#fafff6';
   }
 
   goToVideos() {

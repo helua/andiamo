@@ -1,9 +1,13 @@
-$color:#f7695a;
-$color-2: #84fb54;
+
+$color: #ff501e;
+$color-2: #8cfa60;
 $white: #fafff6;
+$font: 'TeX Gyre Heros Cn', arial;
+$font-bold: 'TeX Gyre Heros Cn Bold', arial;
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font;
+    // font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -15,7 +19,7 @@ body{
 }
 
 .router-wrapper{
-    margin: 4.2rem 0;
+    margin: 2px 0 4.2rem 0;
 }
 
 //logotype "Allora, ANDIAMO ?"
@@ -49,7 +53,7 @@ span#question-mark, span#allora{
     font-size: 2.3rem;
     text-transform: uppercase;
     transform: rotate(-7.2deg);
-    color: $color-2;
+    color: $color;
     z-index: 10;
     @media screen and (max-width: 405px){
         font-size: 1.5rem;
@@ -70,55 +74,50 @@ span#question-mark{
         }
 }
 
-h1, h2{
-    font-size: 1.3rem;
-    letter-spacing: .15rem;
+h1{
+    font-size: 2.8rem;
+    // line-height: 2.4rem;
+    padding: 0 20%;
+    text-align: center;
+    font-family: $font-bold;
+    letter-spacing: .08rem;
+    color: $color;
 
     @media screen and (max-width: 400px){
-        font-size: 1rem;
-        letter-spacing: .11rem;
+        font-size: 2rem;
     }
+
+}
+h2{
+  font-size: 2.8rem;
+  text-align: center;
+  font-family: $font;
+  letter-spacing: .08rem;
+  color: $color;
+
+  @media screen and (max-width: 400px){
+      font-size: 2rem;
+  }
 
 }
 
 a{
     text-decoration: none;
     color: black;
-    text-shadow: 2px 2px rgba($color-2, .2);
     @media screen and (min-width: 600px){
         &:hover{
-            background-color: rgba($color-2, 0.8);
+          text-decoration: underline;
+
         }
     }
 
 }
 
 p, h2, h1, ul {
-    padding: 0 5rem;
     margin: 0;
     @media screen and (max-width: 900px){
         padding: 0 1rem;
     }
-
-}
-.post-wrapper h1{
-    font-size: 1.9rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.body-wrapper p{
-  font-size: 1.5rem;
-  letter-spacing: .15rem;
-  line-height: 1.8rem;
-  width: 70%;
-  margin: 0 30% 0 0;
-  padding-top: 1rem;
-  text-align: justify;
-  @media screen and (max-width: 600px){
-    margin: 0 auto;
-    width: 85%;
-  }
 }
 
 
@@ -165,6 +164,6 @@ button{
     background-color: red;
 }
 .mat-drawer-backdrop.mat-drawer-shown{
-    background-color: rgba($color-2, .6);
+    background-color: rgba($color, .6);
 }
 
