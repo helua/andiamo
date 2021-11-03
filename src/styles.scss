@@ -104,9 +104,14 @@ h1{
     letter-spacing: .08rem;
     color: $color;
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 650px){
         font-size: 2rem;
     }
+    @media screen and (max-width: 400px){
+      font-size: 1.6rem;
+
+    }
+
 
 }
 h2{
@@ -117,7 +122,7 @@ h2{
   color: $color;
 
   @media screen and (max-width: 400px){
-      font-size: 2rem;
+      font-size: 1.8rem;
   }
 
 }

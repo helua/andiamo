@@ -6,6 +6,7 @@ import { switchMap } from 'rxjs/operators';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { AllCredits } from 'src/app/models/credits';
 import { VimeoUrlPipe } from 'src/app/vimeo-url.pipe';
+import { ScreenService } from 'src/app/screen.service';
 
 
 
@@ -30,7 +31,8 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     private location: Location,
     private titleService: Title,
     private metaService: Meta,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private screen: ScreenService
   ) {}
 
   ngOnInit(): void {
@@ -45,8 +47,10 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
         console.log(this.video.embed.html);
         this.player = this.video.embed.html;
       });
-      // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgb(242,129,41)';
-      this.elementRef.nativeElement.ownerDocument.body.style.background = 'linear-gradient(34deg, rgba(242,129,41,1) 0%, rgba(243,104,65,1) 100%)';
+      this.screen.fixMenuColors('#fafff6','#000');
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
+      // this.elementRef.nativeElement.ownerDocument.body.style.background = 'linear-gradient(34deg, rgba(242,129,41,1) 0%, rgba(243,104,65,1) 100%)';
+      this.screen.getScreenSize();
 
   }
 
@@ -79,6 +83,8 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     this.video = null;
     this.title = "";
     this.elementRef.nativeElement.ownerDocument.body.style.background = '#fafff6';
+    this.screen.fixMenuColors('#fafff6','#000');
+
   }
 
   goToVideos() {

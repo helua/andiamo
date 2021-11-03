@@ -11,6 +11,12 @@ $font-bold: 'tex_gyre_heros_cnbold';
     & h1, h2, a, p{
       color: $light;
     }
+    & h1{
+      @media screen and (max-width: 900px){
+
+        margin-top: 4rem;
+      }
+    }
     & h2{
       font-family: $font-bold;
       font-size: 1rem;
@@ -20,6 +26,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
       font-size: 1rem;
       padding: 0;
     }
+
 //break on 'Mat Erdman' break 1134px instead of initial 900px
     // @media screen and (max-width: 1134px){
     //     border-left: 3px solid rgba($color-2, .2);
@@ -73,27 +80,19 @@ $font-bold: 'tex_gyre_heros_cnbold';
 .contact{
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 650px){
+    flex-direction: column;
+  }
 }
 .third{
     display: inline-block;
     vertical-align: top;
-    width: 16%;
+    width: 217px;
     padding-top: 1rem;
     text-align: center;
 
-    @media screen and (max-width: 1134px){
-        display: block;
-        width: 270px;
-        padding: 10%;
-        margin-left: 1%;
-        &:first-child{
-            text-align: left;
-            width: 270px;
-        }
-    }
-    @media screen and (max-width: 400px){
-        width: 236px;
-        padding: 9% 5%;
 
+    @media screen and (max-width: 650px){
+      margin: auto;
     }
 }
