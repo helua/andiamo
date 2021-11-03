@@ -2,8 +2,22 @@
 $color: #ff501e;
 $color-2: #8cfa60;
 $white: #fafff6;
-$font: 'TeX Gyre Heros Cn', arial;
-$font-bold: 'TeX Gyre Heros Cn Bold', arial;
+$font: tex gyre heros cn;
+$font-bold: tex gyre heros cn bold;
+@font-face{
+  font-family:tex gyre heros cn;
+  src:local('TeX Gyre Heros Cn'),
+  local('TeXGyreHerosCn-Regular'),
+  url(./assets/texgyreheroscn-regular.otf)
+  format('otf')
+}
+@font-face{
+  font-family:tex gyre heros cn bold;
+  src:local('TeX Gyre Heros Cn Bold'),
+  local('TeXGyreHerosCn-Bold'),
+  url(./assets/texgyreheroscn-bold.otf)
+  format('otf')
+}
 
 body{
     font-family: $font;
