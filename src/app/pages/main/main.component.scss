@@ -4,13 +4,12 @@ $color: #ff501e;
   position: relative;
   margin-bottom: -8rem;
   @media screen and (max-width: 900px){
-    height: calc(100vh - 8rem);
+    height: unset;
     & h1{
         margin-top: 8rem;
       }
   }
   @media screen and (max-width: 600px){
-    height: calc(100vh - 4rem);
     & h1{
         margin-top: 4rem;
       }
@@ -39,6 +38,9 @@ p{
 
 .videos{
   padding-top: calc(50vh - 180px);
+  @media screen and (max-width:900px){
+    padding-top: 20vh;
+  }
   position: relative;
   & button{
     position: absolute;
@@ -46,7 +48,7 @@ p{
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.2rem;
-    @media screen and (max-width:600px){
+    @media screen and (max-width:900px){
         display: none;
         visibility: hidden;
     }
