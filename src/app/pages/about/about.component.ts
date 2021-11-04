@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   photos: number[] = [];
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/compiled/';
-  logo: string = 'assets/alt-green.svg';
+  logo: string = 'assets/ANDIAMO_sign.svg';
   title = 'O nas – kto stoi za Andiamo Works?';
   description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
 
@@ -43,7 +43,6 @@ export class AboutComponent implements OnInit, OnDestroy {
 
     // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
     // menu.style.backgroundColor="#000";
-    // this.screen.fixAllora();
 
   }
 

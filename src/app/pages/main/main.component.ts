@@ -19,7 +19,6 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
-    this.screen.fixAllora();
     this.screen.fixMenuColors('#000', '#fafff6');
   }
 

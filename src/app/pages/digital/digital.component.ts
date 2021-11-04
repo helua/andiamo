@@ -23,7 +23,6 @@ export class DigitalComponent implements OnInit, OnDestroy {
     this.metaService.updateTag(this.keywords);
     this.metaService.updateTag(this.description);
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#8cfa60';
-    this.screen.fixAllora();
     this.screen.fixMenuColors('#000', '#8cfa60');
     this.metaService.addTags([
       {name: 'robots', content: 'noindex, nofollow, noimageindex'}

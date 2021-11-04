@@ -19,11 +19,11 @@ export class ContactComponent implements OnInit, OnDestroy {
       this.titleService.setTitle(this.title);
       this.metaService.updateTag(this.description);
 
-      this.screen.fixAllora();
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#005953';
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg.jpg")';
 
     }
     ngOnDestroy(){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
+
      }
 }

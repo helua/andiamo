@@ -1,6 +1,8 @@
 $color: #ff501e ;
 $dark: #005953;
 $light: #D3FFB5;
+$white: #fafff6;
+
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
@@ -9,7 +11,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
     height: calc(100vh - 4.2rem);
     position: relative;
     & h1, h2, a, p{
-      color: $light;
+      color: $white;
     }
     & h1{
       @media screen and (max-width: 900px){
@@ -72,8 +74,8 @@ $font-bold: 'tex_gyre_heros_cnbold';
 
   }
   & span{
-    border: $light 1px solid;
-    color: $light;
+    border: $white 1px solid;
+    color: $white;
     padding: 0 1rem;
   }
 }
@@ -95,4 +97,11 @@ $font-bold: 'tex_gyre_heros_cnbold';
     @media screen and (max-width: 650px){
       margin: auto;
     }
+}
+.sign{
+  width: 113px;
+  margin: 1rem auto;
+  & img{
+    width: 100%;
+  }
 }
