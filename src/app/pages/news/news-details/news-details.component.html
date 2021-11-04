@@ -1,9 +1,9 @@
 <div *ngIf="postID; else loadingBlock" class="post-wrapper">
-      <span>{{ post.createdAt | date }}</span>
 
     <div class="title-wrapper">
 
         <h1>{{post.name}}</h1>
+        <span>{{ post.createdAt | date }}</span>
 
         <img [src]="post.image" alt="">
 
