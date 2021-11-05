@@ -126,12 +126,16 @@ h1{
     font-family: $font-bold;
     letter-spacing: .08rem;
     color: $color;
+    margin-top: 0;
 
-    @media screen and (max-width: 650px){
-        font-size: 2rem;
+    @media screen and (max-width: 900px){
+        margin-top: 8rem;
+        padding: 0 5%;
+
     }
     @media screen and (max-width: 400px){
       font-size: 1.6rem;
+      margin-top: 4rem;
 
     }
 
@@ -162,7 +166,7 @@ a{
 
 }
 
-p, h2, h1, ul {
+p, h2, ul {
     margin: 0;
     @media screen and (max-width: 900px){
         padding: 0 1rem;

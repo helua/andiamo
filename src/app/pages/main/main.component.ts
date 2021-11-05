@@ -31,7 +31,5 @@ export class MainComponent implements OnInit {
   ngOnDestroy(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
 
-
-
    }
 }

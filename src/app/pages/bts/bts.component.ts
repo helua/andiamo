@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
@@ -16,7 +16,7 @@ export class BtsComponent implements OnInit{
   title = 'Backstage – zdjęcia z pracy Andiamo Works';
   description: MetaDefinition = {name: 'description', content: 'Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów.'};
 
-  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta) {}
+  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef) {}
 
 
   shuffleArray(array) {
@@ -33,6 +33,7 @@ export class BtsComponent implements OnInit{
     this.metaService.updateTag(this.description);
 
     this.screen.getScreenSize();
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
 
     for(let i = 1; i < 121; i++){
       let newPhoto: number = i;
@@ -40,7 +41,7 @@ export class BtsComponent implements OnInit{
     };
     let photosMix = this.shuffleArray(this.photos);
     this.photos = photosMix;
-    this.screen.fixMenuColors('#000', '#fafff6');
+    this.screen.fixMenuColors('#fff', '#000');
 
     // wygląd strony alternative
     // let logo = document.getElementById("logotype-wrapper");
@@ -62,4 +63,9 @@ export class BtsComponent implements OnInit{
       // logo.style.visibility="visible";
 
   }
+
+  ngOnDestroy(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#f0f0f0';
+
+    }
 }

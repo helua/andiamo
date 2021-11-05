@@ -6,6 +6,10 @@ $white: #fafff6;
   width: 20%;
   left: 50%;
   transform: translate(-50%, 50%);
+  @media screen and (max-width: 599px){
+    width: 50%;
+    bottom: 109px;
+    z-index: 2;  }
 }
 #logotype{
   position: absolute;
@@ -13,21 +17,25 @@ $white: #fafff6;
   width: 62%;
   left: 50%;
   transform: translate(-50%,50%);
+  @media screen and (max-width: 1024px){
+    bottom: 132rem;
+    width: 86%;
+  }
+  @media screen and (max-width: 599px){
+    position: relative;
+    bottom: 3%;
+  }
 }
 .screen{
     position: fixed;
     z-index: 0;
     height: 92vh;
     color: $white;
+    width: 100%;
     @media screen and (max-width: 599px){
         position: relative;
         height: unset;
     }
-    @media screen and (max-height: 680px) and (orientation: landscape){
-    // @media screen and (max-height: 600px) and (orientation: landscape){
-      position: relative;
-      height: unset;
-  }
 }
 
 
@@ -38,11 +46,7 @@ $white: #fafff6;
       position: relative;
       padding-top: 5%;
     }
-    // @media screen and (max-height: 600px) and (orientation: landscape){
-    @media screen and (max-height: 680px) and (orientation: landscape){
-      width: 50%;
-      top: 140vh;
-  }
+
 }
 h2{
   border: $color 1px solid;
@@ -65,73 +69,55 @@ ul{
 
     @media screen and (max-width: 599px){
         text-align: left;
-        font-size: .8rem;
-        line-height: 1.2rem;
+        font-size: .7rem;
+        line-height: 1rem;
         padding: 0 4%;
-        letter-spacing: .06rem;
+        letter-spacing: .04rem;
 
     }
-    @media screen and (max-height: 680px) and (orientation: landscape){
-    // @media screen and (max-height: 600px) and (orientation: landscape){
-      text-align: left;
-      font-size: 1.6rem;
-      line-height: 3rem;
-      padding: 0 5%;
-      letter-spacing: .5rem;
-      text-align: left;
-    }
-}
-
-ul{
     & li{
-        display: inline;
-        padding-right: .5rem;
-        padding-top: .24rem;
+      display: inline;
+      padding-right: .5rem;
+      padding-top: .24rem;
 
-        &:before {
-            content: "▪ ";
-            color: $color;
-          }
-
-        @media screen and (max-width: 599px){
-            display: list-item;
+      &:before {
+          content: "▪ ";
+          color: $color;
         }
-        @media screen and (max-height: 680px) and (orientation: landscape){
-        // @media screen and (max-height: 600px) and (orientation: landscape){
+
+      @media screen and (max-width: 599px){
           display: list-item;
-          padding-top: 25rem;
-          &:last-of-type{
-          padding-bottom: 25rem;}
-
-
-        }
-
-    }
+      }
+  }
 }
 
 .gallery{
     padding-top: 13%;
     position: relative;
     margin-bottom: -4.2rem;
-    @media screen and (max-width: 900px){
-        padding-top: 6%;
+    @media screen and (max-width: 1024px){
+        padding-top: 56%;
     }
+    @media screen and (max-width: 599px){
+      padding-top: 7rem;
+  }
+
 
     .row{
         width: 100%;
         &:not(:last-child){
             margin-bottom: 21.2%;
+            @media screen and (max-width: 1024px){
+              margin-bottom: 35%;
+          }
 
             @media screen and (max-width: 599px){
-                margin-bottom: 0px;
+                margin-bottom: 0%;
             }
 
         }
+        //pushe zdjęć
         .push{
-            @media screen and (max-width: 599px){
-            margin: 0 !important;
-            }
-
             &-1{
               margin-left: 0%;
               margin-right: 68%;
@@ -146,7 +132,7 @@ ul{
             }
 
             &-4{
-              margin: -49.8% 10% 0 59%;
+              margin: -49.8% 10% 0 59%;//-68.8% 3% 0 49%
             }
             &-5{
               margin: 0 33%;
@@ -177,6 +163,64 @@ ul{
             &-10{
               z-index: -1;
               position: relative;
+              filter: brightness(.6);
+            }
+            //tablet
+            @media screen and (max-width: 1024px){
+              &-1{
+                margin-left: 0%;
+                margin-right: 51%;
+              }
+              &-2{
+                margin-left: 24%;
+                margin-right: 34%;
+              }
+              &-3{
+                margin-left: 0%;
+                margin-right: 70%;
+              }
+
+              &-4{
+                margin: -49.8% 3% 0 49%;
+              }
+              &-5{
+                margin: 0 20%;
+              }
+              &-6{
+                margin-left:0%;
+                margin-right: 39%;
+              }
+
+              &-7{
+                margin-left: 38%;
+                margin-right: 4%;
+                z-index:2;
+                position: relative;
+              }
+
+              &-8{
+                margin: -39.2% 40% 0 13%;
+                z-index: -1;
+                position: relative;
+              }
+
+              &-9{
+                margin: 0 3% 0 57%;
+                z-index: 2;
+                position: absolute;
+                filter: grayscale(1);
+                bottom: 41vh;
+              }
+              &-10{
+                z-index: -1;
+                position: relative;
+              }
+            }
+            @media screen and (max-width: 599px){
+              margin: 0 !important;
+              z-index: 1 !important;
+              position: relative;
+              bottom: 0 !important;
             }
 
 
@@ -188,68 +232,86 @@ ul{
     }
     .sticker{
       margin: -62% 10% 0 67%;
-    }
-    .copy{
-      margin-top: 42%;
-      padding-bottom: 2rem;
-      color: $white;
-      & p{
-        padding: 1% 25%;
-        font-size: 1.3vw;
-        line-height: 1.4vw;
-        letter-spacing: .2vw;
-        word-spacing: .05vw;
-        text-align: center;
-
-
-        //tablet
-        @media screen and (max-width: 1024px) and (orientation: portrait){
-            padding: 1% 22%;
-            font-size: 2.5vw;
-            line-height: 3vw;
-            letter-spacing: .2vw;
-            word-spacing: 1vw;
-            &:first-child{
-              // padding-top: 22%;
-              padding-top: 12%;
-          }
-        }
-
-        //phone up to Nexus 7 excluded
-        @media screen and (max-width: 599px){
-            padding: 2% 10%;
-            font-size:5vw;
-            line-height: 6vw;
-            letter-spacing: .2vw;
-            word-spacing: 1vw;
-            &:first-child{
-                padding-top: 15%;
-            }
-        }
-
-        //BIG SCREEN TV
-        @media screen and (min-height: 860px) and (orientation: landscape){
-            font-size: 1.54vw;
-            line-height: 1.7vw;
-            letter-spacing: .2vw;
-            word-spacing: .15vw;
-            &:first-child{
-                padding-top: 6%;
-                // padding-top: 8%;
-            }
-        }
-
-         //small laptop <720 px height (11'-15')
-         @media screen and (max-height: 680px) and (orientation: landscape){
-        //  @media screen and (max-height: 720px) and (orientation: landscape){
-            padding: 1% 25%;
-            font-size: 1.45vw;
-            line-height: 2vw;
-            letter-spacing: .14vw;
-            &:first-child{
-                padding-top: 3%;
-            }
-        }
+      @media screen and (max-width: 1024px){
+        margin: -101% 10% 0 57%;
+      }
+      @media screen and (max-width: 599px){
+        margin: 0 !important;
+        position: absolute;
+        top: 4rem;
+        left: 13%;
+        z-index: 2;
       }
     }
+}
+.copy-mobile{
+  margin-top: 1rem !important;
+  @media screen and (min-width: 599px){
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 599px){
+  .copy{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.copy, .copy-mobile{
+  margin-top: 42%;
+  padding-bottom: 2rem;
+  color: $white;
+
+  @media screen and (max-width: 1024px){
+    margin-top: 66%;
+    padding-bottom: 5rem;
+
+  }
+  & p{
+    padding: 1% 25%;
+    font-size: 1.3vw;
+    line-height: 1.4vw;
+    letter-spacing: .2vw;
+    word-spacing: .05vw;
+    text-align: center;
+
+
+    //tablet
+    @media screen and (max-width: 1024px) and (orientation: portrait){
+        padding: 1% 20%;
+        font-size: 2.5vw;
+        line-height: 3vw;
+        letter-spacing: .2vw;
+        word-spacing: 1vw;
+        &:first-child{
+          // padding-top: 22%;
+          padding-top: 12%;
+      }
+    }
+
+    //phone up to Nexus 7 excluded
+    @media screen and (max-width: 599px){
+        padding: 2% 10%;
+        font-size: 5vw;
+        line-height: 6vw;
+        letter-spacing: .2vw;
+        word-spacing: 1vw;
+        &:first-child{
+            padding-top: 15%;
+        }
+    }
+
+    //BIG SCREEN TV
+    @media screen and (min-height: 860px) and (orientation: landscape){
+        font-size: 1.54vw;
+        line-height: 1.7vw;
+        letter-spacing: .2vw;
+        word-spacing: .15vw;
+        &:first-child{
+            padding-top: 6%;
+            // padding-top: 8%;
+        }
+    }
+  }
 }

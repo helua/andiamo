@@ -13,12 +13,6 @@ $font-bold: 'tex_gyre_heros_cnbold';
     & h1, h2, a, p{
       color: $white;
     }
-    & h1{
-      @media screen and (max-width: 900px){
-
-        margin-top: 4rem;
-      }
-    }
     & h2{
       font-family: $font-bold;
       font-size: 1rem;

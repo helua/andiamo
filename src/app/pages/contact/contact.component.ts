@@ -23,6 +23,5 @@ export class ContactComponent implements OnInit, OnDestroy {
     }
     ngOnDestroy(){
       this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
-
      }
 }
