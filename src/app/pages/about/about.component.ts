@@ -10,9 +10,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit, OnDestroy {
 
-  photos: number[] = [];
+  photos1: number[] = [];
+  photos2: number[] = [];
   smallURL: string = 'assets/about/small';
-  bigURL: string = 'assets/about/big/compiled/';
+  bigURL: string = 'assets/about/big/';
   logo: string = 'assets/ANDIAMO_sign.svg';
   title = 'O nas – kto stoi za Andiamo Works?';
   description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
@@ -25,10 +26,15 @@ export class AboutComponent implements OnInit, OnDestroy {
     this.metaService.updateTag(this.description);
 
     this.screen.getScreenSize();
-    for(let i = 1; i < 12; i++){
+    for(let i = 1; i < 5; i++){
       let newPhoto: number = i;
-      this.photos.push(newPhoto)
-      console.log(this.photos);
+      this.photos1.push(newPhoto)
+      console.log(this.photos1);
+    };
+    for(let i = 5; i < 11; i++){
+      let newPhoto: number = i;
+      this.photos2.push(newPhoto)
+      console.log(this.photos2);
     };
     // basic
     this.screen.fixMenuColors('#fafff6','#000');

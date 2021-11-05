@@ -7,26 +7,41 @@ $font-bold: 'tex_gyre_heros_cnbold';
 
 @font-face {
   font-family: 'tex_gyre_heros_cnregular';
-  src: url('/assets/fonts/texgyreheroscn-regular-webfont.eot');
-  src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype'),
-       url('/assets/fonts/texgyreheroscn-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/texgyreheroscn-regular-webfont.woff') format('woff'),
-       url('/assets/fonts/texgyreheroscn-regular-webfont.ttf') format('truetype'),
-       url('/assets/fonts/texgyreheroscn-regular-webfont.svg#tex_gyre_heros_cnregular') format('svg');
+  src: url('/assets/fonts/texgyreheroscn-regular.otf');
+  src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'tex_gyre_heros_cnbold';
-  src: url('/assets/fonts/texgyreheroscn-bold-webfont.eot');
-  src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype'),
-       url('/assets/fonts/texgyreheroscn-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),
-       url('/assets/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype'),
-       url('/assets/fonts/texgyreheroscn-bold-webfont.svg#tex_gyre_heros_cnbold') format('svg');
+  src: url('/assets/fonts/texgyreheroscn-bold.otf');
+  src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnregular';
+//   src: url('/assets/fonts/texgyreheroscn-regular-webfont.eot');
+//   src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype'),
+//        url('/assets/fonts/texgyreheroscn-regular-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/fonts/texgyreheroscn-regular-webfont.woff') format('woff'),
+//        url('/assets/fonts/texgyreheroscn-regular-webfont.ttf') format('truetype'),
+//        url('/assets/fonts/texgyreheroscn-regular-webfont.svg#tex_gyre_heros_cnregular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnbold';
+//   src: url('/assets/fonts/texgyreheroscn-bold-webfont.eot');
+//   src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype'),
+//        url('/assets/fonts/texgyreheroscn-bold-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('/assets/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),
+//        url('/assets/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype'),
+//        url('/assets/fonts/texgyreheroscn-bold-webfont.svg#tex_gyre_heros_cnbold') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
 body{
@@ -36,9 +51,11 @@ body{
     font-weight: 600;
     letter-spacing: .1rem;
     margin: 0px;
+    background-color: #F0F0F0;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     & ::selection{
         background-color: $color-2;

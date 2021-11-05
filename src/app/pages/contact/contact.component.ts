@@ -18,8 +18,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     ngOnInit() {
       this.titleService.setTitle(this.title);
       this.metaService.updateTag(this.description);
-
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg.jpg")';
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg.jpg"), linear-gradient(50deg, rgba(254,137,45,1) 0%, rgba(254,117,67,1) 100%)';
 
     }
     ngOnDestroy(){
