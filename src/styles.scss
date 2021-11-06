@@ -119,22 +119,26 @@ span#question-mark{
 }
 
 h1{
-    font-size: 2.8rem;
-    // line-height: 2.4rem;
-    padding: 0 20%;
+    font-size: 3.875rem;
+    line-height: 3.8rem;
+    padding: 0 14%;
     text-align: center;
     font-family: $font-bold;
     letter-spacing: .08rem;
     color: $color;
-    margin-top: 0;
+    margin: 0;
+
 
     @media screen and (max-width: 900px){
-        margin-top: 8rem;
-        padding: 0 5%;
+      font-size: 2.875rem;
+      line-height: 2.8rem;
+      margin-top: 8rem;
+      padding: 0 5%;
 
     }
     @media screen and (max-width: 400px){
-      font-size: 1.6rem;
+      font-size: 2.4rem;
+      line-height: 2.3rem;
       margin-top: 4rem;
 
     }

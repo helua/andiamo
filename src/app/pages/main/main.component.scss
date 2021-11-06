@@ -1,10 +1,18 @@
 $color: #ff501e;
+#sign{
+  position: absolute;
+  top: 10rem;
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .screen{
-  height: 100vh;
+  height: 85vh;
   position: relative;
   margin-bottom: -8rem;
   @media screen and (max-width: 900px){
     height: unset;
+    margin-bottom: 0;
   }
 }
 p{
@@ -12,7 +20,7 @@ p{
   color: $color;
   padding: 0 25%;
   position: absolute;
-  top:50%;
+  top:58%;
   transform: translateY(-50%);
   font-size: 2rem;
   @media screen and (max-width: 900px){
@@ -20,11 +28,11 @@ p{
     font-size: 1.8rem;
     top:0%;
     transform: translateY(0%);
-    padding: 10% 20%;
+    padding: 27% 20% 0% 20%;
   }
   @media screen and (max-width: 600px){
     font-size: 1rem;
-    padding: 10% 10%;
+    padding: 51% 10% 0%;
   }
 }
 

@@ -4,28 +4,22 @@
   <div class="mobile">
     <ul>
       <li><a>
-        <!-- <mat-icon (click)="sidenav.toggle()">menu</mat-icon> -->
         <fa-icon [icon]="menuIcon" (click)="sidenav.toggle()"></fa-icon>
-
       </a></li>
       <li><a href="https://vimeo.com/andiamoworks" target="_blank">
-        <!-- <i class="fa fa-vimeo" aria-hidden="true"></i> -->
         <fa-icon [icon]="vimeoIcon"></fa-icon>
       </a></li>
       <li><a href="https://www.facebook.com/andiamoworks" target="_blank">
-        <!-- <i class="fa fa-facebook" aria-hidden="true"></i> -->
         <fa-icon [icon]="facebookIcon"></fa-icon>
-
       </a></li>
       <li><a href="https://www.instagram.com/andiamoworks" target="_blank">
-        <!-- <i class="fa fa-instagram" aria-hidden="true"></i> -->
         <fa-icon [icon]="instagramIcon"></fa-icon>
-
       </a></li>
     </ul>
   </div>
   <mat-sidenav-container>
         <mat-sidenav #sidenav>
+          <img id="sign" src="../assets/ANDIAMO_sign.svg" alt="">
           <mat-nav-list>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="/prace" routerLinkActive="active">WORKS</a>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="/o-nas" routerLinkActive="active">ABOUT</a>

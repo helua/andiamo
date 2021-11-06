@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoCoverComponent } from './video-list/video-cover/video-cover.component';
 import { VimeoUrlPipe } from './vimeo-url.pipe';
+import { VimeoUrlAutoplayPipe } from './vimeo-url-autoplay.pipe';
+
 import { VideoListComponent } from './video-list/video-list.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './pages/main/main.component';
@@ -41,6 +43,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     AppComponent,
     VideoCoverComponent,
     VimeoUrlPipe,
+    VimeoUrlAutoplayPipe,
     VideoListComponent,
     NavComponent,
     MainComponent,

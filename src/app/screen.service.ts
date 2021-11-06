@@ -8,6 +8,7 @@ export class ScreenService {
   scrWidth: any;
   scrHeight: any;
   isBigScreen: boolean = false;
+  isHorizontal: boolean = true;
 
   constructor() { }
 
@@ -25,6 +26,12 @@ export class ScreenService {
       else{
         this.isBigScreen = false;
         console.log('ekran duży: ' +  this.isBigScreen);
+      }
+      if(this.scrWidth > this.scrHeight){
+        this.isHorizontal = true;
+      }
+      else{
+        this.isHorizontal = false;
       }
     }
     fixAllora(): void{

@@ -14,6 +14,8 @@ export class AppComponent implements OnInit{
   instagramIcon = faInstagram;
   facebookIcon = faFacebookF;
   menuIcon = faBars;
+  isSkipped: boolean = false;
+
 
   constructor(private metaService: Meta){}
   ngOnInit() {

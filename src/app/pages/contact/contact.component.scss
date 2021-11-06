@@ -8,82 +8,61 @@ $font-bold: 'tex_gyre_heros_cnbold';
 
 .board{
     width: 100%;
-    height: calc(100vh - 4.2rem);
+    height: calc(100vh - 4.2166rem);
     position: relative;
+    & h1{
+      margin-bottom: 3rem;
+    }
     & h1, h2, a, p{
       color: $white;
     }
-    & h2{
-      font-family: $font-bold;
-      font-size: 1rem;
-      padding: 0;
-    }
-    & p{
-      font-size: 1rem;
-      padding: 0;
+    & h1 a{
+      @media screen and (max-width: 700px){
+        font-size: 2rem;
+        line-height: 1.9rem;
+      }
     }
 
-//break on 'Mat Erdman' break 1134px instead of initial 900px
-    // @media screen and (max-width: 1134px){
-    //     border-left: 3px solid rgba($color-2, .2);
-    //     width: 270px;
-    //     margin: calc((100vh - 450px) / 2) auto;
-    //     height: unset;
+}
 
-    // }
-    // @media screen and(max-width: 600px){
-    //     margin: calc((100vh - 498.2px) / 2) auto;
+.contact{
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0;
 
-    // }
-
-
-    // & h1, h2{
-    //     text-transform: uppercase;
-    //     border-bottom: 3px solid rgba($color-2, .2);
-    //     @media screen and (max-width: 1134px){
-    //         border-bottom: none;
-    //     }
-
-    // }
-
-    // & h1, h2, p{
-    //     line-height: 1.8rem;
-    //     font-size: 1.2rem;
-    //     padding: 0;
-
-    // }
-    // @media screen and (max-width: 400px){
-    //     p{
-    //         margin-top: 1%;
-    //     }
-    // }
-
+  @media screen and (max-width: 650px){
+    flex-direction: column;
+  }
+  & h2{
+    font-family: $font-bold;
+  }
+  & p, h2{
+    font-size: 1.375rem;
+    padding: 0;
+    @media  screen and (max-width: 900px) {
+      font-size: 1.1rem;
+    }
+  }
 }
 .stamp{
   text-align: center;
-  margin: 2rem 0;
+  margin: .3rem 0;
   & p{
-    font-size: .8rem;
-    padding: .2rem 0;
+    font-size: .7rem;
+    padding: 0;
+    margin-bottom: -7px
 
   }
   & span{
+    font-size: .8rem;
     border: $white 1px solid;
     color: $white;
     padding: 0 1rem;
   }
 }
-.contact{
-  display: flex;
-  justify-content: center;
-  @media screen and (max-width: 650px){
-    flex-direction: column;
-  }
-}
 .third{
     display: inline-block;
-    vertical-align: top;
-    width: 217px;
+    width: 316px;
     padding-top: 1rem;
     text-align: center;
 
@@ -94,7 +73,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
 }
 .sign{
   width: 113px;
-  margin: 1rem auto;
+  margin: 0.3rem auto;
   & img{
     width: 100%;
   }

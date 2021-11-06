@@ -1,5 +1,14 @@
 $color: #ff501e;
 $white: #fafff6;
+$font: 'tex_gyre_heros_cnregular';
+$font-bold: 'tex_gyre_heros_cnbold';
+span.regular{
+  font-family: $font;
+}
+span.bold{
+  font-family: $font-bold;
+
+}
 #sign{
   position: absolute;
   bottom: 50vh;
@@ -13,17 +22,30 @@ $white: #fafff6;
 }
 #logotype{
   position: absolute;
-  bottom: 170rem;
+  top: 267%;
   width: 62%;
   left: 50%;
   transform: translate(-50%,50%);
   @media screen and (max-width: 1024px){
-    bottom: 132rem;
     width: 86%;
+    top: 274%;
+
+  }
+  @media screen and (max-width: 900px){
+    top: 201%;
   }
   @media screen and (max-width: 599px){
-    position: relative;
-    bottom: 3%;
+
+    display: none;
+    visibility: hidden;
+  }
+}
+#logotype-mobile{
+  position: relative;
+  top:2%;
+  @media screen and (min-width: 599px) {
+    display: none;
+    visibility: hidden;
   }
 }
 .screen{
@@ -262,6 +284,7 @@ ul{
   margin-top: 42%;
   padding-bottom: 2rem;
   color: $white;
+  position: relative;
 
   @media screen and (max-width: 1024px){
     margin-top: 66%;

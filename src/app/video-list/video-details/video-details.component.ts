@@ -82,9 +82,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     this.videoID = null;
     this.video = null;
     this.title = "";
-    this.elementRef.nativeElement.ownerDocument.body.style.background = '#fafff6';
-    this.screen.fixMenuColors('#fafff6','#000');
-
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
   }
 
   goToVideos() {
