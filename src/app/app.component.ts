@@ -21,6 +21,9 @@ export class AppComponent implements OnInit{
   constructor(private metaService: Meta){}
   ngOnInit() {
     this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
+    ]);
+    this.metaService.addTags([
       {property: 'og:image', content: 'https://andiamo.works/assets/ANDIAMO_cover.jpg'}
     ]);
     setSkipButton('nie');
