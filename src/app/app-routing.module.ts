@@ -17,11 +17,11 @@ const routes: Routes = [
   { path: 'videos/:id', component: VideoDetailsComponent },
   { path: 'o-nas', component: AboutComponent },
   { path: 'digital', component: DigitalComponent },
-  { path: 'aktualnosci', component: NewsComponent },
-  { path: 'aktualnosci/:id', component: NewsDetailsComponent },
-  { path: 'backstage', component: BtsComponent },
+  { path: 'newsy', component: NewsComponent },
+  { path: 'newsy/:id', component: NewsDetailsComponent },
+  { path: 'z-planu', component: BtsComponent },
   { path: 'kontakt', component: ContactComponent },
-  { path: 'reel', component: ReelComponent },
+  { path: 'soulreel', component: ReelComponent },
   { path: '**', component: MainComponent },
 ];
 

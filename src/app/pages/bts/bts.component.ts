@@ -13,7 +13,7 @@ export class BtsComponent implements OnInit{
   smallURL: string = 'assets/bts/smallbts';
   bigURL: string = 'assets/bts/big/compiled/bts';
   logo: string = 'assets/ANDIAMO_sign.svg';
-  title = 'Backstage – zdjęcia z pracy Andiamo Works';
+  title = 'Behind The Scenes – zdjęcia z planu Andiamo Works';
   description: MetaDefinition = {name: 'description', content: 'Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów.'};
 
   constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef) {}

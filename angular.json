@@ -168,11 +168,11 @@
             "routes": [
               "/",
               "/o-nas",
-              "/backstage",
+              "/z-planu",
               "/digital",
-              "/aktualnosci",
+              "/newsy",
               "/kontakt",
-              "/reel"
+              "/soulreel"
             ]
           },
           "configurations": {
