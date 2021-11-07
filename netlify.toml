@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --prod && npm run scully"
+  command = "npx scully --scanRoutes"
   functions = "./functions"
   publish = "dist/static"
 [dev]
