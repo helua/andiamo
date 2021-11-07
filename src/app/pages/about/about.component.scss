@@ -9,6 +9,18 @@ span.bold{
   font-family: $font-bold;
 
 }
+h1.small{
+  @media screen and (min-width: 599px){
+    display: none;
+    visibility: hidden;
+  }
+}
+h1.big{
+  @media screen and (max-width: 599px){
+    display: none;
+    visibility: hidden;
+  }
+}
 #sign{
   position: absolute;
   bottom: 50vh;

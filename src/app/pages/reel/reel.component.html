@@ -1,3 +1,15 @@
-<div class="board">
-<p>REEL 2020</p>
-</div>
+<main *ngIf="video; else loadingBlock">
+  <div class="video-wrapper" >
+  <div class="title-wrapper">
+          <h1>{{video.name}}</h1>
+      </div>
+      <div class="iframe-wrapper"  >
+        <iframe [src]="videoID | vimeoUrl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+  </main>
+
+  <ng-template #loadingBlock>
+  <app-loading></app-loading>
+  </ng-template>
+

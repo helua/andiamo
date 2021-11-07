@@ -1,12 +1,140 @@
-.board{
-    height: calc(100vh - 10rem);
-        @media screen and (max-width:600px){
-            height: calc(100vh - 5.925rem);
+$color: #ff501e;
+$color-2: #8cfa60;
+$white: #fafff6;
+$font: 'TeX Gyre Heros Cn', arial;
+$font-bold: 'TeX Gyre Heros Cn Bold', arial;
+
+    .video-wrapper{
+        // margin-top: 5%;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin-bottom: -4.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // @media screen and (max-width:600px){
+        //     height: calc(100vh - 5.925rem);
+        // }
+
+    .title-wrapper{
+        width: 100%;
+        z-index: 1;
+
+        & h1{
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: .2rem;
+            font-size: 1.3rem;
+            letter-spacing: .15rem;
+            color: $color;
+            margin-top:0;
+        }
+        }
+
+    }
+
+    .iframe-wrapper{
+        margin: 0 auto;
+        width: 960px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        background-color: black;
+
+        & iframe{
+            width: 960px;
+            height: 480px;
+            vertical-align: bottom;
+        }
+        @media screen and (min-width: 1650px){
+          width: 1100px;
+          & iframe{
+              width: 1100px;
+              height: 618px;
+          }
+      }
+        @media screen and (min-width: 1800px){
+            width: 1440px;
+            & iframe{
+                width: 1440px;
+                height: 810px;
+            }
+        }
+
+        @media screen and (max-width: 960px){
+            width: 720px;
+            & iframe{
+                    width:720px;
+                    height: 405px;
+                }
+
+        }
+        @media screen and (max-width: 720px){
+            width: 648px;
+            & iframe{
+                    width: 648px;
+                    height: 364.5px;
+                }
+
+        }
+        @media screen and (max-width: 648px){
+            width: 576px;
+            & iframe{
+                        width: 576px;
+                        height: 324px;
+            }
+    }
+        @media screen and (max-width: 576px){
+            width: 432px;
+            & iframe{
+                width: 432px;
+                height: 243px;
+            }
+    }
+        @media screen and (max-width: 432px){
+            width: 360px;
+            & iframe{
+                width: 360px;
+                height: 202.5px;
         }
     }
-p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        @media screen and (max-width: 360px){
+            width: 270px;
+            & iframe{
+                width: 270px;
+                height: 151.875px;
+            }
+
+        }
+    }
+
+    button.back{
+        position: fixed;
+        bottom: 50%;
+        left: 10%;
+        transform: translate(-50%, 50%);
+    }
+
+
+ul.credits{
+  text-align: center;
+  font-size: .9rem;
+  list-style: none;
+  color: $color;
+  & li{
+    display: inline;
+    padding-right: .75rem;
+  }
+  @media screen and (max-width: 960px){
+    text-align: left;
+    padding: 0% 0 0 10%;
+    &:first-child{
+      padding-top: 5%;
+    }
+    & li{
+      display: list-item;
+    }
+  }
 }
+
+

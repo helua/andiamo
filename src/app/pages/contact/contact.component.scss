@@ -10,6 +10,10 @@ $font-bold: 'tex_gyre_heros_cnbold';
     width: 100%;
     height: calc(100vh - 4.2166rem);
     position: relative;
+    @media screen and (max-width: 599px) {
+      margin-bottom: 8rem;
+      height: unset;
+    }
     & h1{
       margin-bottom: 3rem;
     }
@@ -18,8 +22,8 @@ $font-bold: 'tex_gyre_heros_cnbold';
     }
     & h1 a{
       @media screen and (max-width: 700px){
-        font-size: 2rem;
-        line-height: 1.9rem;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
       }
     }
 

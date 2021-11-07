@@ -34,6 +34,6 @@ export class DigitalComponent implements OnInit, OnDestroy {
 }
 
  ngOnDestroy(){
-  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fafff6';
+  this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#f0f0f0';
  }
 }

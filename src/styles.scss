@@ -2,6 +2,7 @@
 $color: #ff501e;
 $color-2: #8cfa60;
 $white: #fafff6;
+$gray: #f0f0f0;
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
@@ -213,6 +214,7 @@ button{
 .mat-drawer{
     position: fixed !important;
     padding-top: 6rem;
+    background-color: $gray;
 }
 .mat-drawer-container{
     background-color: rgba($white, 0);

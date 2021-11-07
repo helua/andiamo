@@ -11,7 +11,7 @@ export class VideoCoverComponent{
 
 
   @Input() video;
-  logo: string = 'assets/alt.svg';
+  logo: string = 'assets/ANDIAMO_sign.svg';
 
   getName(videoTitle: string){
     return videoTitle.split(' | ')[0].toUpperCase();
