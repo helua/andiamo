@@ -36,7 +36,9 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   ) {}
 
   ngOnInit(): void {
-
+    this.metaService.addTags([
+      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
+    ]);
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.http.getVideo(params.get('id')))).
       subscribe(video => {
