@@ -78,15 +78,14 @@ nav .nav-sec{
     }
 }
 .soulreel{
-  animation: fresh 2s ease .2s 2 normal forwards;
-  transform: translateY(0px);
+  animation: fresh 2s ease .2s 1 normal forwards;
 }
 @keyframes fresh {
-  0%   {color: black; transform: translateY(0px);}
-  25%  {color: $color; transform: translateY(3px);}
-  50%  {color: black; transform: translateY(0px);}
-  75%  {color: $color; transform: translateY(3px);}
-  100% {color: black; transform: translateY(0px);}
+  0%   { letter-spacing: .1rem; margin-left: -0rem; margin-right: -0rem;}
+  25%  { color: $color; letter-spacing: .24rem; margin-left: -.54rem; margin-right: -.54rem;}
+  50%  { letter-spacing: .1rem;  margin-left: -0rem; margin-right: -0rem;}
+  75%  { color: $color; letter-spacing: .24rem; margin-left: -.54rem; margin-right: -.54rem;}
+  100% { letter-spacing: .1rem;  margin-left: -0rem; margin-right: -0rem;}
 }
 
 nav .nav-qua{
