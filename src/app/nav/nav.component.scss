@@ -61,6 +61,10 @@ nav .nav-main{
         transition: .2s ease-out;
     }
 }
+a.main:active{
+  text-decoration: underline;
+  font-family: $font-bold;
+}
 
 nav .nav-sec{
     position: fixed;
