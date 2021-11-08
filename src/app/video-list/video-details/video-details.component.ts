@@ -5,7 +5,6 @@ import { VimeoService } from 'src/app/vimeo.service';
 import { switchMap } from 'rxjs/operators';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { AllCredits } from 'src/app/models/credits';
-import { VimeoUrlPipe } from 'src/app/vimeo-url.pipe';
 import { ScreenService } from 'src/app/screen.service';
 
 
@@ -21,7 +20,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   title: string;
   videoID: number;
   description: MetaDefinition = {};
-  credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
+  credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "...", meta: "Kolejny film Andiamo Works"};
   player: string = '';
   allCredits = AllCredits;
 
@@ -36,9 +35,6 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   ) {}
 
   ngOnInit(): void {
-    this.metaService.addTags([
-      {name: 'robots', content: 'noindex, nofollow, noimageindex'}
-    ]);
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.http.getVideo(params.get('id')))).
       subscribe(video => {
@@ -61,7 +57,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(){
     this.title = this.video.name;
     this.titleService.setTitle(this.title);
-    this.description = {name: 'description', content: this.video.description.substring(0, 155) + '...' };
+    this.description = {name: 'description', content: this.credits.meta };
     this.metaService.updateTag(this.description);
   }
 
@@ -80,7 +76,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
     }
   }
   ngOnDestroy(){
-    this.credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "..."};
+    this.credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "...", meta: '...'};
     this.videoID = null;
     this.video = null;
     this.title = "";
