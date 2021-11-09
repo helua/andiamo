@@ -29,7 +29,10 @@ body{
     letter-spacing: .1rem;
     margin: 0px;
     background-color: #F0F0F0;
-    background-size: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;

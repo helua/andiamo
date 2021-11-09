@@ -1,5 +1,13 @@
 export const AllCredits = [
   {
+    id: 354766030,
+    title: "PEZET | INTRO",
+    dop: "...", 
+    editor: "...", 
+    prodComp: "...",
+    agency: "Reżyserzy Andiamo stworzyli klip do \"Intro\" Pezeta inaugurującego powrót artysty na polską scenę muzyczną. Zobacz teledysk nagrany na taśmie 16 mm."
+  },
+  {
     id: 548741050,
     title: "SZCZYL FEAT. TYMEK | ANASTAZJA",
     dop: "...",
@@ -7,8 +15,7 @@ export const AllCredits = [
     prodComp: "...",
     agency: "...",
     meta: "Oficjalny klip muzyczny do singla Szczyla \"Anastazja\" z gościnnym występem Tymka. Autorzy klipu, duet Andiamo, wcielają marzenie rapera w bycie kurierem w rzeczywistość."
-},
-
+  },
   {
     id: 582470156,
     title: "Łowicz | Więcej warzyw",
@@ -17,7 +24,7 @@ export const AllCredits = [
     prodComp: "Patrycja Maleszewska, Lucyna Pietras",
     agency: "2012",
     meta: "Duet Andiamo przerobił hit Backstreetboys na potrzeby reklamy dla Łowicz Polska. Zobacz niezwykłą reklamę."
-    },
+  },
   {
     id: 520875253,
     title: "BNP PARIBAS | PATRONKI",
@@ -26,7 +33,7 @@ export const AllCredits = [
     prodComp: "Shootme",
     agency: "VMLY&R",
     meta: "Duet reżyserski Andiamo przedstawia społeczną kampanię reklamowa dotyczącą patronek szkół w Polsce. Zobacz ten przekonujący spot."
-},
+  },
   {
     id: 500000455,
     title: "PRO8L3M feat. Brodka | ŻAR | dir. Andiamo",
@@ -35,7 +42,6 @@ export const AllCredits = [
     prodComp: "Shootme",
     agency: "VMLY&R",
     meta: "Klimatyczny teledysk pokazujący historię sześciu nietuzinkowych bohaterów. Zobacz klip stworzony dla PRO8L3M i Brodki!"
-
   },
   {
     id: 475158192,
@@ -45,7 +51,6 @@ export const AllCredits = [
     prodComp: "Andiamo Digital",
     agency: "Starship",
     meta: "Zobacz wyjątkowy teledysk Pezeta i Kayah stworzony przez duet reżyserski Andiamo, wyprodukowany przez dom produkcyjny ShootMe."
-
   },
   {
     id: 465926823,
@@ -181,7 +186,6 @@ export const AllCredits = [
     prodComp: "Shootme",
     agency: "Labcon",
     meta: "Zobacz najlepsze sportowe video 2019 roku. Reżyserzy Andiamo wraz z operatorem Mateuszem Dziekońskim stworzyli wzruszający materiał reklamowy dla Adidasa i Legii."
-
   },
   {
     id: 371783225,
@@ -201,9 +205,8 @@ export const AllCredits = [
     prodComp: "Vogue",
     agency: "Warsaw Creatives",
     meta: "Zobacz krótkometrażowy film stworzony przez reżyserów Andiamo dla Vogue Man Polska. Materiał o JJ Orlińskim, polskim tenorze nagrany w Łazienkach Królewskich."
-
   },
- {
+  {
     id: 541561567,
     title: "LUBELLA | KOKO JUMBO",
     dop: "Olaf Malinowski ",
@@ -211,17 +214,15 @@ export const AllCredits = [
     prodComp: "Graffiti Films",
     agency: "Feeders ( Daniel Przygoda / Bodo Kaniewski)",
     meta: "Zobacz zabawną reklamę stworzoną przez Andiamo dla marki Lubella promującą świeży makaron jajeczny. Reżyserzy okiełznali kurzych bohaterów na planie zdjęciowym."
- },
-
- {
+  },
+  {
     id: 366609947,
     title: "Adidas | Legia Warsaw | Amp Football",
     dop: "Mateusz Dziekonski",
     editor: "Maciej Kozłowski",
     prodComp: "ShootemE Visual Artists",
     meta: "Zobacz najlepsze sportowe video 2019 roku. Reżyserzy Andiamo wraz z operatorem Mateuszem Dziekońskim stworzyli wzruszający materiał reklamowy dla Adidasa i Legii."
-    },
-
+  },
   {
     id: 564673466,
     title: "SPRITE X QUEBO | #LETSBECLEAR | ANDIAMO",
@@ -229,44 +230,44 @@ export const AllCredits = [
     editor: "...",
     prodComp: "...",
     meta: "Nowa kampania reklamowa Sprite zachęca do bycia sobą. Zobacz videopodcast stworzony przez duet Andiamo dla marki Sprite i rapera Quebo."
-},
-    {
-      id: 349837985,
-      title: "Baranovski | Czułe miejsce",
-      dop: "...",
-      editor: "...",
-      prodComp: "...",
-      agency: "...",
-      meta: "Andiamo, czyli reżyserzy Erdmann i Więckowski wyreżyserowali klip muzyczny dla Baranovskiego. Zobacz ten piękny klip. "
-    },
+  },
   {
-      id: 315081982,
-      title: "PUMA | PUMA MAN - GYM (CZ)",
-      dop: "...",
-      editor: "...",
-      prodComp: "...",
-      agency: "...",
-      meta: "Reżyserzy Andiamo zostali zaproszeni do czeskiej produkcji, reklamy dla Puma. Zobacz niesamowity spot reklamowy!"
-    },
-    {
-      id: 314899914,
-      title: "PUMA | Puma Man - Pinball (CZ)",
-      dop: "...",
-      editor: "...",
-      prodComp: "...",
-      agency: "...",
-      meta: "Kolejna odsłona reklamy dla Puma wyreżyserowanej przez duet Andiamo. Zobacz spot reklamowy stworzony na czeski rynek reklamy. "
-    },
-    {
-      id: 314838458,
-      title: "PUMA | PUMA MAN - PARKING (CZ)",
-      dop: "...",
-      editor: "...",
-      prodComp: "...",
-      agency: "...",
-      meta: "Kolejna odsłona reklamy dla Puma wyreżyserowanej przez duet Andiamo. Zobacz dynamiczny spot reklamowy zrobiony przez polskich reżyserów dla Czechów."
-    },
-    {
+    id: 349837985,
+    title: "Baranovski | Czułe miejsce",
+    dop: "...",
+    editor: "...",
+    prodComp: "...",
+    agency: "...",
+    meta: "Andiamo, czyli reżyserzy Erdmann i Więckowski wyreżyserowali klip muzyczny dla Baranovskiego. Zobacz ten piękny klip. "
+  },
+  {
+    id: 315081982,
+    title: "PUMA | PUMA MAN - GYM (CZ)",
+    dop: "...",
+    editor: "...",
+    prodComp: "...",
+    agency: "...",
+    meta: "Reżyserzy Andiamo zostali zaproszeni do czeskiej produkcji, reklamy dla Puma. Zobacz niesamowity spot reklamowy!"
+  },
+  {
+    id: 314899914,
+    title: "PUMA | Puma Man - Pinball (CZ)",
+    dop: "...",
+    editor: "...",
+    prodComp: "...",
+    agency: "...",
+    meta: "Kolejna odsłona reklamy dla Puma wyreżyserowanej przez duet Andiamo. Zobacz spot reklamowy stworzony na czeski rynek reklamy. "
+  },
+  {
+    id: 314838458,
+    title: "PUMA | PUMA MAN - PARKING (CZ)",
+    dop: "...",
+    editor: "...",
+    prodComp: "...",
+    agency: "...",
+    meta: "Kolejna odsłona reklamy dla Puma wyreżyserowanej przez duet Andiamo. Zobacz dynamiczny spot reklamowy zrobiony przez polskich reżyserów dla Czechów."
+  },
+  {
     id: 302792712,
     title: "ANDIAMO | INNER VOICE",
     dop: "...",
@@ -274,8 +275,8 @@ export const AllCredits = [
     prodComp: "...",
     agency: "...",
     meta: "\"Inner Voice\" to krótkometrażowy film dokumentalny opowiadający o polskim tenorze, JJ Orlińskim. Zobacz dokument stworzony przez duet reżyserski Andiamo."
-},
-{
+  },
+  {
     id: 293498910,
     title: "SMOLIK & KEV FOX | ALL THE SAINTS",
     dop: "...",

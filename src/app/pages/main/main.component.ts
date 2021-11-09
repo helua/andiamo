@@ -29,7 +29,7 @@ export class MainComponent implements OnInit {
       this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-pion.jpg")';
     }
     if(this.screen.isHorizontal !== true && this.screen.scrWidth < 450 ){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-mobile.jpg"), linear-gradient(50deg, rgba(254,137,45,1) 0%, rgba(254,117,67,1) 100%)';
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-mobile.jpg")';
     }
   }
   scrollToElement($element): void {
