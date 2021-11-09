@@ -47,7 +47,6 @@ export class ScreenService {
 
     fixMenuColors(colorText, colorBack): void{
       let nav = Array.from(document.getElementsByClassName("menu-link") as HTMLCollectionOf<HTMLElement>);
-      console.log(nav);
       for (let i = 0; i < nav.length; i++) {
         nav[i].style.color = colorText;
       }
