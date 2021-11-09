@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   photos2: number[] = [];
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/';
-  logo: string = 'assets/ANDIAMO_sign.svg';
+  logo: string = 'assets/ANDIAMO_sign-mini.svg';
   title = 'O nas – kto stoi za Andiamo Works?';
   description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
 

@@ -3,16 +3,16 @@
 </header>
   <div class="mobile">
     <ul>
-      <li><a>
+      <li><a class="menu-link">
         <fa-icon [icon]="menuIcon" (click)="sidenav.toggle()"></fa-icon>
       </a></li>
-      <li><a href="https://vimeo.com/andiamoworks" target="_blank">
+      <li><a class="menu-link" href="https://vimeo.com/andiamoworks" target="_blank">
         <fa-icon [icon]="vimeoIcon"></fa-icon>
       </a></li>
-      <li><a href="https://www.facebook.com/andiamoworks" target="_blank">
+      <li><a class="menu-link" href="https://www.facebook.com/andiamoworks" target="_blank">
         <fa-icon [icon]="facebookIcon"></fa-icon>
       </a></li>
-      <li><a href="https://www.instagram.com/andiamoworks" target="_blank">
+      <li><a class="menu-link" href="https://www.instagram.com/andiamoworks" target="_blank">
         <fa-icon [icon]="instagramIcon"></fa-icon>
       </a></li>
     </ul>
@@ -21,12 +21,12 @@
         <mat-sidenav #sidenav>
           <img id="sign" src="../assets/ANDIAMO_sign.svg" alt="">
           <mat-nav-list>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/" routerLinkActive="active">WORKS</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/o-nas" routerLinkActive="active">ABOUT</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/z-planu" routerLinkActive="active">BTS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/" routerLinkActive="active" class="menu-link">WORKS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/o-nas" routerLinkActive="active" class="menu-link">ABOUT</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/z-planu" routerLinkActive="active" class="menu-link">BTS</a>
             <!-- <a (click)="sidenav.toggle()" mat-list-item routerLink="/newsy" routerLinkActive="active">AKTUALNOŚCI</a> -->
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/kontakt" routerLinkActive="active">KONTAKT</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/soulreel" routerLinkActive="active">SOULREEL</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/kontakt" routerLinkActive="active" class="menu-link">KONTAKT</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/soulreel" routerLinkActive="active" class="menu-link">SOULREEL</a>
             <!-- <a (click)="sidenav.toggle()" mat-list-item routerLink="/films" routerLinkActive="active">WORKS</a>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="/about" routerLinkActive="active">ABOUT</a>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="/bts" routerLinkActive="active">BTS</a>

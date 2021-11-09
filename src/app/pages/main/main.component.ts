@@ -25,26 +25,22 @@ export class MainComponent implements OnInit {
     if(this.screen.isHorizontal == true){
       this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray.jpg")';
     }
-    else{
+    if(this.screen.isHorizontal !== true && this.screen.scrWidth > 450 ){
       this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-pion.jpg")';
-
     }
-
+    else{
+      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-mobile.jpg"), linear-gradient(50deg, rgba(254,137,45,1) 0%, rgba(254,117,67,1) 100%)';
+    }
   }
-
   scrollToElement($element): void {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
   skipReel(): void{
     this.isSkipped = 'tak';
     setSkipButton('tak');
-    // console.log(this.isSkipped);
-    // let reel = document.getElementById("showreel");
-    // reel.nativeElement.class.add('hide');
   }
   ngOnDestroy(){
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
-
    }
 }
 

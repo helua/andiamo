@@ -21,33 +21,9 @@ $font-bold: 'tex_gyre_heros_cnbold';
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'tex_gyre_heros_cnregular';
-//   src: url('/assets/fonts/texgyreheroscn-regular-webfont.eot');
-//   src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype'),
-//        url('/assets/fonts/texgyreheroscn-regular-webfont.eot?#iefix') format('embedded-opentype'),
-//        url('/assets/fonts/texgyreheroscn-regular-webfont.woff') format('woff'),
-//        url('/assets/fonts/texgyreheroscn-regular-webfont.ttf') format('truetype'),
-//        url('/assets/fonts/texgyreheroscn-regular-webfont.svg#tex_gyre_heros_cnregular') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'tex_gyre_heros_cnbold';
-//   src: url('/assets/fonts/texgyreheroscn-bold-webfont.eot');
-//   src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype'),
-//        url('/assets/fonts/texgyreheroscn-bold-webfont.eot?#iefix') format('embedded-opentype'),
-//        url('/assets/fonts/texgyreheroscn-bold-webfont.woff') format('woff'),
-//        url('/assets/fonts/texgyreheroscn-bold-webfont.ttf') format('truetype'),
-//        url('/assets/fonts/texgyreheroscn-bold-webfont.svg#tex_gyre_heros_cnbold') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 
 body{
     font-family: $font;
-    // font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -128,6 +104,8 @@ h1{
     letter-spacing: .08rem;
     color: $color;
     margin: 0;
+    top: calc(2% - 2px);
+    position: relative;
 
 
     @media screen and (max-width: 900px){
@@ -147,21 +125,24 @@ h1{
 
 }
 h2{
-  font-size: 2.8rem;
-  text-align: center;
-  font-family: $font;
-  letter-spacing: .08rem;
-  color: $color;
-
-  @media screen and (max-width: 400px){
-      font-size: 1.8rem;
-  }
+    font-size: 3.875rem;
+    line-height: 3.8rem;
+    text-align: center;
+    font-family: $font;
+    letter-spacing: .08rem;
+    color: $color;
+    @media screen and (max-width: 900px){
+        font-size: 2.875rem;
+        line-height: 2.8rem;
+    }
+    @media screen and (max-width: 400px){
+        font-size: 2.4rem;
+        line-height: 2.3rem;    }
 
 }
 
 a{
     text-decoration: none;
-    color: black;
     @media screen and (min-width: 600px){
         &:hover{
           text-decoration: underline;
@@ -177,6 +158,13 @@ p, h2, ul {
         padding: 0 1rem;
     }
 }
+span.regular{
+    font-family: $font;
+  }
+span.bold{
+    font-family: $font-bold;
+  
+  }
 
 
 button{

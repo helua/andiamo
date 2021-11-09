@@ -121,9 +121,15 @@ ul.credits{
   font-size: .9rem;
   list-style: none;
   color: $color;
+  text-transform: uppercase;
   & li{
     display: inline;
     padding-right: .75rem;
+    & span.mobile-dash{
+        @media screen and (max-width: 960px){
+            display: none;
+        }
+    }
   }
   @media screen and (max-width: 960px){
     text-align: left;

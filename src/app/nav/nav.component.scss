@@ -23,7 +23,7 @@ nav{
         list-style-type: none;
 
         & a{
-            padding: 2px;
+            padding: 0 2px;
 
         }
     }
@@ -60,10 +60,6 @@ nav .nav-main{
     & a{
         transition: .2s ease-out;
     }
-}
-a.main:active{
-  text-decoration: underline;
-  font-family: $font-bold;
 }
 
 nav .nav-sec{
