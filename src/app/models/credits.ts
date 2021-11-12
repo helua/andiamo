@@ -5,7 +5,8 @@ export const AllCredits = [
     dop: "...", 
     editor: "...", 
     prodComp: "...",
-    agency: "Reżyserzy Andiamo stworzyli klip do \"Intro\" Pezeta inaugurującego powrót artysty na polską scenę muzyczną. Zobacz teledysk nagrany na taśmie 16 mm."
+    agency: "...",
+    meta: "Reżyserzy Andiamo stworzyli klip do \"Intro\" Pezeta inaugurującego powrót artysty na polską scenę muzyczną. Zobacz teledysk nagrany na taśmie 16 mm."
   },
   {
     id: 548741050,
