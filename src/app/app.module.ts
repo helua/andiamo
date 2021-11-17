@@ -37,6 +37,7 @@ import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component
 import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     NewsCoverComponent,
     NewsDetailsComponent,
     LoadingComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

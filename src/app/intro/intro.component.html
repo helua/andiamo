@@ -1,0 +1,9 @@
+<ng-container *ngIf="isSkipped === 'nie'">
+  <div id="showreel">
+    <video width="100%" poster="../../../assets/ANDIAMO_soulreel.jpg" autoplay muted loop >
+      <source src="../../../assets/ANDIAMO_soulreel.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button (click)="skipReel()">skip</button>
+  </div>
+</ng-container>

@@ -1,0 +1,15 @@
+
+$font: 'tex_gyre_heros_cnregular';
+
+button{
+  border: solid white 2px;
+  font-size: 2rem;
+  color: wheat;
+  position: absolute;
+  top: 90vh;
+  z-index: 10;
+  left: 50%;
+  text-transform: uppercase;
+  font-family: $font;
+  padding: 0 .5rem;
+}
