@@ -6,20 +6,37 @@ $gray: #f0f0f0;
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
+//PRODUCTION
 @font-face {
   font-family: 'tex_gyre_heros_cnregular';
-  src: url('/assets/fonts/texgyreheroscn-regular.otf');
-  src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'tex_gyre_heros_cnbold';
-  src: url('/assets/fonts/texgyreheroscn-bold.otf');
-  src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+//LOCAL
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnregular';
+//   src: url('/assets/fonts/texgyreheroscn-regular.otf');
+//   src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnbold';
+//   src: url('/assets/fonts/texgyreheroscn-bold.otf');
+//   src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
 body{
@@ -166,7 +183,7 @@ span.regular{
   }
 span.bold{
     font-family: $font-bold;
-  
+
   }
 
 

@@ -4,8 +4,7 @@
 /dist
 /tmp
 /out-tsc
-/archiwum
-/distsimple
+
 # Only exists if Bazel was run
 /bazel-out
 
@@ -48,20 +47,34 @@ testem.log
 Thumbs.db
 
 # Sanity
-
 /backend/node_modules
 /backend/dist/
 /backend/config/.checksums
 /backend/config/@sanity/data-aspects.json
 /functions/hello.js
 
+
+#VSCode
 /.vscode
+
 # Local Netlify folder
 .netlify
 
 
-/inne_materialy
-/.scully
+# Scully config
 scully.log
-/scully
+scullyStats.json
+.scully
+/scully/**/*.js
+/scully/**/*.js.map
+/scully/**/*.d.ts
+src/assets/scully-routes.json
+
+
+
+# inne
+
+/inne_materialy
 src/assets/ANDIAMO_soulreel-big.mp4
+/archiwum
+/distsimple
