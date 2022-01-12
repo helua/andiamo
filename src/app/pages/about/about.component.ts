@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
@@ -18,10 +19,10 @@ export class AboutComponent implements OnInit, OnDestroy {
   title = 'O nas – kto stoi za Andiamo Works?';
   description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
 
-  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private router: Router){}
+  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private router: Router, public translate: TranslateService){}
 
   ngOnInit() {
-    console.log(this.router.url);
+    this.checkLang();
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
 
@@ -49,6 +50,13 @@ export class AboutComponent implements OnInit, OnDestroy {
 
     // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
     // menu.style.backgroundColor="#000";
+  }
+
+  checkLang(){
+    console.log(this.router.url);
+    if(this.router.url === "/about"){
+      this.translate.use('en');
+    }
 
   }
 

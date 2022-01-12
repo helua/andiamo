@@ -1,0 +1,19 @@
+
+<select #langSelect (change)="translate.use(langSelect.value); informSite();">
+  language
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select>
+
+<!--
+<form>
+  <h4>mat-select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Language</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="language">
+      <mat-option *ngFor="let language of languages" [value]="language.value">
+        {{language.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Selected language: {{selectedValue}} </p>
+</form> -->

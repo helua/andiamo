@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -11,18 +11,19 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatSelectModule } from '@angular/material/select';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoCoverComponent } from './video-list/video-cover/video-cover.component';
 import { VimeoUrlPipe } from './vimeo-url.pipe';
 import { VimeoUrlAutoplayPipe } from './vimeo-url-autoplay.pipe';
-
 import { VideoListComponent } from './video-list/video-list.component';
 import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './pages/main/main.component';
@@ -38,7 +39,12 @@ import { NewsDetailsComponent } from './pages/news/news-details/news-details.com
 import { LoadingComponent } from './loading/loading.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { IntroComponent } from './intro/intro.component';
+import { TranslationComponent } from './translation/translation.component';
 
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +65,7 @@ import { IntroComponent } from './intro/intro.component';
     NewsDetailsComponent,
     LoadingComponent,
     IntroComponent,
+    TranslationComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -76,6 +83,14 @@ import { IntroComponent } from './intro/intro.component';
     LazyLoadImageModule,
     RouterModule,
     ScullyLibModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  }),
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

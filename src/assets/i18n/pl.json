@@ -1,4 +1,7 @@
 {
+  "MENU": {
+    "CONTACT": "KONTAKT"
+  },
   "MAIN": {
     "H1": "WYBRANE PRACE",
     "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA I WIELE WIĘCEJ"
@@ -14,7 +17,7 @@
     "ABOUT3": "Tworzyliśmy FILMY i KAMPANIE dla takich marek jak: ADIDAS, SPRITE, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, BNP PARIBAS i VOGUE oraz dla najważniejszych polskich artystów, m.in: PRO8L3M, BRODKA, QUEBO, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ i KAYAH."
   },
   "CONTACT": {
-    "H1": "Kontakt"
+    "H1": "KONTAKT"
 
   }
 }

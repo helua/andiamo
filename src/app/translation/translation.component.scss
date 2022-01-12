@@ -1,0 +1,14 @@
+$white: #fafff6;
+$gray: #f0f0f0;
+$color: #ff501e;
+
+
+select{
+  position: fixed;
+  top: calc(4% + 22px);
+    right: 2%;
+  z-index:5;
+  border-color: $gray;
+  color: $color;
+  background-color: $gray;
+}

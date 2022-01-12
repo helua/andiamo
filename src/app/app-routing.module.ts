@@ -14,15 +14,24 @@ import { VideoDetailsComponent } from './video-list/video-details/video-details.
 const routes: Routes = [
   // { path: 'films', redirectTo: '', pathMatch: 'full' },
   { path: '', component: MainComponent },
-  { path: 'videos/:id', component: VideoDetailsComponent },
+
   { path: 'o-nas', component: AboutComponent },
-  { path: 'digital', component: DigitalComponent },
-  { path: 'newsy', component: NewsComponent },
-  { path: 'newsy/:id', component: NewsDetailsComponent },
   { path: 'z-planu', component: BtsComponent },
   { path: 'kontakt', component: ContactComponent },
   { path: 'soulreel', component: ReelComponent },
+
+  { path: 'about', component: AboutComponent },
+  { path: 'bts', component: BtsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'soulreel-en', component: ReelComponent },
+
+  { path: 'videos/:id', component: VideoDetailsComponent },
+  { path: 'newsy', component: NewsComponent },
+  { path: 'newsy/:id', component: NewsDetailsComponent },
+
   { path: '**', component: MainComponent },
+  { path: 'digital', component: DigitalComponent },
+
 ];
 
 @NgModule({
