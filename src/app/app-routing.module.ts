@@ -14,12 +14,12 @@ import { VideoDetailsComponent } from './video-list/video-details/video-details.
 const routes: Routes = [
   // { path: 'films', redirectTo: '', pathMatch: 'full' },
   { path: '', component: MainComponent },
-
   { path: 'o-nas', component: AboutComponent },
   { path: 'z-planu', component: BtsComponent },
   { path: 'kontakt', component: ContactComponent },
   { path: 'soulreel', component: ReelComponent },
 
+  { path: 'en', component: MainComponent },
   { path: 'about', component: AboutComponent },
   { path: 'bts', component: BtsComponent },
   { path: 'contact', component: ContactComponent },

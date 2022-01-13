@@ -106,8 +106,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json",
-              "tsconfig.server.json"
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -124,59 +123,6 @@
             "production": {
               "devServerTarget": "andiamo:serve:production"
             }
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": false,
-              "optimization": true
-            }
-          }
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "options": {
-            "browserTarget": "andiamo:build",
-            "serverTarget": "andiamo:server"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "andiamo:build:production",
-              "serverTarget": "andiamo:server:production"
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "browserTarget": "andiamo:build:production",
-            "serverTarget": "andiamo:server:production",
-            "routes": [
-              "/",
-              "/o-nas",
-              "/z-planu",
-              "/digital",
-              "/newsy",
-              "/kontakt",
-              "/soulreel"
-            ]
-          },
-          "configurations": {
-            "production": {}
           }
         }
       }
