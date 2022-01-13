@@ -1,23 +1,23 @@
-<app-translation (updateLang)="onUpdatedLang($event)"></app-translation>
+<app-translation></app-translation>
 
 <div class="desktop">
 <nav>
     <div class="nav-main">
       <ul>
-        <li><a [routerLink]="main" class="menu-link">WORKS</a></li>
-        <li><a [routerLink]="about" routerLinkActive="active" class="menu-link">ABOUT</a></li>
+        <li><a routerLink="{{ 'ROUTING.MAIN' | translate }}" class="menu-link">WORKS</a></li>
+        <li><a routerLink="{{ 'ROUTING.ABOUT' | translate }}" routerLinkActive="active" class="menu-link">ABOUT</a></li>
       </ul>
       <ul>
-        <li><a [routerLink]="bts" routerLinkActive="active" class="menu-link">BTS</a></li>
+        <li><a routerLink="{{ 'ROUTING.BTS' | translate }}" routerLinkActive="active" class="menu-link">BTS</a></li>
         <!-- <li><a routerLink="/newsy" routerLinkActive="active">Aktualności</a></li> -->
-        <li><a [routerLink]="contact" routerLinkActive="active" class="menu-link">{{ 'MENU.CONTACT' | translate }}</a></li>
+        <li><a routerLink="{{ 'ROUTING.CONTACT' | translate }}" routerLinkActive="active" class="menu-link">{{ 'MENU.CONTACT' | translate }}</a></li>
       </ul>
     </div>
   </nav>
   <nav>
     <div class="nav-sec">
       <ul>
-        <li><a [routerLink]="soulreel" routerLinkActive="active" class="soulreel menu-link">SOULREEL</a></li>
+        <li><a routerLink="{{ 'ROUTING.SOULREEL' | translate }}" routerLinkActive="active" class="soulreel menu-link">SOULREEL</a></li>
         <li><a href="https://shootme.pl" target="_blank" class="menu-link">SHOOTME</a></li>
         <li><a href="https://vimeo.com/andiamoworks" target="_blank" class="menu-link">VIMEO</a>/<a href="https://www.facebook.com/andiamoworks" target="_blank" class="menu-link">FB</a>/<a href="https://www.instagram.com/andiamoworks" target="_blank" class="menu-link">IG</a></li>
       </ul>

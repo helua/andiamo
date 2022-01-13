@@ -21,26 +21,15 @@
         <mat-sidenav #sidenav>
           <img id="sign" src="../assets/ANDIAMO_sign.svg" alt="">
           <mat-nav-list>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/" routerLinkActive="active" class="menu-link">WORKS</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/o-nas" routerLinkActive="active" class="menu-link">ABOUT</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/z-planu" routerLinkActive="active" class="menu-link">BTS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.MAIN' | translate }}" routerLinkActive="active" class="menu-link">WORKS</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.ABOUT' | translate }}" routerLinkActive="active" class="menu-link">ABOUT</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.BTS' | translate }}" routerLinkActive="active" class="menu-link">BTS</a>
             <!-- <a (click)="sidenav.toggle()" mat-list-item routerLink="/newsy" routerLinkActive="active">AKTUALNOŚCI</a> -->
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/kontakt" routerLinkActive="active" class="menu-link">{{ 'MENU.CONTACT' | translate }}</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/soulreel" routerLinkActive="active" class="menu-link">SOULREEL</a>
-            <!-- <a (click)="sidenav.toggle()" mat-list-item routerLink="/films" routerLinkActive="active">WORKS</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/about" routerLinkActive="active">ABOUT</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/bts" routerLinkActive="active">BTS</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/news" routerLinkActive="active">NEWS</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/contact" routerLinkActive="active">CONTACT</a>
-            <a (click)="sidenav.toggle()" mat-list-item routerLink="/soulreel" routerLinkActive="active">REEL 2020</a> -->
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.CONTACT' | translate }}" routerLinkActive="active" class="menu-link">{{ 'MENU.CONTACT' | translate }}</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.SOULREEL' | translate }}" routerLinkActive="active" class="menu-link">SOULREEL</a>
           </mat-nav-list>
         </mat-sidenav>
       <mat-sidenav-content>
-        <!-- <div id="logotype-wrapper">
-          <span id="allora">Allora,</span>
-          <img src="assets/andiamo-logo-big-green.png" alt="ANDIAMO" class="logotype">
-          <span id="question-mark">?</span>
-        </div> -->
           <div class="router-wrapper">
             <router-outlet></router-outlet>
           </div>

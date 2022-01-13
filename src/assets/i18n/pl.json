@@ -2,6 +2,13 @@
   "MENU": {
     "CONTACT": "KONTAKT"
   },
+  "ROUTING": {
+    "MAIN": "/",
+    "ABOUT": "/o-nas",
+    "BTS": "/z-planu",
+    "CONTACT": "/kontakt",
+    "SOULREEL": "/soulreel"
+  },
   "MAIN": {
     "H1": "WYBRANE PRACE",
     "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA I WIELE WIĘCEJ"

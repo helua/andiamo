@@ -15,7 +15,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
       height: unset;
     }
     & h1{
-      margin-bottom: 3rem;
+      margin-bottom: calc(3rem + 5%);
     }
     & h1, h2, a, p{
       color: $white;
@@ -27,6 +27,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
       }
     }
 }
+
 
 .contact{
   display: flex;
@@ -65,6 +66,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
     color: $white;
     padding: 0 1rem;
   }
+
 }
 .third{
     display: inline-block;

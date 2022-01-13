@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ScreenService } from 'src/app/screen.service';
+import { TranslationService } from 'src/app/translation.service';
 import { VimeoService } from 'src/app/vimeo.service';
 
 @Component({
@@ -14,9 +15,10 @@ export class ReelComponent implements OnInit, OnDestroy {
   title = 'Reel 2021 reżyserów Andiamo Works';
   description: MetaDefinition = {name: 'description', content: 'Najnowsza prezentacja prac Andiamo Works.'};
 
-  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private vimeo: VimeoService, private elementRef: ElementRef) {}
+  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private vimeo: VimeoService, private elementRef: ElementRef, private translation: TranslationService) {}
 
   ngOnInit() {
+    this.translation.checkLang();
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
     this.screen.fixMenuColors('#fafff6', '#000');

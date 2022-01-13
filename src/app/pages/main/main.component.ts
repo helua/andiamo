@@ -3,6 +3,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ScreenService } from 'src/app/screen.service';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import {getSkipButton, setSkipButton} from '../../localStorageVriables'
+import { TranslationService } from 'src/app/translation.service';
 
 @Component({
   selector: 'app-main',
@@ -14,9 +15,10 @@ export class MainComponent implements OnInit {
   description: MetaDefinition = {name: 'description', content: 'Tworzymy wyjątkowe reklamy, teledyski i filmy. Zobacz nasze projekty, m.in. dla Adidasa, Wyborowej, czy Pezeta.'};
   arrowIcon = faArrowDown;
   isSkipped = 'nie';
-  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private elementRef: ElementRef){}
+  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private elementRef: ElementRef, private translation: TranslationService){}
 
   ngOnInit() {
+    this.translation.checkLang();
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
     this.screen.fixMenuColors('#000', '#fafff6');

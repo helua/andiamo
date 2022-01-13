@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from '../translation.service';
 
 
 
@@ -11,10 +12,8 @@ import { TranslateService } from '@ngx-translate/core';
 
 
 export class TranslationComponent implements OnInit {
-  lang: string;
-  @Output() updateLang = new EventEmitter<any>();
 
-  constructor( public translate: TranslateService) {
+  constructor( public translate: TranslateService, private translation: TranslationService) {
   translate.addLangs(['pl', 'en']);
   translate.setDefaultLang('pl');
 
@@ -24,12 +23,9 @@ export class TranslationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  informSite(){
-    console.log(this.translate.currentLang);
-    this.lang = this.translate.currentLang;
-    this.updateLang.emit({lang: this.lang});
-    
 
+  navigateOnLangSwitch(){
+    this.translation.navigateOnLangSwitch();
   }
 
 }

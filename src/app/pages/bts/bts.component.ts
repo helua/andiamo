@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
+import { TranslationService } from 'src/app/translation.service';
 
 @Component({
   selector: 'app-bts',
@@ -16,7 +19,7 @@ export class BtsComponent implements OnInit{
   title = 'Behind The Scenes – zdjęcia z planu Andiamo Works';
   description: MetaDefinition = {name: 'description', content: 'Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów.'};
 
-  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef) {}
+  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef, private translation: TranslationService) {}
 
 
   shuffleArray(array) {
@@ -29,6 +32,7 @@ export class BtsComponent implements OnInit{
 
 
   ngOnInit() {
+    this.translation.checkLang();
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);
 
