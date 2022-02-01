@@ -19,7 +19,7 @@ export class BtsComponent implements OnInit{
   title = 'Behind The Scenes – zdjęcia z planu Andiamo Works';
   description: MetaDefinition = {name: 'description', content: 'Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów.'};
 
-  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef, private translation: TranslationService) {}
+  constructor(public screen: ScreenService, private titleService: Title, private metaService: Meta, private elementRef: ElementRef, private translation: TranslationService, private translate: TranslateService) {}
 
 
   shuffleArray(array) {
@@ -33,9 +33,16 @@ export class BtsComponent implements OnInit{
 
   ngOnInit() {
     this.translation.checkLang();
-    this.titleService.setTitle(this.title);
-    this.metaService.updateTag(this.description);
-
+    this.translate.get('BTS.META').subscribe( m => {
+      console.log(m);
+      this.description.content = m;
+      this.metaService.updateTag(this.description);
+    });
+    this.translate.get('BTS.TITLE').subscribe( t => {
+      this.title = t;
+      console.log(t);
+      this.titleService.setTitle(this.title);
+    })
     this.screen.getScreenSize();
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000';
 

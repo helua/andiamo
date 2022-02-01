@@ -11,7 +11,9 @@
   },
   "MAIN": {
     "H1": "SELECTED WORKS",
-    "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA AND MANY MORE"
+    "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA AND MANY MORE",
+    "TITLE": "ANDIAMO directors duo -  MAT ERDMANN and MICHAL WIECKOWSKI",
+    "META": "We create exeptional movies, video clips and advertisements. Watch our works for Adidas, Wyborowa or Pezet."
   },
   "ABOUT": {
     "WHAT?": " is a directors duo consisting of ",
@@ -21,10 +23,21 @@
     "WHAT?2": " are directors duo ",
     "ABOUT1": "We are juggling with the FORM, not shaping our works in any permanently. In love with creating RAW and GLARING worlds since always.",
     "ABOUT2": "Because being in BETWEEN doesn’t mean being NOWHERE, huh ?",
-    "ABOUT3": "We found JOY in mixing documentary and feature for such brands as: ADIDAS, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, WYBOROWA and VOGUE and such top polish artists as: PRO8L3M, BRODKA, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ and KAYAH."
+    "ABOUT3": "We found JOY in mixing documentary and feature for such brands as: ADIDAS, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, WYBOROWA and VOGUE and such top polish artists as: PRO8L3M, BRODKA, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ and KAYAH.",
+    "TITLE": "About - Who ANDIAMO are?",
+    "META": "Directors duo creating astonishing adds and movies. Find out more!"
   },
   "CONTACT": {
-    "H1": "CONTACT"
-
+    "H1": "CONTACT",
+    "TITLE": "Contact for the ANDIAMO - directors duo",
+    "META": "Contact us to make your ideas come to live on the screen"
+  },
+  "BTS": {
+    "TITLE": "Behind The Scenes - how ANDIAMO work looks like",
+    "META": "Gallery of photos from the sets and beautiful snapshots"
+  },
+  "REEL": {
+    "TITLE": "2021 reel of ANDIAMO directors duo",
+    "META": "The freshest portion of ANDIAMO works"
   }
 }

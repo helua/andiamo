@@ -3,6 +3,7 @@ import { faFacebookF, faInstagram, faVimeoV } from '@fortawesome/free-brands-svg
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Meta } from '@angular/platform-browser';
 import { setSkipButton } from '../app/localStorageVriables'
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',

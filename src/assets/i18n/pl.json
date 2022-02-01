@@ -11,7 +11,9 @@
   },
   "MAIN": {
     "H1": "WYBRANE PRACE",
-    "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA I WIELE WIĘCEJ"
+    "CLIENTS": "SPRITE / PEZET / SAMSUNG / PRO8L3M / ADIDAS / BNP PARIBAS / VOGUE / BRODKA / TYSKIE / QUEBO / ŁOWICZ / PUMA I WIELE WIĘCEJ",
+    "TITLE": "Reżyserski duet Andiamo Works. Mateusz Erdmann i Michał Więckowski",
+    "META": "Tworzymy wyjątkowe reklamy, teledyski i filmy. Zobacz nasze projekty, m.in. dla Adidasa, Wyborowej, czy Pezeta."
   },
   "ABOUT": {
     "WHAT?": " to duet reżyserski, który tworzą ",
@@ -21,10 +23,21 @@
     "WHAT?2": " tworzą duet reżyserski",
     "ABOUT1": "W naszych PRACACH lubimy BAWIĆ SIĘ formą, nie zamykając w ŻADNEJ na ZAWSZE. Kochamy EMOCJONALNE podróże w KOSMOS, tak samo jak NIEDOSŁOWNY HUMOR. Bo dla NAS być POMIĘDZY - nigdy nie oznacza BYĆ nigdzie.",
     "ABOUT2": "ŁĄCZY nas NIEUSTANNA chęć tworzenia OBRAZÓW, które są PIĘKNE i PORUSZAJĄCE, niezależnie od tego czy robimy SPOTY reklamowe, DOKUMENTY czy teledyski. Serca NIE OSZUKASZ.",
-    "ABOUT3": "Tworzyliśmy FILMY i KAMPANIE dla takich marek jak: ADIDAS, SPRITE, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, BNP PARIBAS i VOGUE oraz dla najważniejszych polskich artystów, m.in: PRO8L3M, BRODKA, QUEBO, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ i KAYAH."
+    "ABOUT3": "Tworzyliśmy FILMY i KAMPANIE dla takich marek jak: ADIDAS, SPRITE, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, BNP PARIBAS i VOGUE oraz dla najważniejszych polskich artystów, m.in: PRO8L3M, BRODKA, QUEBO, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ i KAYAH.",
+    "TITLE": "O nas – kto stoi za Andiamo Works?",
+    "META": "Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!"
   },
   "CONTACT": {
-    "H1": "KONTAKT"
-
+    "H1": "KONTAKT",
+    "TITLE": "Kontakt z Andiamo Works",
+    "META": "Sprawdź nasze dane kontaktowe i skontaktuj się z nami."
+  },
+  "BTS": {
+    "TITLE": "Behind The Scenes – zdjęcia z planu Andiamo Works",
+    "META": "Andiamo od kuchni – zobacz jak pracujemy. Zdjęcia z planów filmowych i pięknych kadrów."
+  },
+  "REEL": {
+    "TITLE": "Reel 2021 reżyserów Andiamo Works",
+    "META": "Najnowsza prezentacja prac Andiamo Works."
   }
 }

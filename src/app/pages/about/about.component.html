@@ -1,15 +1,27 @@
-<!--
-
-            <p>
-              ANDIAMO is a directors duo consisting of Mat&nbsp;Erdmann and Michal&nbsp;Wieckowski based in WARSAW, Poland. We are juggling with the FORM, not shaping our works in any permanently. In love with creating RAW and GLARING worlds since always. Because being in BETWEEN doesn’t mean being NOWHERE, huh&nbsp;?
-          </p>
-          <p>
-              We found JOY in mixing documentary and feature for such brands as: ADIDAS, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, WYBOROWA and VOGUE and such top polish artists as: PRO8L3M, BRODKA, PEZET, JJ&nbsp;ORLIŃSKI, KRÓL, SOKÓŁ and KAYAH.
-          </p> -->
 <div class="screen">
 
-  <h1 class="big">ANDIAMO<span class="regular">{{ 'ABOUT.WHAT?' | translate }}</span>{{ 'ABOUT.NAME1' | translate }}<span class="regular">{{ 'ABOUT.AND' | translate }}</span>{{ 'ABOUT.NAME2' | translate }}</h1>
-  <h1 class="small">{{ 'ABOUT.NAME1' | translate }}<span class="regular">{{ 'ABOUT.AND' | translate }}</span>{{ 'ABOUT.NAME2' | translate }}<span class="regular">{{ 'ABOUT.WHAT?2' | translate }}</span></h1>
+  <h1 class="big">
+    ANDIAMO
+    <span class="regular">
+      {{ 'ABOUT.WHAT?' | translate }}
+    </span>
+    {{ 'ABOUT.NAME1' | translate }}
+    <span class="regular">
+      {{ 'ABOUT.AND' | translate }}
+    </span>
+    {{ 'ABOUT.NAME2' | translate }}
+  </h1>
+
+  <h1 class="small">
+    {{ 'ABOUT.NAME1' | translate }}
+    <span class="regular">
+      {{ 'ABOUT.AND' | translate }}
+    </span>
+    {{ 'ABOUT.NAME2' | translate }}
+    <span class="regular">
+      {{ 'ABOUT.WHAT?2' | translate }}
+    </span>
+  </h1>
 
   <img id="logotype-mobile" src="../../../assets/ANDIAMO_logotype.svg" alt="">
   <div class="copy-mobile">
@@ -36,7 +48,8 @@
       </ul>
   </div>
 </div>
-    <div *ngIf="screen.isBigScreen; else smallScreen">
+    <!-- <div *ngIf="screen.isBigScreen; else smallScreen"> -->
+      <div>
         <div class="gallery">
             <div class="row" *ngFor="let photo of photos1">
                 <div class="push push-{{photo}}">
@@ -51,6 +64,8 @@
               <p>{{ 'ABOUT.ABOUT1' | translate }}</p>
               <p>{{ 'ABOUT.ABOUT2' | translate }}</p>
               <p>{{ 'ABOUT.ABOUT3' | translate }}</p>
+              <img id="logotype" src="../../../assets/ANDIAMO_logotype.svg" alt="">
+
             </div>
             <div class="row" *ngFor="let photo of photos2">
               <div class="push push-{{photo}}">
@@ -60,7 +75,7 @@
           </div>
         </div>
     </div>
-    <ng-template #smallScreen>
+    <!-- <ng-template #smallScreen>
         <div class="gallery">
             <div class="row" *ngFor="let photo of photos1">
                 <div class="push push-{{photo}}">
@@ -74,7 +89,7 @@
               <img src="../../../assets/plasterek.png" alt="">
             </div>
             <div class="copy">
-              <p>W naszych PRACACH lubimy BAWIĆ SIĘ formą, nie zamykając w ŻADNEJ na ZAWSZE. Kochamy EMOCJONALNE podróże w KOSMOS, tak samo jak NIEDOSŁOWNY HUMOR. Bo dla NAS być POMIĘDZY - nigdy nie oznacza BYĆ nigdzie.</p>
+              <p>W naszych PRACaaaaaACH lubimy BAWIĆ SIĘ formą, nie zamykając w ŻADNEJ na ZAWSZE. Kochamy EMOCJONALNE podróże w KOSMOS, tak samo jak NIEDOSŁOWNY HUMOR. Bo dla NAS być POMIĘDZY - nigdy nie oznacza BYĆ nigdzie.</p>
               <p>ŁĄCZY nas NIEUSTANNA chęć tworzenia OBRAZÓW, które są PIĘKNE i PORUSZAJĄCE, niezależnie od tego czy robimy SPOTY reklamowe, DOKUMENTY czy teledyski. Serca NIE OSZUKASZ. </p>
               <p>Tworzyliśmy FILMY i KAMPANIE dla takich marek jak: ADIDAS, SPRITE, SAMSUNG, PUMA, TYSKIE, BALLANTINE’S, BNP PARIBAS i VOGUE oraz dla najważniejszych polskich artystów, m.in: PRO8L3M, BRODKA, QUEBO, PEZET, JJ ORLIŃSKI, KRÓL, SOKÓŁ i KAYAH.</p>
               <img id="logotype" src="../../../assets/ANDIAMO_logotype.svg" alt="">
@@ -86,6 +101,6 @@
               </div>
           </div>
         </div>
-    </ng-template>
+    </ng-template> -->
 
     <img id="sign" src="../../../assets/ANDIAMO_sign.svg" alt="">

@@ -4,6 +4,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from 'src/app/translation.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -17,26 +18,32 @@ export class AboutComponent implements OnInit, OnDestroy {
   smallURL: string = 'assets/about/small';
   bigURL: string = 'assets/about/big/';
   logo: string = 'assets/ANDIAMO_sign-mini.svg';
-  title = 'O nas – kto stoi za Andiamo Works?';
-  description: MetaDefinition = {name: 'description', content: 'Duet reżyserów zniewalających spotów reklamowych i filmów dla firm. Poznajmy się!'};
+  title: string;
+  description: MetaDefinition = {name: 'description', content: ''};
 
-  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private translation: TranslationService){}
+  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private translation: TranslationService, private translate: TranslateService){}
 
   ngOnInit() {
     this.translation.checkLang();
-    this.titleService.setTitle(this.title);
-    this.metaService.updateTag(this.description);
-
+    this.translate.get('ABOUT.META').subscribe( m => {
+      console.log(m);
+      this.description.content = m;
+      this.metaService.updateTag(this.description);
+    });
+    this.translate.get('ABOUT.TITLE').subscribe( t => {
+      this.title = t;
+      console.log(t);
+      this.titleService.setTitle(this.title);
+    })
     this.screen.getScreenSize();
+    console.log(this.screen.isBigScreen);
     for(let i = 1; i < 5; i++){
       let newPhoto: number = i;
       this.photos1.push(newPhoto)
-      console.log(this.photos1);
     };
     for(let i = 5; i < 11; i++){
       let newPhoto: number = i;
       this.photos2.push(newPhoto)
-      console.log(this.photos2);
     };
     // basic
     this.screen.fixMenuColors('#fafff6','#000');

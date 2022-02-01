@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 import { ScreenService } from 'src/app/screen.service';
 import { TranslationService } from 'src/app/translation.service';
 
@@ -14,12 +15,20 @@ export class ContactComponent implements OnInit, OnDestroy {
   description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze dane kontaktowe i skontaktuj się z nami.'};
   $light: '#D3FFB5';
 
-  constructor(private elementRef: ElementRef, private titleService: Title, private metaService: Meta, private screen: ScreenService, private translation: TranslationService){}
+  constructor(private elementRef: ElementRef, private titleService: Title, private metaService: Meta, private screen: ScreenService, private translation: TranslationService, private translate: TranslateService){}
 
     ngOnInit() {
       this.translation.checkLang();
-      this.titleService.setTitle(this.title);
-      this.metaService.updateTag(this.description);
+      this.translate.get('CONTACT.META').subscribe( m => {
+        console.log(m);
+        this.description.content = m;
+        this.metaService.updateTag(this.description);
+      });
+      this.translate.get('CONTACT.TITLE').subscribe( t => {
+        this.title = t;
+        console.log(t);
+        this.titleService.setTitle(this.title);
+      })
       this.screen.getScreenSize();
       this.screen.fixMenuColors('#000', '#fafff6')
       if(this.screen.isHorizontal == true){

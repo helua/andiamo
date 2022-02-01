@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -13,7 +12,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';

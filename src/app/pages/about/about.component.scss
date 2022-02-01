@@ -24,24 +24,20 @@ h1.big{
   @media screen and (max-width: 599px){
     width: 50%;
     bottom: 109px;
-    z-index: 2;  }
+    z-index: 2;
+  }
 }
 #logotype{
   position: absolute;
-  top: 267%;
+  top: 197%;
   width: 62%;
   left: 50%;
   transform: translate(-50%,50%);
-  @media screen and (max-width: 1024px){
-    width: 86%;
-    top: 274%;
-
-  }
   @media screen and (max-width: 900px){
-    top: 201%;
+    top: 190%;
+    width: 86%;
   }
   @media screen and (max-width: 599px){
-
     display: none;
     visibility: hidden;
   }
@@ -286,7 +282,9 @@ ul{
     visibility: hidden;
   }
 }
-
+.copy{
+  height: 552px;
+}
 .copy, .copy-mobile{
   margin-top: 42%;
   padding-bottom: 2rem;
