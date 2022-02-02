@@ -5,10 +5,11 @@ $color: #ff501e;
 
 select{
   position: fixed;
-  top: calc(4% + 22px);
-    right: 2%;
+  top: calc(6% + 22px);
+  right: 2%;
   z-index:5;
   border-color: $gray;
   color: $color;
   background-color: $gray;
+  font-size: 1rem;
 }
