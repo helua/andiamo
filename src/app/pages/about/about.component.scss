@@ -276,14 +276,16 @@ ul{
     visibility: hidden;
   }
 }
-@media screen and (max-width: 599px){
-  .copy{
+
+.copy{
+  min-height: 700px;
+  @media screen and (max-width: 900px){
+    min-height: 600px;
+  }
+  @media screen and (max-width: 599px){
     display: none;
     visibility: hidden;
   }
-}
-.copy{
-  height: 552px;
 }
 .copy, .copy-mobile{
   margin-top: 42%;
@@ -294,7 +296,6 @@ ul{
   @media screen and (max-width: 1024px){
     margin-top: 66%;
     padding-bottom: 5rem;
-
   }
   & p{
     padding: 1% 25%;
