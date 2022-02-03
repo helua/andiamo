@@ -6,7 +6,7 @@ $gray: #f0f0f0;
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
-//PRODUCTION
+//PRODUCTION FONTS
 @font-face {
   font-family: 'tex_gyre_heros_cnregular';
   src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf');
@@ -22,7 +22,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
   font-style: normal;
 }
 
-//LOCAL
+//LOCAL FONTS
 // @font-face {
 //   font-family: 'tex_gyre_heros_cnregular';
 //   src: url('/assets/fonts/texgyreheroscn-regular.otf');
@@ -63,58 +63,7 @@ body{
     margin: 2px 0 4.2rem 0;
 }
 
-//logotype "Allora, ANDIAMO ?"
-#logotype-wrapper{
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: -1rem;
-    width: 35rem;
-    z-index: 2;
-    mix-blend-mode: difference;
-    height: 7rem;
-    @media screen and (max-width: 405px){
-        width: 22.826rem;
-    }
-}
-.logotype{
-    position: absolute;
-    width: 12rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @media screen and (max-width: 405px){
-        width: 7.826rem;
-    }
-
-}
-span#question-mark, span#allora{
-    display: none;
-    position: absolute;
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    transform: rotate(-7.2deg);
-    color: $color;
-    z-index: 10;
-    @media screen and (max-width: 405px){
-        font-size: 1.5rem;
-    }
-}
-span#allora{
-    left: 0;
-    bottom: 8%;
-    @media screen and (max-width: 405px){
-        bottom: 23%;
-        }
-}
-span#question-mark{
-    right: 27%;
-    top: 13%;
-    @media screen and (max-width: 405px){
-        top: 25%;
-        }
-}
-
+//TYPO
 h1{
     font-size: 3.875rem;
     line-height: 3.8rem;
@@ -126,23 +75,20 @@ h1{
     margin: 0;
     top: calc(2% - 2px);
     position: relative;
-
-
+    @media screen and (max-width: 1024px){
+      padding: 0 17%;
+    }
     @media screen and (max-width: 900px){
       font-size: 2.875rem;
       line-height: 2.8rem;
       margin-top: 8rem;
       padding: 0 5%;
-
     }
     @media screen and (max-width: 400px){
       font-size: 2.4rem;
       line-height: 2.3rem;
       margin-top: 4rem;
-
     }
-
-
 }
 h2{
     font-size: 3.875rem;
@@ -158,18 +104,14 @@ h2{
     @media screen and (max-width: 400px){
         font-size: 2.4rem;
         line-height: 2.3rem;    }
-
 }
-
 a{
     text-decoration: none;
     @media screen and (min-width: 600px){
         &:hover{
           text-decoration: underline;
-
         }
     }
-
 }
 
 p, h2, ul {
@@ -185,14 +127,13 @@ span.bold{
     font-family: $font-bold;
 
   }
-
-
 button{
     border: none;
     cursor: pointer;
     background-color: rgba($white, 0);
 }
-//responsive menu
+
+//desktop menu hidden
 @media only screen and (max-width: 599px) {
     .desktop{
         display: none;
@@ -200,20 +141,18 @@ button{
     }
 }
 
-
-
 //mobile menu
 .mobile{
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
+
     & ul{
         display: flex;
         justify-content: space-between;
         list-style: none;
     }
-
     @media only screen and (min-width: 599px) {
     display: none;
     visibility: hidden;
@@ -221,16 +160,66 @@ button{
 }
 .mat-drawer{
     position: fixed !important;
-    padding-top: 6rem;
     background-color: $gray;
+    & img#sign{
+      padding-top: 6rem;
+    }
 }
 .mat-drawer-container{
     background-color: rgba($white, 0);
-}
-.mat-drawer-container-about{
-    background-color: red;
 }
 .mat-drawer-backdrop.mat-drawer-shown{
     background-color: rgba($color, .6);
 }
 
+//logotype "Allora, ANDIAMO ?"
+// #logotype-wrapper{
+//     position: fixed;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     bottom: -1rem;
+//     width: 35rem;
+//     z-index: 2;
+//     mix-blend-mode: difference;
+//     height: 7rem;
+//     @media screen and (max-width: 405px){
+//         width: 22.826rem;
+//     }
+// }
+// .logotype{
+//     position: absolute;
+//     width: 12rem;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     @media screen and (max-width: 405px){
+//         width: 7.826rem;
+//     }
+
+// }
+// span#question-mark, span#allora{
+//     display: none;
+//     position: absolute;
+//     font-size: 2.3rem;
+//     text-transform: uppercase;
+//     transform: rotate(-7.2deg);
+//     color: $color;
+//     z-index: 10;
+//     @media screen and (max-width: 405px){
+//         font-size: 1.5rem;
+//     }
+// }
+// span#allora{
+//     left: 0;
+//     bottom: 8%;
+//     @media screen and (max-width: 405px){
+//         bottom: 23%;
+//         }
+// }
+// span#question-mark{
+//     right: 27%;
+//     top: 13%;
+//     @media screen and (max-width: 405px){
+//         top: 25%;
+//         }
+// }
