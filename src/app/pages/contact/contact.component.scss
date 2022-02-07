@@ -6,28 +6,36 @@ $white: #fafff6;
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
+h1{
+  top: calc(2vh - 2px);
+  position: relative;
+  // margin-bottom: calc(3rem + 5%);
+  @media screen and (max-width: 599px){
+    top:0;
+  }
+}
+h1, h2, a, p{
+  color: $white;
+}
+h1 a{
+  @media screen and (max-width: 700px){
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+  }
+}
 .board{
     width: 100%;
-    height: calc(100vh - 4.2166rem);
+    // height: calc(100vh - 4.2166rem);
+    height: 66vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media screen and (max-width: 599px) {
       margin-bottom: 8rem;
       height: unset;
     }
-    & h1{
-      margin-bottom: calc(3rem + 5%);
-    }
-    & h1, h2, a, p{
-      color: $white;
-    }
-    & h1 a{
-      @media screen and (max-width: 700px){
-        font-size: 1.2rem;
-        line-height: 1.3rem;
-      }
-    }
 }
-
 
 .contact{
   display: flex;
