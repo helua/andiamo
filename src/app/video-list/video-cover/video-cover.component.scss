@@ -15,17 +15,17 @@ $color: #ff501e;
         transition: .5s ease-in-out;
         // border-radius: 12px;
         border: solid 1px $color;
-        @media screen and (hover: none){
-          filter:grayscale(0%);
-        }
+        // @media screen and (hover: none){
+        //   filter:grayscale(0%);
+        // }
         @media screen and (max-width: 600px){
             width: 96%;
             margin: 0 2%;
         }
     }
-    &:hover img{
-      filter:grayscale(0%);
-    }
+    // &:hover img{
+    //   filter:grayscale(0%);
+    // }
     & span{
         color: $color;
         position: fixed;
