@@ -4,6 +4,12 @@
   <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
 </select>
 
+  <!-- <div *ngFor="let lang of translate.getLangs()">
+    <input type="radio" id="lang" [value]="lang" [selected]="lang === translate.currentLang">
+    <label for="lang">{{ lang }}</label>
+  </div> -->
+
+
 <!--
 <form>
   <h4>mat-select</h4>

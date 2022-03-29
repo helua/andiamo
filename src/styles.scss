@@ -43,7 +43,7 @@ body{
     font-family: $font;
     font-size: 1.3rem;
     font-weight: 600;
-    letter-spacing: .1rem;
+    letter-spacing: 0;
     margin: 0px;
     background-color: #F0F0F0;
     background-size: cover;
@@ -60,7 +60,7 @@ body{
 }
 
 .router-wrapper{
-    margin: 2px 0 4.2rem 0;
+    margin: 0 0 4.2rem 0;
 }
 
 //TYPO
@@ -73,7 +73,8 @@ h1{
     letter-spacing: .08rem;
     color: $color;
     margin: 0;
-    top: calc(2% - 2px);
+    top: 2%;
+    // top: calc(2% - 2px);
     position: relative;
     @media screen and (max-width: 1024px){
       padding: 0 17%;

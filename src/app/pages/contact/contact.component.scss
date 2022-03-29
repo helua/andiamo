@@ -7,7 +7,8 @@ $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
 h1{
-  top: calc(2vh - 2px);
+  top: 2vh;
+  // top: calc(2vh - 2px);
   position: relative;
   // margin-bottom: calc(3rem + 5%);
   @media screen and (max-width: 599px){

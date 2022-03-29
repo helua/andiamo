@@ -2,29 +2,45 @@
 $font: 'tex_gyre_heros_cnregular';
 #showreel{
   height: 56.3vw;
+  width: 100%;
+  background-image: url('../../assets/ANDIAMO_gif.gif');
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-aspect-ratio: 1.776){
+    height: 100vh;
+  }
+  @media screen and (orientation: portrait){
+    height: 66vh;
+  }
 }
 button{
   border: solid white 2px;
   font-size: 2rem;
-  color: wheat;
+  color: white;
   position: absolute;
   top: 90vh;
   z-index: 10;
   left: 50%;
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-family: $font;
-  padding: 0 .5rem;
+  padding: .5rem 2rem;
+  @media screen and (max-aspect-ratio: 1.776){
+    top: 80vh;
+  }
+  @media screen and (orientation: portrait) {
+    top: 60vh;
+    font-size: 1.2rem
+  }
 }
 img{
   position: absolute;
-  top: 50vh;
   z-index: 9;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  &#gif{
-    transform: translate(-50%, 0%);
-    top: 0%;
+  transform: translate(-50%, -50%);
+  top: 50vh;
+    @media screen and (orientation: portrait) {
+      top: 33vh;
   }
-
 }

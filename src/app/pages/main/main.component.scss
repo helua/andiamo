@@ -3,10 +3,13 @@ $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 #sign{
   position: absolute;
-  top: 10rem;
-  width: 100px;
+  top: 13rem;
+  width: 129px;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 900px){
+    top: 10rem;
+  }
 }
 .screen{
   height: 85vh;
