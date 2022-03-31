@@ -6,7 +6,7 @@ $font: 'tex_gyre_heros_cnregular';
   background-image: url('../../assets/ANDIAMO_gif.gif');
   background-position: center;
   background-size: cover;
-  @media screen and (max-aspect-ratio: 1.776){
+  @media screen and (max-aspect-ratio: 1.776), (orientation: portrait){
     height: 100vh;
   }
 }
