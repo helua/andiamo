@@ -25,8 +25,8 @@ button{
   @media screen and (max-aspect-ratio: 1.776){
     top: 80vh;
   }
-  @media screen and (orientation: portrait) {
-    top: 60vh;
+  @media screen and (max-width: 900px) {
+    top: 82vh;
     font-size: 1.2rem
   }
 }

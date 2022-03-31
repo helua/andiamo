@@ -14,6 +14,8 @@ select{
   font-size: 1rem;
   @media screen and (max-width: 599px){
     top: calc(6% + 22px);
-
+    @media screen and (orientation: landscape){
+      top: calc(6vw + 22px);
+    }
   }
 }
