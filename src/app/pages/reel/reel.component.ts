@@ -13,8 +13,8 @@ import { VimeoService } from 'src/app/vimeo.service';
 export class ReelComponent implements OnInit, OnDestroy {
   videoID: string = '643212746';
   video: any;
-  title = 'Reel 2021 reżyserów Andiamo Works';
-  description: MetaDefinition = {name: 'description', content: 'Najnowsza prezentacja prac Andiamo Works.'};
+  title = 'Reel 2021 reżyserów Andiamo';
+  description: MetaDefinition = {name: 'description', content: 'Najnowsza prezentacja prac Andiamo.'};
 
   constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private vimeo: VimeoService, private elementRef: ElementRef, private translation: TranslationService, private translate: TranslateService) {}
 

@@ -9,9 +9,6 @@ $font: 'tex_gyre_heros_cnregular';
   @media screen and (max-aspect-ratio: 1.776){
     height: 100vh;
   }
-  @media screen and (orientation: portrait){
-    height: 66vh;
-  }
 }
 button{
   border: solid white 2px;

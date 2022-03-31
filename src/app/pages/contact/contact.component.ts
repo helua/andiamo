@@ -11,7 +11,7 @@ import { TranslationService } from 'src/app/translation.service';
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
-  title = 'Kontakt z Andiamo Works';
+  title = 'Kontakt z Andiamo';
   description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze dane kontaktowe i skontaktuj się z nami.'};
   $light: '#D3FFB5';
 

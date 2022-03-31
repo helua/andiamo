@@ -2,8 +2,8 @@ export const AllCredits = [
   {
     id: 354766030,
     title: "PEZET | INTRO",
-    dop: "...", 
-    editor: "...", 
+    dop: "...",
+    editor: "...",
     prodComp: "...",
     agency: "...",
     meta: "Reżyserzy Andiamo stworzyli klip do \"Intro\" Pezeta inaugurującego powrót artysty na polską scenę muzyczną. Zobacz teledysk nagrany na taśmie 16 mm."
@@ -78,7 +78,7 @@ export const AllCredits = [
     editor: "Pati Pirog",
     prodComp: "Andiamo Digital",
     agency: "Outrage",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
   },
   {
     id: 455748813,
@@ -95,7 +95,7 @@ export const AllCredits = [
     dop: "Adam Suzin",
     editor: "Nikodem Chabior",
     prodComp: "Andiamo Digital",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
 
   },
   {
@@ -141,7 +141,7 @@ export const AllCredits = [
     editor: "Sam Editor",
     prodComp: "Andiamo Digital",
     agency: "Starship",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
   },
   {
     id: 412487120,
@@ -150,7 +150,7 @@ export const AllCredits = [
     editor: "Maciej Kozlowski",
     prodComp: "Shootme",
     agency: "GONG",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
   },
   {
     id: 394249129,
@@ -168,7 +168,7 @@ export const AllCredits = [
     editor: "Kuba Tomaszkiewicz",
     prodComp: "Andiamo Digital",
     agency: "Kreatik",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
   },
   {
     id: 393674975,
@@ -177,7 +177,7 @@ export const AllCredits = [
     editor: "Kuba Tomaszkiewicz",
     prodComp: "Andiamo Digital",
     agency: "Kreatik",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
   },
   {
     id: 378886789,
@@ -195,7 +195,7 @@ export const AllCredits = [
     editor: "Nikodem Chabior",
     prodComp: "Andiamo Digital",
     agency: "Starship",
-    meta: "Kolejny film Andiamo Works"
+    meta: "Kolejny film Andiamo"
 
   },
   {

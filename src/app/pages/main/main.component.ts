@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  title = 'Reżyserski duet Andiamo Works. Mateusz Erdmann i Michał Więckowski';
+  title = 'Reżyserski duet Andiamo. Mateusz Erdmann i Michał Więckowski';
   description: MetaDefinition = {name: 'description', content: 'Tworzymy wyjątkowe reklamy, teledyski i filmy. Zobacz nasze projekty, m.in. dla Adidasa, Wyborowej, czy Pezeta.'};
   arrowIcon = faArrowDown;
   isSkipped = 'nie';

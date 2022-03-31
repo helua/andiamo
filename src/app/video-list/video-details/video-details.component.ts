@@ -20,7 +20,7 @@ export class VideoDetailsComponent implements OnInit, AfterViewChecked {
   title: string;
   videoID: number;
   description: MetaDefinition = {};
-  credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "...", meta: "Kolejny film Andiamo Works"};
+  credits = {id: null, title: "...", dop: "...", editor: "...", prodComp: "...", agency: "...", meta: "Kolejny film Andiamo"};
   player: string = '';
   allCredits = AllCredits;
 
