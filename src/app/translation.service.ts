@@ -32,7 +32,6 @@ export class TranslationService {
       this.translate.use('pl');
     }
     if(this.router.url === "/en"){
-      console.log(this.router.url);
       this.translate.use('en');
     }
     if(this.router.url === "/soulreel"){
@@ -41,6 +40,8 @@ export class TranslationService {
     if(this.router.url === "/soulreel-en"){
       this.translate.use('en');
     }
+    this.underlineLangOption();
+
   }
   navigateOnLangSwitch(){
     if(this.router.url === '/o-nas'){
@@ -73,5 +74,32 @@ export class TranslationService {
     if(this.router.url === '/soulreel-en'){
       this.router.navigate(['/soulreel'])
     };
+    this.underlineLangOption();
+
+  }
+  underlineLangOption(): void{
+    const langOptionPL = document.getElementById('pl');
+    console.log(langOptionPL)
+    const langOptionEN = document.getElementById('en');
+    console.log(langOptionEN)
+
+    if(this.translate.currentLang === 'pl'){
+      if(langOptionPL && langOptionEN){
+        langOptionPL.style.textDecoration = "underline";
+        langOptionPL.style.fontFamily = "tex_gyre_heros_cnbold";
+        langOptionEN.style.textDecoration = "none";
+        langOptionEN.style.fontFamily = "tex_gyre_heros";
+
+      }
+    }
+    if(this.translate.currentLang === 'en'){
+      if(langOptionEN && langOptionPL){
+        langOptionEN.style.textDecoration = "underline";
+        langOptionEN.style.fontFamily = "tex_gyre_heros_cnbold";
+        langOptionPL.style.textDecoration = "none";
+        langOptionPL.style.fontFamily = "tex_gyre_heros";
+
+      }
+    }
   }
 }

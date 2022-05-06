@@ -108,6 +108,7 @@ h2{
 }
 a{
     text-decoration: none;
+    cursor: pointer;
     @media screen and (min-width: 600px){
         &:hover{
           text-decoration: underline;

@@ -52,5 +52,12 @@ export class ScreenService {
       }
       let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
       menu.style.backgroundColor= colorBack;
+      // let langOptionEN = document.getElementById('en');
+      // langOptionEN.style.color = colorText;
+      // let langOptionPL = document.getElementById('pl');
+      // langOptionPL.style.color = colorText;
+      // let slash = document.getElementById('slash');
+      // console.log(slash);
+      // slash.style.color = colorText;
     }
 }

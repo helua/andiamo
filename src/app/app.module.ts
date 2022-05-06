@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,7 +36,6 @@ import { NewsComponent } from './pages/news/news.component';
 import { NewsCoverComponent } from './pages/news/news-cover/news-cover.component';
 import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
 import { LoadingComponent } from './loading/loading.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 import { IntroComponent } from './intro/intro.component';
 import { TranslationComponent } from './translation/translation.component';
 

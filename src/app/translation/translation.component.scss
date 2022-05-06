@@ -3,19 +3,28 @@ $gray: #f0f0f0;
 $color: #ff501e;
 
 
-select{
-  position: fixed;
-  top: calc(4% + 22px);
-  right: 2%;
-  z-index:5;
-  border-color: $gray;
-  color: $color;
-  background-color: $gray;
-  font-size: 1rem;
-  @media screen and (max-width: 599px){
-    top: calc(6% + 22px);
-    @media screen and (orientation: landscape){
-      top: calc(6vw + 22px);
-    }
+// select{
+//   position: fixed;
+//   top: calc(4% + 22px);
+//   right: 2%;
+//   z-index:5;
+//   border-color: $gray;
+//   color: $color;
+//   background-color: $gray;
+//   font-size: 1rem;
+//   @media screen and (max-width: 599px){
+//     top: calc(6% + 22px);
+//     @media screen and (orientation: landscape){
+//       top: calc(6vw + 22px);
+//     }
+//   }
+// }
+
+@media screen and (max-width: 599px){
+  a{
+    padding: 0 16px;
+    font-size: 1.5rem;
+    margin-top: 3%;
+    line-height: 48px;
   }
 }

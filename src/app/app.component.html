@@ -27,6 +27,7 @@
             <!-- <a (click)="sidenav.toggle()" mat-list-item routerLink="/newsy" routerLinkActive="active">AKTUALNOŚCI</a> -->
             <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.CONTACT' | translate }}" routerLinkActive="active" class="menu-link">{{ 'MENU.CONTACT' | translate }}</a>
             <a (click)="sidenav.toggle()" mat-list-item routerLink="{{ 'ROUTING.SOULREEL' | translate }}" routerLinkActive="active" class="menu-link">SOULREEL</a>
+              <app-translation (click)="sidenav.toggle()"></app-translation>
           </mat-nav-list>
         </mat-sidenav>
       <mat-sidenav-content>
