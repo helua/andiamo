@@ -44,6 +44,7 @@ export class TranslationService {
 
   }
   navigateOnLangSwitch(){
+
     if(this.router.url === '/o-nas'){
       this.router.navigate(['/about'])
     };
@@ -74,7 +75,9 @@ export class TranslationService {
     if(this.router.url === '/soulreel-en'){
       this.router.navigate(['/soulreel'])
     };
+
     this.underlineLangOption();
+
 
   }
   underlineLangOption(): void{
@@ -84,6 +87,7 @@ export class TranslationService {
     console.log(langOptionEN)
 
     if(this.translate.currentLang === 'pl'){
+      console.log('LANG OPTION - PL')
       if(langOptionPL && langOptionEN){
         langOptionPL.style.textDecoration = "underline";
         langOptionPL.style.fontFamily = "tex_gyre_heros_cnbold";
@@ -93,6 +97,7 @@ export class TranslationService {
       }
     }
     if(this.translate.currentLang === 'en'){
+      console.log('LANG OPTION - ENG')
       if(langOptionEN && langOptionPL){
         langOptionEN.style.textDecoration = "underline";
         langOptionEN.style.fontFamily = "tex_gyre_heros_cnbold";

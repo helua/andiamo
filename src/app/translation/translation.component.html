@@ -4,6 +4,6 @@
   <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
 </select> -->
 
-<a (click)="translate.use('pl'); navigateOnLangSwitch();" class="menu-link">PL</a>
+<a (click)="translate.use('pl'); navigateOnLangSwitch();" class="menu-link" id="pl">PL</a>
 <span id="slash" class="menu-link"> / </span>
-<a (click)="translate.use('en'); navigateOnLangSwitch();"  class="menu-link">EN</a>
+<a (click)="translate.use('en'); navigateOnLangSwitch();"  class="menu-link" id="en">EN</a>

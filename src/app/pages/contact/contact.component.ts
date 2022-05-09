@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
       this.translation.checkLang();
+      console.log('CONTACT - NG ON INIT')
       this.translate.get('CONTACT.META').subscribe( m => {
         console.log(m);
         this.description.content = m;
