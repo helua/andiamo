@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../translation.service';
 
@@ -13,7 +13,7 @@ import { TranslationService } from '../translation.service';
 
 export class TranslationComponent implements OnInit {
 
-  constructor( public translate: TranslateService, private translation: TranslationService) {
+  constructor( public translate: TranslateService, private translation: TranslationService, private cdRef: ChangeDetectorRef) {
   translate.addLangs(['pl', 'en']);
   translate.setDefaultLang('pl');
 
@@ -26,6 +26,7 @@ export class TranslationComponent implements OnInit {
 
   navigateOnLangSwitch(){
     this.translation.navigateOnLangSwitch();
+    this.cdRef.detectChanges();
   }
 
 }
