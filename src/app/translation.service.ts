@@ -102,7 +102,7 @@ export class TranslationService {
         langOptionPL.style.textDecoration = "underline";
         langOptionPL.style.fontFamily = "tex_gyre_heros_cnbold";
         langOptionEN.style.textDecoration = "none";
-        langOptionEN.style.fontFamily = "tex_gyre_heros";
+        langOptionEN.style.fontFamily = "tex_gyre_heros_cnregular";
         langOptionPL.style.pointerEvents = "none";
         langOptionEN.style.pointerEvents = "auto";
       }
@@ -112,7 +112,7 @@ export class TranslationService {
         langOptionEN.style.textDecoration = "underline";
         langOptionEN.style.fontFamily = "tex_gyre_heros_cnbold";
         langOptionPL.style.textDecoration = "none";
-        langOptionPL.style.fontFamily = "tex_gyre_heros";
+        langOptionPL.style.fontFamily = "tex_gyre_heros_cnregular";
         langOptionEN.style.pointerEvents = "none";
         langOptionPL.style.pointerEvents = "auto";
       }

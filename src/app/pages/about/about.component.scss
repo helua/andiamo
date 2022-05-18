@@ -37,9 +37,11 @@ h1.big{
 .awards{
     position: absolute;
     bottom: 0%;
+    display: none;
     @media screen and (max-width: 599px) {
       position: relative;
       padding-top: 5%;
+      display: block;
     }
   & h2{
     border: $color 1px solid;
@@ -85,10 +87,97 @@ h1.big{
   }
 }
 }
+.awards2{
+  position: absolute;
+  bottom: -16px;
+  bottom: 0;
+  // margin-top: 20vh;
+  display: block;
+  color: white;
+  height: 4.2rem;
+  width: 99vw;
+  margin-left: .5vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+
+    @media screen and (max-width: 599px) {
+      position: relative;
+      padding-top: 5%;
+      display: none;
+    }
+  & h2{
+    border: $color 1px solid;
+    color: $color;
+    padding: 0 1rem;
+    width: 170px;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 5px 2vw;
+    left: 2vw;
+  }
+  & .inner{
+    padding: 0 2vw;
+    font-size: 1.1rem;
+    letter-spacing: .16rem;
+    word-spacing: .05rem;
+    text-align: justify;
+    opacity: .9;
+    text-transform: uppercase;
+    width: 967rem;
+    animation: move infinite 200s ease;
+
+
+
+    @media screen and (max-width: 599px){
+        text-align: left;
+        font-size: .7rem;
+        line-height: 1rem;
+        padding: 0 4%;
+        letter-spacing: .04rem;
+
+    }
+    & > div{
+
+      float: left;
+      display: inline;
+      padding-right: .5rem;
+      padding-top: .24rem;
+
+      &:before {
+          content: "▪ ";
+          color: $color;
+        }
+
+  }
+}
+}
+@keyframes move{
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.gallery-window{
+  // height: calc(93vh - 4.2rem);
+  height: 100vh;
+  display: block;
+  overflow-y: auto;
+  margin-bottom: -4.2rem;
+  @media screen and (max-width: 599px){
+    height: unset;
+  }
+}
 .gallery{
-    padding-top: 13%;
+    // padding-top: 13%;
+    padding-top: 27%;
     position: relative;
-    margin-bottom: -4.2rem;
+    // margin-bottom: -4.2rem;
+    margin-bottom: -79%;
     @media screen and (max-width: 1024px){
         padding-top: 56%;
     }
@@ -328,14 +417,15 @@ h1.big{
 }
 
 #sign{
-  position: absolute;
-  bottom: 50vh;
+  position: relative;
   width: 20%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 283%);
   @media screen and (max-width: 599px){
     width: 50%;
     bottom: 109px;
     z-index: 2;
+    position: absolute;
+    transform: translate(-50%, 50%);
   }
 }
