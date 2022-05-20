@@ -33,15 +33,16 @@ export class MainComponent implements OnInit {
     this.screen.fixMenuColors('#000', '#fafff6');
     this.isSkipped = getSkipButton();
     this.screen.getScreenSize();
-    if(this.screen.isHorizontal == true){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray.jpg")';
-    }
-    if(this.screen.isHorizontal !== true && this.screen.scrWidth > 450 ){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-pion.jpg")';
-    }
-    if(this.screen.isHorizontal !== true && this.screen.scrWidth < 450 ){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-mobile.jpg")';
-    }
+    //skrypt tła
+    // if(this.screen.isHorizontal == true){
+    //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray.jpg")';
+    // }
+    // if(this.screen.isHorizontal !== true && this.screen.scrWidth > 450 ){
+    //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-pion.jpg")';
+    // }
+    // if(this.screen.isHorizontal !== true && this.screen.scrWidth < 450 ){
+    //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../assets/ANDIAMO_bg-gray-mobile.jpg")';
+    // }
   }
   scrollToElement($element): void {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
@@ -50,8 +51,8 @@ export class MainComponent implements OnInit {
     this.isSkipped = 'tak';
     setSkipButton('tak');
   }
-  ngOnDestroy(){
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
-   }
+  // ngOnDestroy(){
+  //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'none';
+  //  }
 }
 

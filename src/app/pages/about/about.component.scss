@@ -10,6 +10,7 @@ h1.small{
   }
 }
 h1.big{
+  // margin-top: 1%;
   @media screen and (max-width: 599px){
     display: none;
     visibility: hidden;
@@ -26,7 +27,7 @@ h1.big{
 .screen{
     position: fixed;
     z-index: 0;
-    height: 92vh;
+    height: calc(100vh - 1.1rem - 4%);
     color: $white;
     width: 100%;
     @media screen and (max-width: 599px){
@@ -89,9 +90,9 @@ h1.big{
 }
 .awards2{
   position: absolute;
-  bottom: -16px;
   bottom: 0;
   // margin-top: 20vh;
+  // margin-top: 60vh;
   display: block;
   color: white;
   height: 4.2rem;
@@ -115,6 +116,18 @@ h1.big{
     line-height: 1rem;
     margin: 5px 2vw;
     left: 2vw;
+    animation: soak 1 21s forwards;
+  }
+  @keyframes soak{
+    0% {
+      color:black;
+      border: black 1px solid;
+    }
+
+    100% {
+      color: $color;
+      border: $color 1px solid;
+    }
   }
   & .inner{
     padding: 0 2vw;
@@ -124,19 +137,9 @@ h1.big{
     text-align: justify;
     opacity: .9;
     text-transform: uppercase;
-    width: 967rem;
-    animation: move infinite 200s ease;
+    width: 960rem;
+    animation: move infinite 159s ease-out backwards;
 
-
-
-    @media screen and (max-width: 599px){
-        text-align: left;
-        font-size: .7rem;
-        line-height: 1rem;
-        padding: 0 4%;
-        letter-spacing: .04rem;
-
-    }
     & > div{
 
       float: left;
@@ -154,12 +157,16 @@ h1.big{
 }
 @keyframes move{
   0% {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+    -webkit-transform: translateX(100vw);
+    transform: translateX(100vw);
   }
-  100% {
+  99% {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(-101%);
+    transform: translateX(-101%);
   }
 }
 .gallery-window{
@@ -170,6 +177,8 @@ h1.big{
   margin-bottom: -4.2rem;
   @media screen and (max-width: 599px){
     height: unset;
+    overflow-y: visible;
+
   }
 }
 .gallery{
@@ -204,6 +213,8 @@ h1.big{
             &-1{
               margin-left: 0%;
               margin-right: 68%;
+              z-index: -1;
+              position: relative;
             }
             &-2{
               margin-left:14%;
@@ -420,10 +431,9 @@ h1.big{
   position: relative;
   width: 20%;
   left: 50%;
-  transform: translate(-50%, 283%);
+  transform: translate(-50%, 289%);
   @media screen and (max-width: 599px){
     width: 50%;
-    bottom: 109px;
     z-index: 2;
     position: absolute;
     transform: translate(-50%, 50%);

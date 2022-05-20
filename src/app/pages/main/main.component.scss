@@ -7,14 +7,15 @@ $font-bold: 'tex_gyre_heros_cnbold';
   width: 129px;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
   @media screen and (max-width: 900px){
     top: 10rem;
   }
 }
 .screen{
-  height: 85vh;
+  height: 50vh;
   position: relative;
-  margin-bottom: -8rem;
+  margin-bottom: -180px;
   @media screen and (max-width: 900px){
     height: unset;
     margin-bottom: 0;
@@ -44,7 +45,7 @@ p{
 }
 
 .videos{
-  padding-top: calc(50vh - 180px);
+  // padding-top: calc(50vh - 180px);
   @media screen and (max-width:900px){
     padding-top: 20vh;
   }
