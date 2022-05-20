@@ -7,36 +7,36 @@ $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
 
 //PRODUCTION FONTS
-// @font-face {
-//   font-family: 'tex_gyre_heros_cnregular';
-//   src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf');
-//   src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'tex_gyre_heros_cnbold';
-//   src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf');
-//   src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-//LOCAL FONTS
 @font-face {
   font-family: 'tex_gyre_heros_cnregular';
-  src: url('/assets/fonts/texgyreheroscn-regular.otf');
-  src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'tex_gyre_heros_cnbold';
-  src: url('/assets/fonts/texgyreheroscn-bold.otf');
-  src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf');
+  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+// //LOCAL FONTS
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnregular';
+//   src: url('/assets/fonts/texgyreheroscn-regular.otf');
+//   src: url('/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'tex_gyre_heros_cnbold';
+//   src: url('/assets/fonts/texgyreheroscn-bold.otf');
+//   src: url('/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
 body{
@@ -172,6 +172,25 @@ button{
 }
 .mat-drawer-backdrop.mat-drawer-shown{
     background-color: rgba($color, .6);
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4; filter: grayscale(.4);}
+  to {opacity: 1; filter: grayscale(0);}
+}
+
+@keyframes fade {
+  from {opacity: .4; filter: grayscale(.4);}
+  to {opacity: 1; filter: grayscale(0);}
 }
 
 //logotype "Allora, ANDIAMO ?"

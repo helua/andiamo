@@ -1,7 +1,8 @@
 <div *ngIf="videos else loadingBlock" class="grid">
     <app-video-cover
       *ngFor="let video of videos"
-      [video]="video">
+      [video]="video"
+      class="fade">
     </app-video-cover>
 </div>
 <ng-template #loadingBlock>
