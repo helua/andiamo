@@ -20,6 +20,12 @@ $font-bold: 'tex_gyre_heros_cnbold';
     height: unset;
     margin-bottom: 0;
   }
+  @media screen and (max-height: 900px){
+    margin-bottom: -90px;
+  }
+  @media screen and (max-height: 700px){
+    margin-bottom: 0px;
+  }
 }
 p{
   text-align: center;
