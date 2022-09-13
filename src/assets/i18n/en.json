@@ -41,5 +41,10 @@
   "REEL": {
     "TITLE": "2021 reel of ANDIAMO directors duo",
     "META": "The freshest portion of ANDIAMO works"
+  },
+  "404": {
+    "TITLE": "404: site not found",
+    "H1": "site not found",
+    "META": "404: site not found"
   }
 }

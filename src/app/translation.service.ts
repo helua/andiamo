@@ -50,6 +50,14 @@ export class TranslationService {
       this.translate.use('en');
       this.underlineLangOption('en');
     }
+    if(this.router.url === "/strona-nie-istnieje"){
+      this.translate.use('pl');
+      this.underlineLangOption('pl');
+    }
+    if(this.router.url === "/site-not-found"){
+      this.translate.use('en');
+      this.underlineLangOption('en');
+    }
 
   }
   navigateOnLangSwitch(){
@@ -83,12 +91,18 @@ export class TranslationService {
     if(this.router.url === '/soulreel-en'){
       this.router.navigate(['/soulreel'])
     };
+    if(this.router.url === '/strona-nie-istnieje'){
+      this.router.navigate(['/site-not-found'])
+    };
+    if(this.router.url === '/site-not-found'){
+      this.router.navigate(['/strona-nie-istnieje'])
+    };
 
 
-    if(this.router.url === '/' || 'o-nas' || 'z-planu' || 'kontakt' || 'soulreel'){
+    if(this.router.url === '/' || 'o-nas' || 'z-planu' || 'kontakt' || 'soulreel' || 'strona-nie-istnieje'){
       this.underlineLangOption('en');
     }
-    if(this.router.url === '/en' || 'about' || 'bts' || 'contact' || 'soulreel-en'){
+    if(this.router.url === '/en' || 'about' || 'bts' || 'contact' || 'soulreel-en' || 'site-not-found'){
       this.underlineLangOption('pl');
     }
 

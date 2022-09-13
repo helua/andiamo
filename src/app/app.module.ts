@@ -38,6 +38,7 @@ import { NewsDetailsComponent } from './pages/news/news-details/news-details.com
 import { LoadingComponent } from './loading/loading.component';
 import { IntroComponent } from './intro/intro.component';
 import { TranslationComponent } from './translation/translation.component';
+import { SiteNotFoundComponent } from './pages/site-not-found/site-not-found.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -64,6 +65,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoadingComponent,
     IntroComponent,
     TranslationComponent,
+    SiteNotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

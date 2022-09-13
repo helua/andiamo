@@ -16,18 +16,16 @@ export class MainComponent implements OnInit {
   description: MetaDefinition = {name: 'description', content: 'Tworzymy wyjątkowe reklamy, teledyski i filmy. Zobacz nasze projekty, m.in. dla Adidasa, Wyborowej, czy Pezeta.'};
   arrowIcon = faArrowDown;
   isSkipped = 'nie';
-  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private elementRef: ElementRef, private translation: TranslationService, private translate: TranslateService){}
+  constructor(private titleService: Title, private metaService: Meta, private screen: ScreenService, private translation: TranslationService, private translate: TranslateService){}
 
   ngOnInit() {
     this.translation.checkLang();
     this.translate.get('MAIN.META').subscribe( m => {
-      console.log(m);
       this.description.content = m;
       this.metaService.updateTag(this.description);
     });
     this.translate.get('MAIN.TITLE').subscribe( t => {
       this.title = t;
-      console.log(t);
       this.titleService.setTitle(this.title);
     })
     this.screen.fixMenuColors('#000', '#fafff6');

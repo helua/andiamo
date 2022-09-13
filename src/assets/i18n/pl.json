@@ -41,5 +41,10 @@
   "REEL": {
     "TITLE": "Reel 2021 reżyserów Andiamo",
     "META": "Najnowsza prezentacja prac Andiamo."
+  },
+  "404": {
+    "TITLE": "404: ta strona nie istnieje",
+    "H1": "ta strona nie istnieje",
+    "META": "404: ta strona nie istnieje"
   }
 }
