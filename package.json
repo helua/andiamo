@@ -29,7 +29,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@ngx-translate/core": "^13.0.0",
-    "@ngx-translate/http-loader": "^7.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "@sanity/block-content-to-html": "^2.0.0",
     "@sanity/client": "^2.21.7",
     "@sanity/image-url": "^1.0.1",
