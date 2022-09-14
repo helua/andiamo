@@ -36,6 +36,7 @@
     "@scullyio/init": "^2.0.1",
     "@scullyio/ng-lib": "^2.0.0",
     "@scullyio/scully": "^2.0.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.36",
     "@types/vimeo__player": "^2.10.1",
     "@vimeo/player": "^2.16.1",
     "delay": "^5.0.0",
