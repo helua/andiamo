@@ -12,14 +12,24 @@ import { ScreenService } from 'src/app/screen.service';
 })
 export class NewsComponent implements OnInit {
 
-  posts!: Observable<Post[]>;
+  postsRaw: any = [];
+  posts: Post[] = []
   title = 'Aktualności z życia i projektów Andiamo';
   description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze najnowsze projekty i zrealizowane spoty reklamowe. Mamy doswiadczenie w produkcji i kreacji!'};
 
   constructor(private blogPostsService: BlogPostsService, private screen: ScreenService, private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.posts = this.blogPostsService.getPosts();
+    console.log('NEWS')
+    this.blogPostsService.getPosts().subscribe( posts => {
+      console.log(posts);
+      this.postsRaw = posts;
+      for (let i = 0; i < this.postsRaw.result.length; i++){
+        this.posts.push(this.blogPostsService.workResult(this.postsRaw.result[i]));
+      }
+      console.log(this.posts);
+    });
+
     this.screen.fixMenuColors('#000', '#f0f0f0');
     this.titleService.setTitle(this.title);
     this.metaService.updateTag(this.description);

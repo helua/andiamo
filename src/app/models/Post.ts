@@ -1,9 +1,10 @@
 export interface Post {
     createdAt?: string;
     id?: string;
-    name?: string;
+    title?: string;
     categories?: string[];
     body?: string;
-    image?: string;
+    images?: string[];
     meta?: string;
+    slug?: string;
   }

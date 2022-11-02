@@ -1,16 +1,16 @@
 
 <div class="post-cover">
   <div class="holder">
-    <a [routerLink]="['/aktualnosci', post.id]">
+    <a [routerLink]="['/newsy', post.slug]">
 
     <span class="post-date">{{ post.createdAt | date}}</span>
 
       <div class="post-cover-image">
-        <img [src]="post.image" />
+        <img [src]="post.images[0]" />
 
       </div>
       <caption class="post-cover-title">
-        {{ post.name }}
+        {{ post.title }}
       </caption>
     </a>
   </div>

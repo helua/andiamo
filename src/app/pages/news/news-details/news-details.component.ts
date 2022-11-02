@@ -19,33 +19,25 @@ const sanity = sanityClient({
   styleUrls: ['./news-details.component.scss']
 })
 export class NewsDetailsComponent implements OnInit {
-  // post: any = undefined;
+
   title: string;
   postRaw: any = {};
-  post: Post = {createdAt: "", id: "",name: "", categories:[""], meta:"", body: "", image: ""};
+  post: Post = {createdAt: "", id: "",title: "", categories:[""], meta:"", body: "", images: []};
   postID: string;
-  //   createdAt: '2021-04-09T14:20:02Z',
-  //   id: 'd',
-  //   name: 'ASdasdasd',
-  //   categories: ['gdf'],
-  //   body: 'fsdfs',
-  //   image: 'sdfsdf',
-  //   meta: 'sfsdfsdf'
-  // }
   description: MetaDefinition = {};
 
   constructor(
     private http: BlogPostsService ,
     private route: ActivatedRoute,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private blogPostService: BlogPostsService
   ) {}
 
   ngOnInit(){
     this.metaService.addTags([
       {name: 'robots', content: 'noindex, nofollow, noimageindex'}
     ]);
-    // this.getData();
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.http.getPost(
@@ -53,72 +45,14 @@ export class NewsDetailsComponent implements OnInit {
         )
       ).subscribe( post => {
         this.postRaw = post;
-        this.post = this.workResult(this.postRaw.result[0]);
-        this.postID = this.post.id;
-        console.log(this.post);
-        this.title = this.post.name;
+        this.post = this.blogPostService.workResult(this.postRaw.result[0]);
+        this.postID = this.post.slug;
+        this.title = this.post.title;
         this.titleService.setTitle(this.title);
         this.description = {name: 'description', content: this.post.meta};
         this.metaService.updateTag(this.description);
       })
   }
-
-  // async getData(): Promise<Object>{
-  //   const postProto = await firstValueFrom(
-  //     this.route.paramMap.pipe(
-  //       switchMap((params: ParamMap) =>
-  //         this.http.getPost(
-  //           params.get('id')
-
-  //           )
-  //         )
-  //       )
-  //     )
-  //     console.log(postProto);
-  //     this.post = this.workResult(postProto.result[0]);
-  //     console.log(this.post);
-
-  //   console.log(this.post);
-  //   return postProto;
-
-  // }
-  workResult(p): Post{
-    const blocksToHtml = require("@sanity/block-content-to-html");
-    const postClean = {
-      createdAt: p._createdAt,
-      name: p.title,
-      categories: p.categories,
-      body: blocksToHtml({ blocks: p.body }),
-      meta: p.metaDescription,
-      id: p.slug.current,
-      image: null
-    }
-    const imageUrlBuilder = require("@sanity/image-url");
-    const image =
-        p.mainImage.asset
-          ? p.mainImage.asset._ref
-          : null;
-
-      if (image) {
-        postClean.image = imageUrlBuilder(sanity).image(image).url();
-      }
-
-    return postClean;
-  }
-  // async getData(){
-  //   this.post = {body: "<p>ajajaj</p>", categories: [], createdAt: undefined, image: "", meta: "opis z mapety", name: "tytuł z Mapety", url: "" };
-  //   this.post = await firstValueFrom(
-  //     this.route.paramMap.pipe(
-  //       switchMap((params: ParamMap) =>
-  //         this.http.getPost(
-  //           params.get('id')
-  //           )
-  //         )
-  //       )
-  //     );
-  //   console.log(this.post);
-  //   this.addMeta(this.post);
-  // }
 
   addMeta(post){
     console.log('addMeta '+post.meta);

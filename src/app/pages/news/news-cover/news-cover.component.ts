@@ -7,15 +7,7 @@ import { Post } from 'src/app/models/Post';
   styleUrls: ['./news-cover.component.scss'],
 })
 export class NewsCoverComponent implements OnInit {
-  @Input() post: Post = {
-    createdAt: 'dzisiaj',
-    id: 'super-post',
-    name: 'Szok i niedowierzanie. Kliknij i też to przeżyj',
-    categories: ['newsy'],
-    body: 'treść artykułu',
-    image: 'zdjecia/img',
-    meta: 'jakiś opis meta'
-  };
+  @Input() post: Post;
 
   constructor() {}
 

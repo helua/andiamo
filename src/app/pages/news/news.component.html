@@ -1,7 +1,7 @@
 <div class="blog">
   <h1>NEWS</h1>
     <main
-      *ngIf="posts | async as posts; else loadingBlock"
+      *ngIf="posts; else loadingBlock"
     >
       <app-news-cover
         class="post-item"
