@@ -34,16 +34,16 @@ export class ScreenService {
         this.isHorizontal = false;
       }
     }
-    fixAllora(): void{
-      let logo = document.getElementById("logotype-wrapper");
-      logo.style.bottom="-1rem";
-      logo.style.left="50%";
-      logo.style.transform="translate(-50%, 0%)";
-      let allora = document.getElementById("allora");
-      allora.style.display="none";
-      let question = document.getElementById("question-mark");
-      question.style.display="none";
-    }
+    // fixAllora(): void{
+    //   let logo = document.getElementById("logotype-wrapper");
+    //   logo.style.bottom="-1rem";
+    //   logo.style.left="50%";
+    //   logo.style.transform="translate(-50%, 0%)";
+    //   let allora = document.getElementById("allora");
+    //   allora.style.display="none";
+    //   let question = document.getElementById("question-mark");
+    //   question.style.display="none";
+    // }
 
     fixMenuColors(colorText, colorBack): void{
       let nav = Array.from(document.getElementsByClassName("menu-link") as HTMLCollectionOf<HTMLElement>);

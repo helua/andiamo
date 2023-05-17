@@ -4,15 +4,14 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { BlogPostsService } from 'src/app/blog-posts.service';
 import { switchMap } from 'rxjs/operators';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
-import { firstValueFrom } from 'rxjs';
 import { Post } from '../../../models/Post';
-import { environment } from 'src/environments/environment';
-const sanityClient = require("@sanity/client");
-const sanity = sanityClient({
-  projectId: '10ugj9p1',
-  dataset: 'production',
-  useCdn: true,
-});
+
+// const sanityClient = require("@sanity/client");
+// const sanity = sanityClient({
+//   projectId: '10ugj9p1',
+//   dataset: 'production',
+//   useCdn: true,
+// });
 @Component({
   selector: 'app-news-details',
   templateUrl: './news-details.component.html',
