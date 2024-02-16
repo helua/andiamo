@@ -13,7 +13,7 @@ import { ScreenService } from 'src/app/screen.service';
 export class NewsComponent implements OnInit {
 
   postsRaw: any = [];
-  posts: Post[] = []
+  posts: Post [] = []
   title = 'Aktualności z życia i projektów Andiamo';
   description: MetaDefinition = {name: 'description', content: 'Sprawdź nasze najnowsze projekty i zrealizowane spoty reklamowe. Mamy doswiadczenie w produkcji i kreacji!'};
 

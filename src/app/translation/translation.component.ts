@@ -26,7 +26,7 @@ export class TranslationComponent implements OnInit {
 
   navigateOnLangSwitch(){
     this.translation.navigateOnLangSwitch();
-    this.cdRef.detectChanges();
+    // this.cdRef.detectChanges();
   }
 
 }

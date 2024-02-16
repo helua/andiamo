@@ -9,7 +9,7 @@ export class TranslationService {
 
   constructor(private router: Router, private translate: TranslateService) { }
 
-  checkLang(){
+    checkLang(){
     if(this.router.url === "/about"){
       this.translate.use('en');
       this.underlineLangOption('en');
@@ -98,19 +98,17 @@ export class TranslationService {
       this.router.navigate(['/strona-nie-istnieje'])
     };
 
-
-    if(this.router.url === '/' || 'o-nas' || 'z-planu' || 'kontakt' || 'soulreel' || 'strona-nie-istnieje'){
-      this.underlineLangOption('en');
-    }
-    if(this.router.url === '/en' || 'about' || 'bts' || 'contact' || 'soulreel-en' || 'site-not-found'){
-      this.underlineLangOption('pl');
-    }
+    // if(this.router.url === '/en' || 'about' || 'bts' || 'contact' || 'soulreel-en' || 'site-not-found'){
+    //   this.underlineLangOption('pl');
+    // }
+    // if(this.router.url === '/' || 'o-nas' || 'z-planu' || 'kontakt' || 'soulreel' || 'strona-nie-istnieje'){
+    //   this.underlineLangOption('en');
+    // }
 
   }
   underlineLangOption(code: string){
     const langOptionPL = document.getElementById('pl');
     const langOptionEN = document.getElementById('en');
-
     if(code === 'pl'){
       if(langOptionPL && langOptionEN){
         langOptionPL.style.textDecoration = "underline";
@@ -131,5 +129,6 @@ export class TranslationService {
         langOptionPL.style.pointerEvents = "auto";
       }
     }
+
   }
 }
