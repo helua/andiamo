@@ -12,22 +12,23 @@ const httpOptions = {
 export class VimeoService {
 
   constructor(private http:HttpClient) { }
-  getWholeChannel(user) {
-    // return this.http.get('https://vimeo.com/api/v2/'+user+'/videos.json');
-    return this.http.get('https://api.vimeo.com/users/'+user+'/videos?fields=uri,name,pictures.sizes&sizes=640x360',
-     {
-      headers: {
-        'Accept': 'application/vnd.vimeo.user+json;version=3.0,application/vnd.vimeo.video+json;version=3.4',
-        'User-Agent': 'andiamo-works-website',
-        'Authorization': 'bearer 74ff957ff59b7305cbd387773f6d1a3f',
-      },
-    });
+  // getWholeChannel(user) {
+  //   // return this.http.get('https://vimeo.com/api/v2/'+user+'/videos.json');
+  //   return this.http.get('https://api.vimeo.com/users/'+user+'/videos?fields=uri,name,pictures.sizes&sizes=640x360',
+  //    {
+  //     headers: {
+  //       'Accept': 'application/vnd.vimeo.user+json;version=3.0,application/vnd.vimeo.video+json;version=3.4',
+  //       'User-Agent': 'andiamo-works-website',
+  //       'Authorization': 'bearer 74ff957ff59b7305cbd387773f6d1a3f',
+  //     },
+  //   });
 
-  }
+  // }
 
   getVideos(user) {
     // return this.http.get('https://vimeo.com/api/v2/'+user+'/videos.json');
-    return this.http.get('https://api.vimeo.com/users/'+user+'/albums/8969296/videos?fields=uri,name,pictures.sizes&sizes=640x360&per_page=100',
+    // return this.http.get('https://api.vimeo.com/users/'+user+'/albums/8969296/videos?fields=uri,name,pictures.sizes&sizes=640x360&per_page=100',
+    return this.http.get('https://api.vimeo.com/users/'+user+'/albums/8969296/videos?fields=uri,name,pictures.base_link&per_page=100',
      {
       headers: {
         'Accept': 'application/vnd.vimeo.user+json;version=3.0,application/vnd.vimeo.video+json;version=3.4',

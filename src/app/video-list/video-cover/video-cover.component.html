@@ -7,7 +7,7 @@
 
     <a [routerLink]="[video.uri]">
         <img
-            [lazyLoad]="video.pictures.sizes[0].link"
+            [lazyLoad]="video.pictures.base_link"
             [defaultImage]="logo"
             alt="{{ getName(video.name) }}">
         <label

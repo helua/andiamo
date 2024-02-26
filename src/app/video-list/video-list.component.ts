@@ -24,7 +24,7 @@ export class VideoListComponent implements OnInit {
   ngOnInit(): void{
     this._vimeoService.getVideos(this.user).subscribe(videos => {
       this.videosUnsorted = videos;
-      console.log(videos);
+      // console.log(videos);
       this.videoCount = this.videosUnsorted.data.length;
       this.order = this.orderUpdate(this.videoCount, this.order);
       this.videos = this.changePosition(this.videosUnsorted.data, this.order);
