@@ -1,8 +1,8 @@
 $color: #ff501e;
 .grid__item{
     // max-width: 34.5rem;
-    max-width: 640px;
-    // max-width: 720px;
+    // max-width: 640px;
+    max-width: 720px;
     margin: 0 auto .8rem auto;
     border-radius: 18px;
     & a{
@@ -36,7 +36,8 @@ $color: #ff501e;
         visibility: hidden;
         display:none;//może usunę potem żeby zadziałało transition
         opacity: 0;
-        width: calc((100% - 640px) / 2);
+        // width: calc((100% - 640px) / 2);
+        width: calc((100% - 720px) / 2);
         // width: calc((100% - 34.5rem) / 2);
         text-align: center;
         @media screen and (max-width: 1024px){
