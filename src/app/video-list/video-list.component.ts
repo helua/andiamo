@@ -26,8 +26,9 @@ export class VideoListComponent implements OnInit {
       this.videosUnsorted = videos;
       // console.log(videos);
       this.videoCount = this.videosUnsorted.data.length;
-      this.order = this.orderUpdate(this.videoCount, this.order);
-      this.videos = this.changePosition(this.videosUnsorted.data, this.order);
+      // this.order = this.orderUpdate(this.videoCount, this.order);
+      // this.videos = this.changePosition(this.videosUnsorted.data, this.order);
+      this.videos = this.videosUnsorted.data;
       console.log(this.videos);
     })
   }

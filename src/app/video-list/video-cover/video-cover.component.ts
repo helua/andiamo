@@ -14,7 +14,13 @@ export class VideoCoverComponent{
   logo: string = 'assets/ANDIAMO_sign-mini.svg';
 
   getName(videoTitle: string){
-    return videoTitle.split(' | ')[0].toUpperCase();
+    if(videoTitle.split(' - ').length > 1){
+      return videoTitle.split(' - ')[0].toUpperCase();
+    }
+    if(videoTitle.split(' | ').length > 1){
+      return videoTitle.split(' | ')[0].toUpperCase();
+    }
+    else return videoTitle
   }
 
   getRest(videoTitle: string){
