@@ -1,7 +1,8 @@
 
 $color: #ff501e;
 $color-2: #8cfa60;
-$white: #fafff6;
+// $white: #fafff6;
+$white: #ffffff;
 $gray: #f0f0f0;
 $font: 'tex_gyre_heros_cnregular';
 $font-bold: 'tex_gyre_heros_cnbold';
@@ -9,15 +10,15 @@ $font-bold: 'tex_gyre_heros_cnbold';
 //PRODUCTION FONTS
 @font-face {
   font-family: 'tex_gyre_heros_cnregular';
-  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf');
-  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-regular.otf') format('opentype');
+  src: url('./assets/fonts/texgyreheroscn-regular.otf');
+  src: url('./assets/fonts/texgyreheroscn-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'tex_gyre_heros_cnbold';
-  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf');
-  src: url('https://andiamo.works/assets/fonts/texgyreheroscn-bold.otf') format('opentype');
+  src: url('./assets/fonts/texgyreheroscn-bold.otf');
+  src: url('./assets/fonts/texgyreheroscn-bold.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,7 +46,7 @@ body{
     font-weight: 600;
     letter-spacing: 0;
     margin: 0px;
-    background-color: #F0F0F0;
+    background-color: $white;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -135,6 +136,24 @@ button{
     background-color: rgba($white, 0);
 }
 
+nav{
+  // height:300vh;
+    & *{
+        z-index: 10;
+    }
+    & ul{
+        padding: 0;
+    }
+    & li{
+        text-decoration: none;
+        list-style-type: none;
+
+        & a{
+            padding: 0 2px;
+
+        }
+    }
+}
 //desktop menu hidden
 @media only screen and (max-width: 599px) {
     .desktop{

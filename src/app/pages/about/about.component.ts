@@ -1,10 +1,9 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/screen.service';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslationService } from 'src/app/translation.service';
-import { Observable, Subscription } from 'rxjs';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -21,7 +20,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   title: string;
   description: MetaDefinition = {name: 'description', content: ''};
 
-  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private translation: TranslationService, private translate: TranslateService){}
+  constructor(private elementRef: ElementRef, public screen: ScreenService, private titleService: Title, private metaService: Meta, private translation: TranslationService, private translate: TranslateService, private viewport: ViewportScroller){}
 
   ngOnInit() {
     this.translation.checkLang();
@@ -59,7 +58,13 @@ export class AboutComponent implements OnInit, OnDestroy {
     // let menu = Array.from(document.getElementsByClassName("mat-drawer")as HTMLCollectionOf<HTMLElement>)[0];
     // menu.style.backgroundColor="#000";
   }
-
+  onScrollToTop(): void {
+    // this.viewport.scrollToPosition([0,0])
+    // this.viewport.getScrollPosition()
+    console.log(this.viewport.getScrollPosition())
+    // this.viewport.scrollToAnchor('gallery')
+    this.viewport.scrollToPosition([0,0])
+  }
  ngOnDestroy(){
   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#f0f0f0';
   }

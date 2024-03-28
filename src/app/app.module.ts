@@ -39,6 +39,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { IntroComponent } from './intro/intro.component';
 import { TranslationComponent } from './translation/translation.component';
 import { SiteNotFoundComponent } from './pages/site-not-found/site-not-found.component';
+import { ScrollUpComponent } from './nav/scroll-up/scroll-up.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -66,6 +67,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     IntroComponent,
     TranslationComponent,
     SiteNotFoundComponent,
+    ScrollUpComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

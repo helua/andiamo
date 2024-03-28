@@ -1,0 +1,14 @@
+nav.nav-andiamo{
+  position: fixed;
+  bottom: 0%;
+  left: 1%;
+  & ul{
+    display: flex;
+    justify-content: start;
+    & li a img{
+      // background: url('./../../assets/ANDIAMO_logotype.svg') no-repeat 100%;
+      width: 162px;
+      height: 56px;
+    }
+  }
+}

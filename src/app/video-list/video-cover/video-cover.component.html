@@ -2,23 +2,22 @@
 
     <span
         class="name">
-            {{ getName(video.name)}}
+            <!-- {{ getName(video.name)}} -->
     </span>
 
     <a [routerLink]="[video.uri]">
         <img
             [lazyLoad]="video.pictures.base_link"
-            [defaultImage]="logo"
-            alt="{{ getName(video.name) }}">
+            [defaultImage]="logo">
         <label
             class="name-rest">
-                {{ getNameRest(video.name) }}
+                <!-- {{ getNameRest(video.name) }} -->
         </label>
     </a>
 
     <span
         class="rest">
-            {{ getRest(video.name) }}
+            <!-- {{ getRest(video.name) }} -->
     </span>
 
 </div>

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class  NavComponent implements OnInit {
   main: string = "/";
   about: string = "/o-nas";
   bts: string = "/z-planu";
@@ -16,4 +16,5 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }

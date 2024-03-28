@@ -11,23 +11,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
 
 }
 
-nav{
-    & *{
-        z-index: 10;
-    }
-    & ul{
-        padding: 0;
-    }
-    & li{
-        text-decoration: none;
-        list-style-type: none;
 
-        & a{
-            padding: 0 2px;
-
-        }
-    }
-}
 nav{
   font-size: 1.375rem;
 }
@@ -62,17 +46,17 @@ nav .nav-main{
         transition: .2s ease-out;
     }
 }
-
 nav .nav-sec{
     position: fixed;
-    width: 96%;
     bottom: 2%;
-    left: 2%;
+    right: 2%;
     & ul{
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 }
+
+
 .soulreel{
   animation: fresh 2s ease .2s 1 normal forwards;
 }

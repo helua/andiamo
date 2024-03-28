@@ -15,7 +15,7 @@ $font-bold: 'tex_gyre_heros_cnbold';
 .screen{
   height: 50vh;
   position: relative;
-  margin-bottom: -100px;
+  margin-bottom: -200px;
   @media screen and (max-width: 900px){
     height: unset;
     margin-bottom: 0;

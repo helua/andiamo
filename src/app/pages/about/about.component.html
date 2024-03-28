@@ -1,3 +1,4 @@
+<div id="gallery"></div>
 <div class="screen">
 
   <h1 class="big fade">
@@ -55,67 +56,62 @@
         <li><span class="bold">„Inner Voice” </span>MOSCOW SHORTS - Best Cinematography 2018</li>
         <li><span class="bold">„Inner Voice”</span> TOFIFEST Special Screening 2018</li>
     </ul>
-</div>
-
-<div class="awards2">
-  <h2>PRESS&nbsp;&&nbsp;AWARDS</h2>
-  <div class="inner">
-    <div><span class="bold">TYMEK / URBAŃSKI  „KRÓL ŻYCIA”</span> DIRECTORS LIBRARY MARCH 2022</div>
-    <div><span class="bold">PRO8L3M & BRODKA „ŻAR”</span> POLISH MUSIC VIDEO AWARD 2021 WINNER - RAP</div>
-    <div><span class="bold">BNP paribas „Patronki”</span> BRONZE KTR 2021 AWARD - CREATIVE STRATEGY, SILVER KTR 2021 AWARD - COMMUNICATION PR, SILVER KTR 2021 AWARD - COMMUNICATION ONLINE, GOLD KTR 2021 AWARD - COMMUNICATION INTEGRATED</div>
-    <div><span class="bold">LUBELLA „KOKO JUMBO”</span> BRONZE KTR 2021 AWARD - COMMUNICATION VIDEO</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> GOLD KTR 2021 AWARD - CINEMATOGRAPHY</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> SILVER KTR 2021 AWARD - DIRECTION</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> VIDEOCLIP ITALIA 2021</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> Cinematographers Award 2021</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> DIRECTORS LIBRARY January 2021</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> Best Music Video CULTURE.PL 3rd Place</div>
-    <div><span class="bold">JJ Orliński „Voi che udite il mid lamento”</span> Best Music Video CULTURE.PL 7th Place</div>
-    <div><span class="bold">JJ Orliński „Voi che udite”</span> Best Music Video Extra 2020 PMVA 2020 Nomination</div>
-    <div><span class="bold">Pezet „Nisko jest Niebo”</span> Best Music Video Rap PMVA 2020 Nomination</div>
-    <div><span class="bold">Adidas „Amp Futbol”</span> Branded Content - KTR 2020 Nomination</div>
-    <div><span class="bold">Adidas „Amp Futbol”</span> Best Sport Video - SPORT MARKETING 2020</div>
-    <div><span class="bold">Głosem Zwierząt „Pokochaj”</span> Best Social Campaign KREATURA 2020</div>
-    <div><span class="bold">„Leśne”</span> Millenium DOCS AGAINST GRAVITY Special Screening 2020</div>
-    <div><span class="bold">„Inner Voice” </span>MOSCOW SHORTS - Best Cinematography 2018</div>
-    <div><span class="bold">„Inner Voice”</span> TOFIFEST Special Screening 2018</div>
   </div>
+
+  <div class="awards2">
+    <h2>PRESS&nbsp;&&nbsp;AWARDS</h2>
+    <div class="inner">
+      <div><span class="bold">TYMEK / URBAŃSKI  „KRÓL ŻYCIA”</span> DIRECTORS LIBRARY MARCH 2022</div>
+      <div><span class="bold">PRO8L3M & BRODKA „ŻAR”</span> POLISH MUSIC VIDEO AWARD 2021 WINNER - RAP</div>
+      <div><span class="bold">BNP paribas „Patronki”</span> BRONZE KTR 2021 AWARD - CREATIVE STRATEGY, SILVER KTR 2021 AWARD - COMMUNICATION PR, SILVER KTR 2021 AWARD - COMMUNICATION ONLINE, GOLD KTR 2021 AWARD - COMMUNICATION INTEGRATED</div>
+      <div><span class="bold">LUBELLA „KOKO JUMBO”</span> BRONZE KTR 2021 AWARD - COMMUNICATION VIDEO</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> GOLD KTR 2021 AWARD - CINEMATOGRAPHY</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> SILVER KTR 2021 AWARD - DIRECTION</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> VIDEOCLIP ITALIA 2021</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> Cinematographers Award 2021</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> DIRECTORS LIBRARY January 2021</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> Best Music Video CULTURE.PL 3rd Place</div>
+      <div><span class="bold">JJ Orliński „Voi che udite il mid lamento”</span> Best Music Video CULTURE.PL 7th Place</div>
+      <div><span class="bold">JJ Orliński „Voi che udite”</span> Best Music Video Extra 2020 PMVA 2020 Nomination</div>
+      <div><span class="bold">Pezet „Nisko jest Niebo”</span> Best Music Video Rap PMVA 2020 Nomination</div>
+      <div><span class="bold">Adidas „Amp Futbol”</span> Branded Content - KTR 2020 Nomination</div>
+      <div><span class="bold">Adidas „Amp Futbol”</span> Best Sport Video - SPORT MARKETING 2020</div>
+      <div><span class="bold">Głosem Zwierząt „Pokochaj”</span> Best Social Campaign KREATURA 2020</div>
+      <div><span class="bold">„Leśne”</span> Millenium DOCS AGAINST GRAVITY Special Screening 2020</div>
+      <div><span class="bold">„Inner Voice” </span>MOSCOW SHORTS - Best Cinematography 2018</div>
+      <div><span class="bold">„Inner Voice”</span> TOFIFEST Special Screening 2018</div>
+    </div>
+  </div>
+
 </div>
-
-
-
-</div>
-    <!-- <div *ngIf="screen.isBigScreen; else smallScreen"> -->
-      <div class="gallery-window">
-       <div class="gallery">
-            <div class="row" *ngFor="let photo of photos1">
-                <div class="push push-{{photo}}">
-                    <img [src]="bigURL+photo+'.jpg'"
-                    alt="ANDIAMO photo{{photo}}">
-                </div>
-            </div>
-            <div class="sticker">
-              <img src="../../../assets/plasterek.png" alt="">
-            </div>
-            <div class="copy">
-              <p>{{ 'ABOUT.ABOUT1' | translate }}</p>
-              <p>{{ 'ABOUT.ABOUT2' | translate }}</p>
-              <p>{{ 'ABOUT.ABOUT3' | translate }}</p>
-              <img id="logotype" src="../../../assets/ANDIAMO_logotype.svg" alt="">
-
-            </div>
-            <div class="row" *ngFor="let photo of photos2">
-              <div class="push push-{{photo}}">
-                  <img [src]="bigURL+photo+'.jpg'"
-                  alt="ANDIAMO photo{{photo}}">
-              </div>
-          </div>
-
+<!-- <div *ngIf="screen.isBigScreen; else smallScreen"> -->
+  <div class="gallery-window">
+    <!-- <app-scroll-up (scrollToTop)="onScrollToTop()"></app-scroll-up> -->
+    <div class="gallery">
+      <div class="row" *ngFor="let photo of photos1">
+        <div class="push push-{{photo}}">
+            <img [src]="bigURL+photo+'.jpg'"
+            alt="ANDIAMO photo{{photo}}">
         </div>
-        <img id="sign" src="../../../assets/ANDIAMO_sign.svg" alt="">
-
       </div>
-
+      <div class="sticker">
+        <img src="../../../assets/plasterek.png" alt="">
+      </div>
+      <div class="copy">
+        <p>{{ 'ABOUT.ABOUT1' | translate }}</p>
+        <p>{{ 'ABOUT.ABOUT2' | translate }}</p>
+        <p>{{ 'ABOUT.ABOUT3' | translate }}</p>
+        <img id="logotype" src="../../../assets/ANDIAMO_logotype.svg" alt="">
+      </div>
+      <div class="row" *ngFor="let photo of photos2">
+        <div class="push push-{{photo}}">
+            <img [src]="bigURL+photo+'.jpg'"
+            alt="ANDIAMO photo{{photo}}">
+        </div>
+      </div>
+    </div>
+    <img id="sign" src="../../../assets/ANDIAMO_sign.svg" alt="">
+  </div>
 
 
     <!-- <ng-template #smallScreen>
